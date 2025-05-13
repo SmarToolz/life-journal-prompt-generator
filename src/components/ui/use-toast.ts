@@ -1,5 +1,5 @@
 
-// Re-export from the correct location
-import { useToast, toast } from "@/hooks/use-toast";
+// Export the toast hooks from the correct location
+import { toast, useToast } from "@/components/ui/toast";
 
-export { useToast, toast };
+export { toast, useToast };
