@@ -1,7 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Slider } from "@/components/ui/slider";
-import { Button } from "@/components/ui/button";
 import { Volume, Volume1, Volume2, VolumeX } from "lucide-react";
 
 interface AudioPlayerProps {
@@ -61,10 +60,20 @@ const AudioPlayer = ({ isPlaying }: AudioPlayerProps) => {
           promise.catch(error => console.log("Playback prevented: ", error));
         }
       });
+
+      // Activate the wave animation
+      document.querySelectorAll('.animated-wave').forEach(wave => {
+        wave.classList.add('playing');
+      });
     } else {
       musicAudio?.pause();
       sfxAudio?.pause();
       brainAudio?.pause();
+
+      // Deactivate the wave animation
+      document.querySelectorAll('.animated-wave').forEach(wave => {
+        wave.classList.remove('playing');
+      });
     }
   }, [isPlaying]);
   

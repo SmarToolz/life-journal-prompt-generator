@@ -105,6 +105,59 @@
   animation: wave-animation 10s linear infinite;
 }
 
+/* Animated colorful wave */
+.animated-wave {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, 
+    #4cc9f0,
+    #4361ee,
+    #3a0ca3,
+    #7209b7,
+    #f72585,
+    #4cc9f0
+  );
+  background-size: 600% 100%;
+  animation: gradient-wave 15s ease infinite;
+  opacity: 0.8;
+}
+
+.animated-wave::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: translateY(-50%);
+  filter: blur(10px);
+  animation: wave-motion 3s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
+}
+
+.animated-wave.playing::before {
+  animation-duration: 2s;
+}
+
+@keyframes gradient-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes wave-motion {
+  0% { 
+    height: 20%; 
+    filter: blur(5px);
+  }
+  100% { 
+    height: 80%; 
+    filter: blur(15px);
+  }
+}
+
 @keyframes wave-animation {
   0% {
     background-position: 0 0;
@@ -112,4 +165,14 @@
   100% {
     background-position: 200px 0;
   }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
