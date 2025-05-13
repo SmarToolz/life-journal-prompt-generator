@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { useTranslation } from '@/utils/translations';
 
 interface AffirmationFormProps {
   onGenerate: (category: string, goal: string, name: string) => void;
@@ -18,23 +19,24 @@ type CategoryOption = {
   emoji: string;
 };
 
-const categories: CategoryOption[] = [
-  { value: "self-love", label: "Self-Love & Confidence", emoji: "💗" },
-  { value: "health", label: "Health & Wellness", emoji: "🌿" },
-  { value: "career", label: "Career & Success", emoji: "⭐" },
-  { value: "relationship", label: "Relationship & Love", emoji: "💌" },
-  { value: "gratitude", label: "Gratitude & Positivity", emoji: "🙏" },
-  { value: "stress", label: "Stress & Anxiety Relief", emoji: "🧘" },
-  { value: "motivation", label: "Motivation & Productivity", emoji: "🚀" },
-  { value: "abundance", label: "Abundance & Wealth", emoji: "✨" },
-  { value: "mindfulness", label: "Mindfulness & Inner Peace", emoji: "🕊️" },
-  { value: "goals", label: "Goal Achievement", emoji: "🎯" },
-];
-
 const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerating, className }) => {
   const [category, setCategory] = useState<string>("");
   const [goal, setGoal] = useState<string>("");
   const [name, setName] = useState<string>("");
+  const { t } = useTranslation();
+
+  const categories: CategoryOption[] = [
+    { value: "self-love", label: t('self-love'), emoji: "💗" },
+    { value: "health", label: t('health'), emoji: "🌿" },
+    { value: "career", label: t('career'), emoji: "⭐" },
+    { value: "relationship", label: t('relationship'), emoji: "💌" },
+    { value: "gratitude", label: t('gratitude'), emoji: "🙏" },
+    { value: "stress", label: t('stress'), emoji: "🧘" },
+    { value: "motivation", label: t('motivation'), emoji: "🚀" },
+    { value: "abundance", label: t('abundance'), emoji: "✨" },
+    { value: "mindfulness", label: t('mindfulness'), emoji: "🕊️" },
+    { value: "goals", label: t('goals'), emoji: "🎯" },
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,11 +49,11 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <div className="space-y-2">
         <label htmlFor="category" className="text-lg font-medium">
-          Choose Your Affirmation Category
+          {t('chooseCategory')}
         </label>
         <Select value={category} onValueChange={setCategory}>
           <SelectTrigger id="category" className="bg-white/70 backdrop-blur-sm">
-            <SelectValue placeholder="Select a category" />
+            <SelectValue placeholder={t('selectCategory')} />
           </SelectTrigger>
           <SelectContent position="popper">
             {categories.map((cat) => (
@@ -67,11 +69,11 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <div className="space-y-2">
         <label htmlFor="goal" className="text-lg font-medium">
-          Describe your current goal or intention
+          {t('describeGoal')}
         </label>
         <Textarea
           id="goal"
-          placeholder="e.g., 'I want to feel more confident at work'"
+          placeholder={t('goalPlaceholder')}
           value={goal}
           onChange={(e) => setGoal(e.target.value)}
           className="resize-none bg-white/70 backdrop-blur-sm"
@@ -81,12 +83,12 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <div className="space-y-2">
         <label htmlFor="name" className="text-lg font-medium">
-          Your name (optional)
+          {t('yourName')} <span className="text-sm text-muted-foreground ml-1">({t('nameOptional')})</span>
         </label>
         <Input
           id="name"
           type="text"
-          placeholder="Enter your name for personalized affirmations"
+          placeholder={t('namePlaceholder')}
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="bg-white/70 backdrop-blur-sm"
@@ -98,7 +100,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
         className="w-full bg-primary hover:bg-primary/90"
         disabled={!category || isGenerating}
       >
-        {isGenerating ? "Generating..." : "Generate Affirmation"}
+        {isGenerating ? t('generating') : t('generateAffirmation')}
       </Button>
     </form>
   );
