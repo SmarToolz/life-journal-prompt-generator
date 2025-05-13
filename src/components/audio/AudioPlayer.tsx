@@ -3,25 +3,19 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Volume, Volume1, Volume2, VolumeX } from "lucide-react";
-import { VoiceType } from '@/components/settings/VoiceSelector';
-import { useTranslation } from '@/utils/translations';
 
 interface AudioPlayerProps {
   isPlaying: boolean;
-  selectedVoice: VoiceType;
-  affirmations: string[];
 }
 
-const AudioPlayer = ({ isPlaying, selectedVoice, affirmations = [] }: AudioPlayerProps) => {
+const AudioPlayer = ({ isPlaying }: AudioPlayerProps) => {
   const [musicVolume, setMusicVolume] = useState(50);
   const [sfxVolume, setSfxVolume] = useState(30);
   const [brainVolume, setBrainVolume] = useState(40);
-  const [voiceVolume, setVoiceVolume] = useState(70);
   
   const musicRef = useRef<HTMLAudioElement | null>(null);
   const sfxRef = useRef<HTMLAudioElement | null>(null);
   const brainRef = useRef<HTMLAudioElement | null>(null);
-  const { t } = useTranslation();
   
   // Initialize audio elements
   useEffect(() => {
@@ -67,57 +61,12 @@ const AudioPlayer = ({ isPlaying, selectedVoice, affirmations = [] }: AudioPlaye
           promise.catch(error => console.log("Playback prevented: ", error));
         }
       });
-      
-      // Text to speech would be implemented here
-      if (affirmations.length > 0) {
-        // Placeholder for TTS implementation
-        console.log(`Speaking affirmations with ${selectedVoice} voice`);
-        
-        // This is where you would integrate a TTS service
-        // For example with the Web Speech API:
-        if ('speechSynthesis' in window) {
-          // Cancel any ongoing speech
-          window.speechSynthesis.cancel();
-          
-          // Create utterance for each affirmation
-          setTimeout(() => {
-            affirmations.forEach((affirmation, index) => {
-              const utterance = new SpeechSynthesisUtterance(affirmation);
-              
-              // Set voice based on selectedVoice
-              const voices = window.speechSynthesis.getVoices();
-              const voiceOptions = voices.filter(voice => 
-                selectedVoice === 'male' ? !voice.name.includes('Female') : voice.name.includes('Female')
-              );
-              
-              if (voiceOptions.length > 0) {
-                utterance.voice = voiceOptions[0];
-              }
-              
-              utterance.volume = voiceVolume / 100;
-              utterance.rate = 0.9; // slightly slower for better clarity
-              
-              // Add delay between affirmations
-              utterance.onstart = () => {
-                console.log(`Speaking affirmation ${index + 1}`);
-              };
-              
-              window.speechSynthesis.speak(utterance);
-            });
-          }, 1000); // Delay to allow background audio to start first
-        }
-      }
     } else {
       musicAudio?.pause();
       sfxAudio?.pause();
       brainAudio?.pause();
-      
-      // Stop any ongoing speech
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
     }
-  }, [isPlaying, affirmations, selectedVoice, voiceVolume]);
+  }, [isPlaying]);
   
   // Update volumes when sliders change
   useEffect(() => {
@@ -175,21 +124,8 @@ const AudioPlayer = ({ isPlaying, selectedVoice, affirmations = [] }: AudioPlaye
         />
       </div>
       
-      <div className="flex items-center gap-3">
-        {getVolumeIcon(voiceVolume)}
-        <span className="w-32 text-sm">Voice</span>
-        <Slider
-          value={[voiceVolume]}
-          min={0}
-          max={100}
-          step={1}
-          onValueChange={(value) => setVoiceVolume(value[0])}
-          className="flex-grow"
-        />
-      </div>
-      
       <div className="text-xs text-center text-muted-foreground mt-2">
-        {t('deepBreath')}
+        Note: Audio files are placeholders. Please click on the page first to enable audio playback.
       </div>
     </div>
   );
