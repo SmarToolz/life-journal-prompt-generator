@@ -7,7 +7,6 @@ import { generateAffirmation, getCategoryEmoji } from '@/utils/affirmationGenera
 import { useToast } from "@/components/ui/use-toast";
 import { TranslationProvider, useTranslation } from '@/utils/translations';
 import VoiceSelector, { VoiceType } from '@/components/settings/VoiceSelector';
-import LanguageSelector from '@/components/settings/LanguageSelector';
 import FavoritesLibrary from '@/components/favorites/FavoritesLibrary';
 import { v4 as uuidv4 } from '@/utils/uuid';
 
@@ -79,7 +78,6 @@ const Index = () => {
           <div className="flex justify-center gap-3 mb-4">
             <FavoritesLibrary />
             <VoiceSelector selectedVoice={selectedVoice} onVoiceChange={handleVoiceChange} />
-            <LanguageSelector />
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-primary">

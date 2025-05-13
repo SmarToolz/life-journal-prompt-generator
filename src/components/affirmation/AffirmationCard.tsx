@@ -26,7 +26,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
   className,
 }) => {
   const { toast } = useToast();
-  const { t, currentLanguage } = useTranslation();
+  const { t } = useTranslation();
 
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(affirmation);
@@ -42,7 +42,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
       text: affirmation,
       category,
       timestamp: Date.now(),
-      language: currentLanguage,
+      language: 'en', // Now always English
     };
     
     addFavorite(favorite);

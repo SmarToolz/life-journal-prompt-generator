@@ -120,7 +120,7 @@ const FavoritesLibrary = () => {
                   </div>
                   <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
                     <span>{new Date(item.timestamp).toLocaleDateString()}</span>
-                    <span>{t(item.category as any)}</span>
+                    <span>{t(item.category)}</span>
                   </div>
                 </div>
               ))}
