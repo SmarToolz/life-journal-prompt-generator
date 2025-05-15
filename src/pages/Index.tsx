@@ -4,7 +4,7 @@ import AffirmationForm from '@/components/affirmation/AffirmationForm';
 import AffirmationCard from '@/components/affirmation/AffirmationCard';
 import AudioPlayer from '@/components/audio/AudioPlayer';
 import { generateAffirmation, getCategoryEmoji } from '@/utils/affirmationGenerator';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Library } from "lucide-react";
 import FavoritesLibrary from '@/components/favorites/FavoritesLibrary';
@@ -18,14 +18,14 @@ const Index = () => {
   const [showFavorites, setShowFavorites] = useState<boolean>(false);
   const { toast } = useToast();
 
-  const handleGenerateAffirmation = (category: string, goal: string, name: string) => {
+  const handleGenerateAffirmation = (category: string, goal: string, promptFocus: string) => {
     setIsGenerating(true);
     
     // Simulate API call with setTimeout
     setTimeout(() => {
       // Generate three unique affirmations
       const newAffirmations = Array.from({ length: 3 }, () => 
-        generateAffirmation(category, goal, name)
+        generateAffirmation(category, goal, promptFocus)
       );
       
       setAffirmations(newAffirmations);
@@ -33,8 +33,8 @@ const Index = () => {
       setIsGenerating(false);
       
       toast({
-        title: `${getCategoryEmoji(category)} Affirmations Generated`,
-        description: "Your personalized affirmations are ready.",
+        title: `${getCategoryEmoji(category)} Journal Prompts Generated`,
+        description: "Your personalized prompts are ready.",
       });
     }, 1500);
   };
@@ -48,14 +48,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
+    <div className="min-h-screen bg-white">
       <div className="container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-purple-800">
-            AI Affirmation Prompt Generator
+            Life Journal Prompt Generator
           </h1>
           <p className="text-lg text-purple-600 max-w-lg mx-auto">
-            Create personalized affirmations with soothing audio layers to calm your mind and elevate your spirit.
+            Daily Ideas for Gratitude, Dreams, and More
           </p>
           
           <div className="absolute right-0 top-0">
@@ -101,10 +101,10 @@ const Index = () => {
             ) : (
               <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col items-center justify-center h-64 text-center border border-purple-200">
                 <h3 className="text-xl font-medium mb-3 text-purple-700">
-                  Your affirmation will appear here
+                  Your journal prompts will appear here
                 </h3>
                 <p className="text-purple-600">
-                  Select a category and fill in the form to generate your personalized affirmation
+                  Select options and fill in the form to generate your personalized journal prompts
                 </p>
               </div>
             )}
@@ -112,7 +112,7 @@ const Index = () => {
         </div>
 
         <footer className="mt-16 text-center text-sm text-purple-600">
-          <p>Take a deep breath and let these affirmations guide your journey</p>
+          <p>Take a deep breath and let these prompts guide your journaling journey</p>
         </footer>
       </div>
       
