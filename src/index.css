@@ -14,24 +14,24 @@
     --popover: 195 30% 98%;
     --popover-foreground: 195 50% 15%;
 
-    --primary: 195 85% 40%;
-    --primary-foreground: 195 10% 98%;
+    --primary: 270 70% 50%;
+    --primary-foreground: 270 10% 98%;
 
-    --secondary: 195 30% 90%;
-    --secondary-foreground: 195 50% 25%;
+    --secondary: 270 30% 90%;
+    --secondary-foreground: 270 50% 25%;
 
-    --muted: 195 30% 90%;
-    --muted-foreground: 195 40% 40%;
+    --muted: 270 30% 90%;
+    --muted-foreground: 270 40% 40%;
 
-    --accent: 195 30% 90%;
-    --accent-foreground: 195 50% 25%;
+    --accent: 270 30% 90%;
+    --accent-foreground: 270 50% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 195 20% 85%;
-    --input: 195 20% 85%;
-    --ring: 195 85% 40%;
+    --border: 270 20% 85%;
+    --input: 270 20% 85%;
+    --ring: 270 85% 40%;
 
     --radius: 0.75rem;
 
@@ -55,24 +55,24 @@
     --popover: 195 50% 15%;
     --popover-foreground: 195 10% 98%;
 
-    --primary: 195 85% 60%;
-    --primary-foreground: 195 50% 10%;
+    --primary: 270 85% 60%;
+    --primary-foreground: 270 50% 10%;
 
-    --secondary: 195 50% 20%;
-    --secondary-foreground: 195 10% 98%;
+    --secondary: 270 50% 20%;
+    --secondary-foreground: 270 10% 98%;
 
-    --muted: 195 50% 20%;
-    --muted-foreground: 195 40% 70%;
+    --muted: 270 50% 20%;
+    --muted-foreground: 270 40% 70%;
 
-    --accent: 195 50% 20%;
-    --accent-foreground: 195 10% 98%;
+    --accent: 270 50% 20%;
+    --accent-foreground: 270 10% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 195 50% 25%;
-    --input: 195 50% 25%;
-    --ring: 195 85% 60%;
+    --border: 270 50% 25%;
+    --input: 270 50% 25%;
+    --ring: 270 85% 60%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -96,11 +96,11 @@
 }
 
 .ocean-gradient {
-  @apply bg-gradient-to-b from-blue-100 via-blue-200 to-blue-300;
+  @apply bg-gradient-to-b from-purple-100 via-purple-200 to-purple-300;
 }
 
 .wave-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10c5 0 10-10 15-10s10 10 15 10 10-10 15-10 10 10 15 10 10-10 15-10 10 10 15 10 10-10 15-10' stroke='%2380DEEA' fill='none' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10c5 0 10-10 15-10s10 10 15 10 10-10 15-10 10 10 15 10 10-10 15-10 10 10 15 10 10-10 15-10' stroke='%23B794F4' fill='none' /%3E%3C/svg%3E");
   background-size: 100px 20px;
   animation: wave-animation 10s linear infinite;
 }
@@ -111,12 +111,12 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, 
-    #4cc9f0,
-    #4361ee,
-    #3a0ca3,
-    #7209b7,
-    #f72585,
-    #4cc9f0
+    #c084fc,
+    #8b5cf6,
+    #7c3aed,
+    #6d28d9,
+    #8b5cf6,
+    #c084fc
   );
   background-size: 600% 100%;
   animation: gradient-wave 15s ease infinite;

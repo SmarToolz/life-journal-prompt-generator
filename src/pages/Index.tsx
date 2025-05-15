@@ -48,13 +48,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen ocean-gradient">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
       <div className="container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-primary">
-            Affirmation Wave Generator
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-purple-800">
+            AI Affirmation Prompt Generator
           </h1>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto">
+          <p className="text-lg text-purple-600 max-w-lg mx-auto">
             Create personalized affirmations with soothing audio layers to calm your mind and elevate your spirit.
           </p>
           
@@ -62,17 +62,17 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full"
+              className="rounded-full bg-white hover:bg-purple-100"
               onClick={() => setShowFavorites(true)}
               title="Favorites Library"
             >
-              <Library className="h-5 w-5" />
+              <Library className="h-5 w-5 text-purple-700" />
             </Button>
           </div>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl shadow-lg">
+          <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-200">
             <AffirmationForm 
               onGenerate={handleGenerateAffirmation} 
               isGenerating={isGenerating}
@@ -91,7 +91,7 @@ const Index = () => {
                       togglePlayback={togglePlayback}
                       isMale={isMaleVoice}
                       toggleVoice={index === 0 ? toggleVoice : undefined} // Voice toggle only on first card
-                      className="bg-white/50 backdrop-blur-sm shadow-lg animate-float"
+                      className="bg-white/70 backdrop-blur-sm shadow-lg animate-float border border-purple-200"
                     />
                   ))}
                 </div>
@@ -99,11 +99,11 @@ const Index = () => {
                 <AudioPlayer isPlaying={isPlaying} />
               </>
             ) : (
-              <div className="bg-white/30 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col items-center justify-center h-64 text-center">
-                <h3 className="text-xl font-medium mb-3">
+              <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col items-center justify-center h-64 text-center border border-purple-200">
+                <h3 className="text-xl font-medium mb-3 text-purple-700">
                   Your affirmation will appear here
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-purple-600">
                   Select a category and fill in the form to generate your personalized affirmation
                 </p>
               </div>
@@ -111,7 +111,7 @@ const Index = () => {
           </div>
         </div>
 
-        <footer className="mt-16 text-center text-sm text-muted-foreground">
+        <footer className="mt-16 text-center text-sm text-purple-600">
           <p>Take a deep breath and let these affirmations guide your journey</p>
         </footer>
       </div>

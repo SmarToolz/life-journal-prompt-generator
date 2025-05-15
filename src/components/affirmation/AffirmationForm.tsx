@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 interface AffirmationFormProps {
@@ -16,6 +15,11 @@ type CategoryOption = {
   value: string;
   label: string;
   emoji: string;
+};
+
+type GoalOption = {
+  value: string;
+  label: string;
 };
 
 const categories: CategoryOption[] = [
@@ -31,6 +35,20 @@ const categories: CategoryOption[] = [
   { value: "goals", label: "Goal Achievement", emoji: "🎯" },
 ];
 
+const goals: GoalOption[] = [
+  { value: "self-reflection", label: "Self-Reflection" },
+  { value: "standard-entry", label: "Standard Entry" },
+  { value: "stress-reduction", label: "Stress Reduction" },
+  { value: "problem-solving", label: "Problem Solving" },
+  { value: "goal-setting", label: "Goal Setting" },
+  { value: "boosting-memory", label: "Boosting Memory" },
+  { value: "emotional-release", label: "Emotional Release" },
+  { value: "enhancing-creativity", label: "Enhancing Creativity" },
+  { value: "tracking-development", label: "Tracking Development" },
+  { value: "improving-writing-skills", label: "Improving Writing Skills" },
+  { value: "capturing-memories", label: "Capturing Memories" },
+];
+
 const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerating, className }) => {
   const [category, setCategory] = useState<string>("");
   const [goal, setGoal] = useState<string>("");
@@ -38,7 +56,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (category) {
+    if (category && goal) {
       onGenerate(category, goal, name);
     }
   };
@@ -46,14 +64,14 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
   return (
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <div className="space-y-2">
-        <label htmlFor="category" className="text-lg font-medium">
+        <label htmlFor="category" className="text-lg font-medium text-purple-800">
           Choose Your Affirmation Category
         </label>
         <Select value={category} onValueChange={setCategory}>
-          <SelectTrigger id="category" className="bg-white/70 backdrop-blur-sm">
+          <SelectTrigger id="category" className="bg-white/90 backdrop-blur-sm border-purple-200">
             <SelectValue placeholder="Select a category" />
           </SelectTrigger>
-          <SelectContent position="popper">
+          <SelectContent position="popper" className="bg-white border-purple-200">
             {categories.map((cat) => (
               <SelectItem key={cat.value} value={cat.value}>
                 <span className="inline-flex items-center gap-2">
@@ -66,21 +84,25 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="goal" className="text-lg font-medium">
-          Describe your current goal or intention
+        <label htmlFor="goal" className="text-lg font-medium text-purple-800">
+          Choose Your Goal or Intention
         </label>
-        <Textarea
-          id="goal"
-          placeholder="e.g., 'I want to feel more confident at work'"
-          value={goal}
-          onChange={(e) => setGoal(e.target.value)}
-          className="resize-none bg-white/70 backdrop-blur-sm"
-          rows={3}
-        />
+        <Select value={goal} onValueChange={setGoal}>
+          <SelectTrigger id="goal" className="bg-white/90 backdrop-blur-sm border-purple-200">
+            <SelectValue placeholder="Select your goal or intention" />
+          </SelectTrigger>
+          <SelectContent position="popper" className="bg-white border-purple-200">
+            {goals.map((goalOption) => (
+              <SelectItem key={goalOption.value} value={goalOption.value}>
+                {goalOption.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="name" className="text-lg font-medium">
+        <label htmlFor="name" className="text-lg font-medium text-purple-800">
           Your name (optional)
         </label>
         <Input
@@ -89,14 +111,14 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
           placeholder="Enter your name for personalized affirmations"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="bg-white/70 backdrop-blur-sm"
+          className="bg-white/90 backdrop-blur-sm border-purple-200"
         />
       </div>
 
       <Button 
         type="submit" 
-        className="w-full bg-primary hover:bg-primary/90"
-        disabled={!category || isGenerating}
+        className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+        disabled={!category || !goal || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Affirmation"}
       </Button>
