@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import { Clipboard, X, Trash2 } from 'lucide-react';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface FavoritesLibraryProps {
   open: boolean;
@@ -21,7 +21,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
     navigator.clipboard.writeText(text);
     toast({
       title: "Copied",
-      description: "Affirmation copied to clipboard.",
+      description: "Journal prompt copied to clipboard.",
     });
   };
 
@@ -29,7 +29,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
     removeFavorite(affirmation);
     toast({
       title: "Removed from Favorites",
-      description: "Affirmation removed from your favorites.",
+      description: "Journal prompt removed from your favorites.",
     });
   };
 
@@ -45,27 +45,27 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto">
+        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto bg-white">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-xl">
+            <DialogTitle className="flex items-center gap-2 text-xl text-purple-800">
               Favorites Library
             </DialogTitle>
-            <DialogDescription>
-              Your saved affirmations for daily inspiration.
+            <DialogDescription className="text-purple-600">
+              Your saved journal prompts for daily inspiration.
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 my-4">
             {favorites.length === 0 ? (
               <div className="text-center py-10 text-muted-foreground">
-                No saved affirmations yet. Generate some affirmations and save your favorites!
+                No saved journal prompts yet. Generate some prompts and save your favorites!
               </div>
             ) : (
               <>
                 {favorites.map((affirmation, index) => (
                   <div 
                     key={index} 
-                    className="p-4 rounded-lg bg-secondary/30 backdrop-blur-sm relative"
+                    className="p-4 rounded-lg bg-secondary/30 backdrop-blur-sm relative border border-purple-100"
                   >
                     <p className="pr-16">{affirmation}</p>
                     <div className="absolute top-2 right-2 flex gap-1">
@@ -93,14 +93,18 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
           </div>
 
           <div className="flex justify-between">
-            <Button variant="outline" onClick={() => onOpenChange(false)}>
+            <Button 
+              variant="outline" 
+              onClick={() => onOpenChange(false)}
+              className="border-purple-200 text-purple-700"
+            >
               Close
             </Button>
             {favorites.length > 0 && (
               <Button 
                 variant="destructive" 
                 onClick={() => setConfirmDialogOpen(true)}
-                className="gap-2"
+                className="gap-2 bg-red-500 hover:bg-red-600"
               >
                 <Trash2 className="h-4 w-4" />
                 Clear All
@@ -111,16 +115,16 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
       </Dialog>
 
       <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
-        <AlertDialogContent>
+        <AlertDialogContent className="bg-white">
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you sure?</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to clear all your saved affirmations?
+            <AlertDialogTitle className="text-purple-800">Are you sure?</AlertDialogTitle>
+            <AlertDialogDescription className="text-purple-600">
+              Are you sure you want to clear all your saved journal prompts?
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={handleClearAll}>Continue</AlertDialogAction>
+            <AlertDialogCancel className="border-purple-200 text-purple-700">Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleClearAll} className="bg-red-500 hover:bg-red-600">Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

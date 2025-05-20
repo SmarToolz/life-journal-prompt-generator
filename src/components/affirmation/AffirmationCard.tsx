@@ -2,26 +2,18 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, Heart, Copy } from "lucide-react";
+import { Heart, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavorites } from '@/contexts/FavoritesContext';
 import { useToast } from "@/components/ui/use-toast";
 
 interface AffirmationCardProps {
   affirmation: string;
-  isPlaying: boolean;
-  isMale?: boolean;
-  togglePlayback: () => void;
-  toggleVoice?: () => void;
   className?: string;
 }
 
 const AffirmationCard: React.FC<AffirmationCardProps> = ({
   affirmation,
-  isPlaying,
-  isMale,
-  togglePlayback,
-  toggleVoice,
   className,
 }) => {
   const { isFavorite, addFavorite, removeFavorite } = useFavorites();
@@ -48,7 +40,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
     navigator.clipboard.writeText(affirmation);
     toast({
       title: "Copied",
-      description: "Affirmation copied to clipboard.",
+      description: "Journal prompt copied to clipboard.",
     });
   };
 
@@ -66,35 +58,13 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
         
         <div className="flex items-center gap-3">
           <Button
-            onClick={togglePlayback}
-            variant="outline"
-            size="icon"
-            className="rounded-full w-12 h-12 flex items-center justify-center border-primary"
-            title={isPlaying ? "Pause" : "Play"}
-          >
-            {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6 ml-0.5" />}
-          </Button>
-          
-          {toggleVoice && (
-            <Button
-              onClick={toggleVoice}
-              variant="outline"
-              size="sm"
-              className="text-xs"
-              title="Toggle voice"
-            >
-              {isMale ? "Male Voice" : "Female Voice"}
-            </Button>
-          )}
-          
-          <Button
             onClick={handleCopy}
             variant="outline"
             size="icon"
             className="rounded-full w-10 h-10"
             title="Copy to clipboard"
           >
-            <Copy className="h-4 w-4" />
+            <Copy className="h-5 w-5" />
           </Button>
           
           <Button
@@ -107,7 +77,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             )}
             title={isFavorited ? "Remove from favorites" : "Add to favorites"}
           >
-            <Heart className="h-4 w-4" />
+            <Heart className="h-5 w-5" />
           </Button>
         </div>
       </CardContent>

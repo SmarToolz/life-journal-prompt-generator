@@ -78,7 +78,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
             {journalGoals.map((goal) => (
               <SelectItem key={goal.value} value={goal.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span>{goal.emoji}</span> {goal.label}
+                  <span className="text-xl">{goal.emoji}</span> {goal.label}
                 </span>
               </SelectItem>
             ))}
@@ -98,7 +98,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
             {journalTypes.map((type) => (
               <SelectItem key={type.value} value={type.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span>{type.emoji}</span> {type.label}
+                  <span className="text-xl">{type.emoji}</span> {type.label}
                 </span>
               </SelectItem>
             ))}
