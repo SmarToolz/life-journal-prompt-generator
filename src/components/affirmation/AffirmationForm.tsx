@@ -67,18 +67,18 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
   return (
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <div className="space-y-2">
-        <label htmlFor="journalGoal" className="text-lg font-medium text-purple-800">
+        <label htmlFor="journalGoal" className="text-lg font-medium text-[#403E43]">
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
-          <SelectTrigger id="journalGoal" className="bg-white/90 backdrop-blur-sm border-purple-200">
+          <SelectTrigger id="journalGoal" className="bg-white/90 backdrop-blur-sm border-purple-200 text-[#403E43]">
             <SelectValue placeholder="Select a journal goal" />
           </SelectTrigger>
           <SelectContent position="popper" className="bg-white border-purple-200">
             {journalGoals.map((goal) => (
               <SelectItem key={goal.value} value={goal.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-xl">{goal.emoji}</span> {goal.label}
+                  <span className="text-2xl">{goal.emoji}</span> <span className="text-[#403E43]">{goal.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -87,18 +87,18 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="journalType" className="text-lg font-medium text-purple-800">
+        <label htmlFor="journalType" className="text-lg font-medium text-[#403E43]">
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
-          <SelectTrigger id="journalType" className="bg-white/90 backdrop-blur-sm border-purple-200">
+          <SelectTrigger id="journalType" className="bg-white/90 backdrop-blur-sm border-purple-200 text-[#403E43]">
             <SelectValue placeholder="Select a journal type" />
           </SelectTrigger>
           <SelectContent position="popper" className="bg-white border-purple-200">
             {journalTypes.map((type) => (
               <SelectItem key={type.value} value={type.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-xl">{type.emoji}</span> {type.label}
+                  <span className="text-2xl">{type.emoji}</span> <span className="text-[#403E43]">{type.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -107,7 +107,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="promptFocus" className="text-lg font-medium text-purple-800">
+        <label htmlFor="promptFocus" className="text-lg font-medium text-[#403E43]">
           Prompt Focus:
         </label>
         <Input
@@ -116,7 +116,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
           placeholder="Enter an optional focus"
           value={promptFocus}
           onChange={(e) => setPromptFocus(e.target.value)}
-          className="bg-white/90 backdrop-blur-sm border-purple-200"
+          className="bg-white/90 backdrop-blur-sm border-purple-200 text-[#403E43]"
         />
       </div>
 

@@ -101,15 +101,15 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, 
-    #c084fc,
-    #8b5cf6,
-    #7c3aed,
-    #6d28d9,
-    #8b5cf6,
-    #c084fc
+    #4DD0E1,
+    #26C6DA,
+    #00BCD4,
+    #00ACC1,
+    #0097A7,
+    #00838F
   );
   background-size: 600% 100%;
-  animation: gradient-wave 30s ease infinite; /* Slowed down by 50% from 15s to 30s */
+  animation: gradient-wave 60s ease infinite; /* Slowed down from 30s to 60s */
   opacity: 0.8;
 }
 
@@ -123,7 +123,7 @@
   background: inherit;
   transform: translateY(-50%);
   filter: blur(10px);
-  animation: wave-motion 6s ease-in-out infinite alternate; /* Slowed down from 3s to 6s */
+  animation: wave-motion 12s ease-in-out infinite alternate; /* Slowed down from 6s to 12s */
   transition: all 0.3s ease;
 }
 

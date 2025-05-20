@@ -51,7 +51,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
       </div>
       <CardContent className="p-6 flex flex-col items-center justify-center space-y-6">
         <div className="text-center">
-          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-[#403E43]">
             {affirmation}
           </p>
         </div>
@@ -64,7 +64,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             className="rounded-full w-10 h-10"
             title="Copy to clipboard"
           >
-            <Copy className="h-5 w-5" />
+            <Copy className="h-5 w-5 text-[#403E43]" />
           </Button>
           
           <Button

@@ -40,10 +40,10 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <div className="container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-purple-800">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#fb933b' }}>
             Life Journal Prompt Generator
           </h1>
-          <p className="text-lg text-purple-600 max-w-lg mx-auto">
+          <p className="text-lg max-w-lg mx-auto text-[#403E43]">
             Daily Ideas for Gratitude, Dreams, and More
           </p>
           
@@ -94,7 +94,7 @@ const Index = () => {
           </div>
         </div>
 
-        <footer className="mt-16 text-center text-sm text-purple-600">
+        <footer className="mt-16 text-center text-sm text-[#403E43]">
           <p>Take a deep breath and let these prompts guide your journaling journey</p>
         </footer>
       </div>
