@@ -47,7 +47,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
   return (
     <Card className={cn("overflow-hidden", className)}>
       <div className="relative h-8 overflow-hidden">
-        <div className="soft-wave-animation absolute inset-0 h-full w-full"></div>
+        <div className="breathing-wave-animation absolute inset-0 h-full w-full"></div>
       </div>
       <CardContent className="p-6 flex flex-col items-center justify-center space-y-6">
         <div className="text-center">
