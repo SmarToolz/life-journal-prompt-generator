@@ -48,22 +48,19 @@ const Index = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-charcoal">
               Life Journal Prompt Generator
             </h1>
-          </div>
-          <p className="text-lg max-w-lg mx-auto text-charcoal">
-            Daily Ideas for Gratitude, Dreams, and More
-          </p>
-          
-          <div className="absolute right-0 top-0">
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full bg-white hover:bg-red-50 border-red-200"
+              className="rounded-full bg-white hover:bg-red-50 border-red-200 ml-6"
               onClick={() => setShowFavorites(true)}
               title="Favorites Library"
             >
               <Heart className="h-6 w-6 text-red-500 fill-red-500" />
             </Button>
           </div>
+          <p className="text-lg max-w-lg mx-auto text-charcoal">
+            Daily Ideas for Gratitude, Dreams, and More
+          </p>
         </header>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -128,7 +125,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/515855b2-0759-4b67-aec5-26ca9e56c57e.png" 
               alt="Meditation" 
-              className="w-6 h-6 animate-float-meditation"
+              className="w-12 h-12 animate-float-meditation"
             />
             <p className="text-xl font-medium text-charcoal">
               Take a deep breath and let these prompts guide your journaling journey

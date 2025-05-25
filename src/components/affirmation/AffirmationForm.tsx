@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -55,12 +54,11 @@ const journalTypes: JournalTypeOption[] = [
 const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerating, className }) => {
   const [journalGoal, setJournalGoal] = useState<string>("");
   const [journalType, setJournalType] = useState<string>("");
-  const [promptFocus, setPromptFocus] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (journalGoal && journalType) {
-      onGenerate(journalType, journalGoal, promptFocus);
+      onGenerate(journalType, journalGoal, "");
     }
   };
 
@@ -78,7 +76,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
             {journalGoals.map((goal) => (
               <SelectItem key={goal.value} value={goal.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-3xl">{goal.emoji}</span> <span className="text-charcoal">{goal.label}</span>
+                  <span className="text-2xl">{goal.emoji}</span> <span className="text-charcoal">{goal.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -98,7 +96,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
             {journalTypes.map((type) => (
               <SelectItem key={type.value} value={type.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-3xl">{type.emoji}</span> <span className="text-charcoal">{type.label}</span>
+                  <span className="text-2xl">{type.emoji}</span> <span className="text-charcoal">{type.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -106,23 +104,9 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
         </Select>
       </div>
 
-      <div className="space-y-2">
-        <label htmlFor="promptFocus" className="text-lg font-medium text-charcoal">
-          Prompt Focus:
-        </label>
-        <Input
-          id="promptFocus"
-          type="text"
-          placeholder="Enter an optional focus"
-          value={promptFocus}
-          onChange={(e) => setPromptFocus(e.target.value)}
-          className="bg-pastel-blue border-gray-200 text-charcoal placeholder:text-charcoal/50"
-        />
-      </div>
-
       <Button 
         type="submit" 
-        className="w-full bg-pastel-green hover:bg-pastel-green/80 text-charcoal font-medium"
+        className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
         disabled={!journalGoal || !journalType || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}
