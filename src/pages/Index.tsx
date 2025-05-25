@@ -37,13 +37,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <div className="container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#fb933b' }}>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-charcoal">
             Life Journal Prompt Generator
           </h1>
-          <p className="text-lg max-w-lg mx-auto text-[#403E43]">
+          <p className="text-lg max-w-lg mx-auto text-charcoal">
             Daily Ideas for Gratitude, Dreams, and More
           </p>
           
@@ -51,17 +51,17 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full bg-white hover:bg-purple-100"
+              className="rounded-full bg-white hover:bg-red-50 border-red-200"
               onClick={() => setShowFavorites(true)}
               title="Favorites Library"
             >
-              <Heart className="h-6 w-6 text-red-500" />
+              <Heart className="h-6 w-6 text-red-500 fill-red-500" />
             </Button>
           </div>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-200">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
             <AffirmationForm 
               onGenerate={handleGenerateAffirmation} 
               isGenerating={isGenerating}
@@ -76,17 +76,17 @@ const Index = () => {
                     <AffirmationCard 
                       key={index}
                       affirmation={affirmation}
-                      className="bg-white/70 backdrop-blur-sm shadow-lg animate-float border border-purple-200"
+                      className="bg-white shadow-sm animate-float border border-gray-100"
                     />
                   ))}
                 </div>
               </>
             ) : (
-              <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col items-center justify-center h-64 text-center border border-purple-200">
-                <h3 className="text-xl font-medium mb-3 text-purple-700">
+              <div className="bg-white p-8 rounded-xl shadow-sm flex flex-col items-center justify-center h-64 text-center border border-gray-100">
+                <h3 className="text-xl font-medium mb-3 text-charcoal">
                   Your journal prompts will appear here
                 </h3>
-                <p className="text-purple-600">
+                <p className="text-charcoal/70">
                   Select options and fill in the form to generate your personalized journal prompts
                 </p>
               </div>
@@ -94,8 +94,17 @@ const Index = () => {
           </div>
         </div>
 
-        <footer className="mt-16 text-center text-sm text-[#403E43]">
-          <p>Take a deep breath and let these prompts guide your journaling journey</p>
+        <footer className="mt-16 text-center">
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <img 
+              src="/lovable-uploads/515855b2-0759-4b67-aec5-26ca9e56c57e.png" 
+              alt="Meditation" 
+              className="w-8 h-8 animate-float-meditation"
+            />
+            <p className="text-lg font-medium text-charcoal">
+              Take a deep breath and let these prompts guide your journaling journey
+            </p>
+          </div>
         </footer>
       </div>
       

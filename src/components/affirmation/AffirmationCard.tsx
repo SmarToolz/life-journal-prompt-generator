@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavorites } from '@/contexts/FavoritesContext';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface AffirmationCardProps {
   affirmation: string;
@@ -47,11 +47,11 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
   return (
     <Card className={cn("overflow-hidden", className)}>
       <div className="relative h-8 overflow-hidden">
-        <div className="animated-wave absolute inset-0 h-full w-full opacity-70"></div>
+        <div className="soft-wave-animation absolute inset-0 h-full w-full"></div>
       </div>
       <CardContent className="p-6 flex flex-col items-center justify-center space-y-6">
         <div className="text-center">
-          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-[#403E43]">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-charcoal">
             {affirmation}
           </p>
         </div>
@@ -61,10 +61,10 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             onClick={handleCopy}
             variant="outline"
             size="icon"
-            className="rounded-full w-10 h-10"
+            className="rounded-full w-10 h-10 border-gray-200 hover:bg-gray-50"
             title="Copy to clipboard"
           >
-            <Copy className="h-5 w-5 text-[#403E43]" />
+            <Copy className="h-5 w-5 text-charcoal" />
           </Button>
           
           <Button
@@ -73,11 +73,13 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             size="icon"
             className={cn(
               "rounded-full w-10 h-10",
-              isFavorited && "bg-primary text-primary-foreground"
+              isFavorited 
+                ? "bg-red-500 hover:bg-red-600 text-white" 
+                : "border-gray-200 hover:bg-red-50"
             )}
             title={isFavorited ? "Remove from favorites" : "Add to favorites"}
           >
-            <Heart className="h-5 w-5" />
+            <Heart className={cn("h-5 w-5", isFavorited ? "fill-white" : "text-red-500")} />
           </Button>
         </div>
       </CardContent>
