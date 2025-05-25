@@ -129,7 +129,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
             <AlertDialogAction onClick={handleClearAll} className="bg-red-500 hover:bg-red-600">Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </Dialog>
+      </AlertDialog>
     </>
   );
 };
