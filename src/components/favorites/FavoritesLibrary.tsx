@@ -47,17 +47,17 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto bg-white">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-xl text-purple-800">
+            <DialogTitle className="flex items-center gap-2 text-xl text-charcoal">
               Favorites Library
             </DialogTitle>
-            <DialogDescription className="text-purple-600">
+            <DialogDescription className="text-charcoal/70">
               Your saved journal prompts for daily inspiration.
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 my-4">
             {favorites.length === 0 ? (
-              <div className="text-center py-10 text-muted-foreground">
+              <div className="text-center py-10 text-charcoal/60">
                 No saved journal prompts yet. Generate some prompts and save your favorites!
               </div>
             ) : (
@@ -67,13 +67,14 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                     key={index} 
                     className="p-4 rounded-lg bg-secondary/30 backdrop-blur-sm relative border border-purple-100"
                   >
-                    <p className="pr-16">{affirmation}</p>
+                    <p className="pr-16 text-charcoal">{affirmation}</p>
                     <div className="absolute top-2 right-2 flex gap-1">
                       <Button 
                         variant="ghost" 
                         size="icon" 
                         onClick={() => handleCopy(affirmation)}
                         title="Copy to clipboard"
+                        className="text-charcoal hover:text-charcoal"
                       >
                         <Clipboard className="h-4 w-4" />
                       </Button>
@@ -82,6 +83,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                         size="icon"
                         onClick={() => handleRemove(affirmation)}
                         title="Remove from favorites"
+                        className="text-charcoal hover:text-charcoal"
                       >
                         <X className="h-4 w-4" />
                       </Button>
@@ -96,7 +98,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
             <Button 
               variant="outline" 
               onClick={() => onOpenChange(false)}
-              className="border-purple-200 text-purple-700"
+              className="border-gray-200 text-charcoal hover:text-charcoal"
             >
               Close
             </Button>
@@ -117,13 +119,13 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
       <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
         <AlertDialogContent className="bg-white">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-purple-800">Are you sure?</AlertDialogTitle>
-            <AlertDialogDescription className="text-purple-600">
+            <AlertDialogTitle className="text-charcoal">Are you sure?</AlertDialogTitle>
+            <AlertDialogDescription className="text-charcoal/70">
               Are you sure you want to clear all your saved journal prompts?
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="border-purple-200 text-purple-700">Cancel</AlertDialogCancel>
+            <AlertDialogCancel className="border-gray-200 text-charcoal hover:text-charcoal">Cancel</AlertDialogCancel>
             <AlertDialogAction onClick={handleClearAll} className="bg-red-500 hover:bg-red-600">Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

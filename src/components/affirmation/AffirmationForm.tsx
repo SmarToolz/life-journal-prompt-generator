@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -86,30 +85,29 @@ const journalTypes: JournalTypeOption[] = [
 const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerating, className }) => {
   const [journalGoal, setJournalGoal] = useState<string>("");
   const [journalType, setJournalType] = useState<string>("");
-  const [promptFocus, setPromptFocus] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (journalGoal && journalType) {
-      onGenerate(journalType, journalGoal, promptFocus);
+      onGenerate(journalType, journalGoal, "");
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <div className="space-y-2">
-        <label htmlFor="journalGoal" className="text-lg font-medium text-[#403E43]">
+        <label htmlFor="journalGoal" className="text-lg font-medium text-charcoal">
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
-          <SelectTrigger id="journalGoal" className="bg-white/90 backdrop-blur-sm border-purple-200 text-[#403E43]">
+          <SelectTrigger id="journalGoal" className="bg-pastel-pink border-gray-200 text-charcoal">
             <SelectValue placeholder="Select a journal goal" />
           </SelectTrigger>
-          <SelectContent position="popper" className="bg-white border-purple-200">
+          <SelectContent position="popper" className="bg-white border-gray-200">
             {journalGoals.map((goal) => (
               <SelectItem key={goal.value} value={goal.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl">{goal.emoji}</span> <span className="text-[#403E43]">{goal.label}</span>
+                  <span className="text-2xl">{goal.emoji}</span> <span className="text-charcoal">{goal.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -118,42 +116,28 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="journalType" className="text-lg font-medium text-[#403E43]">
+        <label htmlFor="journalType" className="text-lg font-medium text-charcoal">
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
-          <SelectTrigger id="journalType" className="bg-white/90 backdrop-blur-sm border-purple-200 text-[#403E43]">
+          <SelectTrigger id="journalType" className="bg-pastel-orange border-gray-200 text-charcoal">
             <SelectValue placeholder="Select a journal type" />
           </SelectTrigger>
-          <SelectContent position="popper" className="bg-white border-purple-200">
+          <SelectContent position="popper" className="bg-white border-gray-200">
             {journalTypes.map((type) => (
               <SelectItem key={type.value} value={type.value}>
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl">{type.emoji}</span> <span className="text-[#403E43]">{type.label}</span>
+                  <span className="text-2xl">{type.emoji}</span> <span className="text-charcoal">{type.label}</span>
                 </span>
               </SelectItem>
             ))}
           </SelectContent>
         </Select>
-      </div>
-
-      <div className="space-y-2">
-        <label htmlFor="promptFocus" className="text-lg font-medium text-[#403E43]">
-          Prompt Focus:
-        </label>
-        <Input
-          id="promptFocus"
-          type="text"
-          placeholder="Enter an optional focus"
-          value={promptFocus}
-          onChange={(e) => setPromptFocus(e.target.value)}
-          className="bg-white/90 backdrop-blur-sm border-purple-200 text-[#403E43]"
-        />
       </div>
 
       <Button 
         type="submit" 
-        className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+        className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
         disabled={!journalGoal || !journalType || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}
