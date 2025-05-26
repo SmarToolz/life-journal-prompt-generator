@@ -1,3 +1,4 @@
+import promptsData from './prompts.json';
 
 // Helper function to generate affirmations based on category and user input
 export const generateAffirmation = (
@@ -5,6 +6,8 @@ export const generateAffirmation = (
   goal: string = "",
   name: string = ""
 ): string => {
+
+  console.log('category', category, goal, name)
   // Base affirmations for each category
   const affirmations: Record<string, string[]> = {
     "self-love": [
@@ -79,8 +82,10 @@ export const generateAffirmation = (
     ],
   };
 
+    const goalPrompts = promptsData.journalGoals[goal];
+
   // Select random affirmation from the chosen category
-  const categoryAffirmations = affirmations[category] || affirmations["self-love"];
+  const categoryAffirmations = goalPrompts[category] || goalPrompts["Standard"];
   const baseAffirmation = categoryAffirmations[Math.floor(Math.random() * categoryAffirmations.length)];
   
   // Personalize the affirmation if a name is provided

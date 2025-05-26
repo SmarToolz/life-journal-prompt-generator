@@ -24,33 +24,64 @@ type JournalTypeOption = {
 };
 
 const journalGoals: JournalGoalOption[] = [
-  { value: "standard-entry", label: "Standard Entry", emoji: "📝" },
-  { value: "self-reflection", label: "Self-Reflection", emoji: "🪞" },
-  { value: "stress-reduction", label: "Stress Reduction", emoji: "🧘" },
-  { value: "problem-solving", label: "Problem Solving", emoji: "🧩" },
-  { value: "goal-setting", label: "Goal Setting", emoji: "🎯" },
-  { value: "boosting-memory", label: "Boosting Memory", emoji: "🧠" },
-  { value: "emotional-release", label: "Emotional Release", emoji: "💔" },
-  { value: "enhancing-creativity", label: "Enhancing Creativity", emoji: "🎨" },
-  { value: "tracking-development", label: "Tracking Development", emoji: "📊" },
-  { value: "improving-writing-skills", label: "Improving Writing Skills", emoji: "✍️" },
-  { value: "capturing-memories", label: "Capturing Memories", emoji: "📸" },
+  { value: "Standard Entry", label: "Standard Entry", emoji: "📝" },
+  { value: "Self-Reflection", label: "Self-Reflection", emoji: "🪞" },
+  { value: "Stress Reduction", label: "Stress Reduction", emoji: "🧘" },
+  { value: "Problem Solving", label: "Problem Solving", emoji: "🧩" },
+  { value: "Goal Setting", label: "Goal Setting", emoji: "🎯" },
+  { value: "Boosting Memory", label: "Boosting Memory", emoji: "🧠" },
+  { value:"Emotional Release", label: "Emotional Release", emoji: "💔" },
+  { value: "Enhancing Creativity", label: "Enhancing Creativity", emoji: "🎨" },
+  { value: "Tracking Development", label: "Tracking Development", emoji: "📊" },
+  { value: "Improving Writing Skills", label: "Improving Writing Skills", emoji: "✍️" },
+  { value: "Capturing Memories", label: "Capturing Memories", emoji: "📸" },
 ];
 
 const journalTypes: JournalTypeOption[] = [
-  { value: "standard", label: "Standard", emoji: "📔" },
-  { value: "gratitude", label: "Gratitude Journal", emoji: "🙏" },
-  { value: "bullet", label: "Bullet Journal", emoji: "•️" },
-  { value: "dream", label: "Dream Journal", emoji: "💤" },
-  { value: "travel", label: "Travel Journal", emoji: "✈️" },
-  { value: "art", label: "Art Journal", emoji: "🎭" },
-  { value: "prayer", label: "Prayer Journal", emoji: "📿" },
-  { value: "food", label: "Food Journal", emoji: "🍽️" },
-  { value: "health", label: "Health and Wellness Journal", emoji: "💪" },
-  { value: "project", label: "Project Journal", emoji: "📋" },
-  { value: "learning", label: "Learning Journal", emoji: "📚" },
-  { value: "reading", label: "Reading Journal", emoji: "📖" },
+  { value: "Standard", label: "Standard", emoji: "📔" },
+  { value: "Gratitude Journal", label: "Gratitude Journal", emoji: "🙏" },
+  { value: "Bullet Journal", label: "Bullet Journal", emoji: "•️" },
+  { value:"Dream Journal", label: "Dream Journal", emoji: "💤" },
+  { value: "Travel Journal", label: "Travel Journal", emoji: "✈️" },
+  { value: "Art Journal", label: "Art Journal", emoji: "🎭" },
+  { value: "Prayer Journal", label: "Prayer Journal", emoji: "📿" },
+  { value: "Food Journal", label: "Food Journal", emoji: "🍽️" },
+  { value: "Health and Wellness Journal", label: "Health and Wellness Journal", emoji: "💪" },
+  { value: "Project Journal", label: "Project Journal", emoji: "📋" },
+  { value:  "Learning Journal", label: "Learning Journal", emoji: "📚" },
+  { value: "Reading Journal", label: "Reading Journal", emoji: "📖" },
 ];
+
+
+
+// const journalGoals: JournalGoalOption[] = [
+//   { value: "standard-entry", label: "Standard Entry", emoji: "📝" },
+//   { value: "self-reflection", label: "Self-Reflection", emoji: "🪞" },
+//   { value: "stress-reduction", label: "Stress Reduction", emoji: "🧘" },
+//   { value: "problem-solving", label: "Problem Solving", emoji: "🧩" },
+//   { value: "goal-setting", label: "Goal Setting", emoji: "🎯" },
+//   { value: "boosting-memory", label: "Boosting Memory", emoji: "🧠" },
+//   { value: "emotional-release", label: "Emotional Release", emoji: "💔" },
+//   { value: "enhancing-creativity", label: "Enhancing Creativity", emoji: "🎨" },
+//   { value: "tracking-development", label: "Tracking Development", emoji: "📊" },
+//   { value: "improving-writing-skills", label: "Improving Writing Skills", emoji: "✍️" },
+//   { value: "capturing-memories", label: "Capturing Memories", emoji: "📸" },
+// ];
+
+// const journalTypes: JournalTypeOption[] = [
+//   { value: "standard", label: "Standard", emoji: "📔" },
+//   { value: "gratitude", label: "Gratitude Journal", emoji: "🙏" },
+//   { value: "bullet", label: "Bullet Journal", emoji: "•️" },
+//   { value: "dream", label: "Dream Journal", emoji: "💤" },
+//   { value: "travel", label: "Travel Journal", emoji: "✈️" },
+//   { value: "art", label: "Art Journal", emoji: "🎭" },
+//   { value: "prayer", label: "Prayer Journal", emoji: "📿" },
+//   { value: "food", label: "Food Journal", emoji: "🍽️" },
+//   { value: "health", label: "Health and Wellness Journal", emoji: "💪" },
+//   { value: "project", label: "Project Journal", emoji: "📋" },
+//   { value: "learning", label: "Learning Journal", emoji: "📚" },
+//   { value: "reading", label: "Reading Journal", emoji: "📖" },
+// ];
 
 const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerating, className }) => {
   const [journalGoal, setJournalGoal] = useState<string>("");
