@@ -1,5 +1,8 @@
 import promptsData from './prompts.json';
 
+// Track used prompts for each goal-type combination to avoid immediate repeats
+const usedPromptsTracker: Record<string, string[]> = {};
+
 // Helper function to generate affirmations based on category and user input
 export const generateAffirmation = (
   category: string,
@@ -101,6 +104,75 @@ export const generateAffirmation = (
   }
   
   return personalizedAffirmation;
+};
+
+// New function to generate multiple unique affirmations
+export const generateUniqueAffirmations = (
+  category: string,
+  goal: string = "",
+  name: string = "",
+  count: number = 3
+): string[] => {
+  console.log('Generating unique affirmations for:', category, goal, name);
+  
+  const goalPrompts = promptsData.journalGoals[goal];
+  const categoryAffirmations = goalPrompts[category] || goalPrompts["Standard"];
+  
+  console.log('Available prompts:', categoryAffirmations.length);
+  
+  // Create a unique key for this goal-type combination
+  const combinationKey = `${goal}-${category}`;
+  
+  // Get previously used prompts for this combination
+  const previouslyUsed = usedPromptsTracker[combinationKey] || [];
+  
+  // Create a pool of available prompts, excluding recently used ones
+  let availablePrompts = categoryAffirmations.filter(prompt => !previouslyUsed.includes(prompt));
+  
+  // If we don't have enough unused prompts, reset and use all prompts
+  if (availablePrompts.length < count) {
+    availablePrompts = [...categoryAffirmations];
+    usedPromptsTracker[combinationKey] = []; // Reset the tracker
+    console.log('Reset prompt tracker for combination:', combinationKey);
+  }
+  
+  // Select unique prompts for this generation
+  const selectedPrompts: string[] = [];
+  const tempAvailable = [...availablePrompts];
+  
+  for (let i = 0; i < count && tempAvailable.length > 0; i++) {
+    const randomIndex = Math.floor(Math.random() * tempAvailable.length);
+    const selectedPrompt = tempAvailable[randomIndex];
+    selectedPrompts.push(selectedPrompt);
+    tempAvailable.splice(randomIndex, 1); // Remove to ensure uniqueness within this generation
+  }
+  
+  // Update the used prompts tracker
+  if (!usedPromptsTracker[combinationKey]) {
+    usedPromptsTracker[combinationKey] = [];
+  }
+  usedPromptsTracker[combinationKey].push(...selectedPrompts);
+  
+  // Keep only the most recent prompts in the tracker (to eventually allow reuse)
+  if (usedPromptsTracker[combinationKey].length > categoryAffirmations.length * 0.7) {
+    usedPromptsTracker[combinationKey] = usedPromptsTracker[combinationKey].slice(-Math.floor(categoryAffirmations.length * 0.5));
+  }
+  
+  console.log('Selected prompts:', selectedPrompts.length);
+  console.log('Used prompts tracker size:', usedPromptsTracker[combinationKey].length);
+  
+  // Personalize the affirmations if a name is provided
+  return selectedPrompts.map(baseAffirmation => {
+    if (name) {
+      const personalizations = [
+        `${name}, ${baseAffirmation.toLowerCase()}`,
+        `${baseAffirmation} This is your truth, ${name}.`,
+        `Remember, ${name}: ${baseAffirmation.toLowerCase()}`,
+      ];
+      return personalizations[Math.floor(Math.random() * personalizations.length)];
+    }
+    return baseAffirmation;
+  });
 };
 
 // Get the emoji for a specific category

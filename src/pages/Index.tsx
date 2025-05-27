@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import AffirmationForm from '@/components/affirmation/AffirmationForm';
 import AffirmationCard from '@/components/affirmation/AffirmationCard';
 import CustomPromptsTab from '@/components/custom/CustomPromptsTab';
-import { generateAffirmation, getCategoryEmoji } from '@/utils/affirmationGenerator';
+import { generateUniqueAffirmations, getCategoryEmoji } from '@/utils/affirmationGenerator';
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Heart, BookOpen } from "lucide-react";
@@ -23,10 +22,8 @@ const Index = () => {
     
     // Simulate API call with setTimeout
     setTimeout(() => {
-      // Generate three unique affirmations
-      const newAffirmations = Array.from({ length: 3 }, () => 
-        generateAffirmation(category, goal, promptFocus)
-      );
+      // Generate three unique affirmations using the new function
+      const newAffirmations = generateUniqueAffirmations(category, goal, promptFocus, 3);
       
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
@@ -125,7 +122,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/515855b2-0759-4b67-aec5-26ca9e56c57e.png" 
               alt="Meditation" 
-              className="w-12 h-12 animate-float-meditation"
+              className="w-24 h-24 animate-float-meditation"
             />
             <p className="text-xl font-medium text-charcoal">
               Take a deep breath and let these prompts guide your journaling journey
