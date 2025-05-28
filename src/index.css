@@ -103,21 +103,119 @@
   }
 }
 
+/* Animated Galaxy Background */
+.galaxy-background {
+  background-image: url('/lovable-uploads/900384b2-a91a-4a21-8145-9071a352f697.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure the background animation plays continuously */
+.galaxy-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/lovable-uploads/900384b2-a91a-4a21-8145-9071a352f697.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  animation: galaxy-float 20s ease-in-out infinite;
+}
+
+@keyframes galaxy-float {
+  0%, 100% { 
+    background-position: center center;
+    transform: scale(1);
+  }
+  25% { 
+    background-position: center top;
+    transform: scale(1.05);
+  }
+  50% { 
+    background-position: center bottom;
+    transform: scale(1.1);
+  }
+  75% { 
+    background-position: center top;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .galaxy-background::before {
+    background-attachment: scroll;
+    background-size: cover;
+    animation: galaxy-float-mobile 15s ease-in-out infinite;
+  }
+}
+
+@keyframes galaxy-float-mobile {
+  0%, 100% { 
+    background-position: center center;
+    transform: scale(1);
+  }
+  50% { 
+    background-position: center bottom;
+    transform: scale(1.02);
+  }
+}
+
+/* Glassmorphism Effect */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Enhanced glassmorphism for better mobile performance */
+@media (max-width: 768px) {
+  .glass-morphism {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-morphism {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+/* Text shadow utilities for better readability */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
 /* Breathing wave animation - slow and subtle */
 .breathing-wave-animation {
   position: relative;
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, 
-    #14B8A6,
-    #06B6D4,
-    #0EA5E9,
-    #3B82F6,
-    #6366F1
+    rgba(148, 163, 184, 0.6),
+    rgba(99, 102, 241, 0.6),
+    rgba(139, 92, 246, 0.6),
+    rgba(219, 39, 119, 0.6),
+    rgba(236, 72, 153, 0.6)
   );
   background-size: 300% 100%;
   animation: breathing-gradient 4s ease-in-out infinite, breathing-wave 6s ease-in-out infinite;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .breathing-wave-animation::before {
