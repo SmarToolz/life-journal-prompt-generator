@@ -103,34 +103,54 @@
   }
 }
 
-/* Galaxy Background */
+/* Animated WebP Galaxy Background */
 .galaxy-background {
-  background-image: url('/lovable-uploads/c9741d96-9e33-4dbc-9f86-bdae018e8aa0.png');
+  background-image: url('/lovable-uploads/ad6bd33f-ac61-4f2b-8265-efa653f185b0.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure the background animation plays continuously */
+.galaxy-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/lovable-uploads/ad6bd33f-ac61-4f2b-8265-efa653f185b0.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
   animation: galaxy-float 20s ease-in-out infinite;
 }
 
 @keyframes galaxy-float {
   0%, 100% { 
     background-position: center center;
+    transform: scale(1);
   }
   25% { 
     background-position: center top;
+    transform: scale(1.05);
   }
   50% { 
     background-position: center bottom;
+    transform: scale(1.1);
   }
   75% { 
     background-position: center top;
+    transform: scale(1.05);
   }
 }
 
 @media (max-width: 768px) {
-  .galaxy-background {
+  .galaxy-background::before {
     background-attachment: scroll;
     background-size: cover;
     animation: galaxy-float-mobile 15s ease-in-out infinite;
@@ -140,9 +160,11 @@
 @keyframes galaxy-float-mobile {
   0%, 100% { 
     background-position: center center;
+    transform: scale(1);
   }
   50% { 
     background-position: center bottom;
+    transform: scale(1.02);
   }
 }
 
