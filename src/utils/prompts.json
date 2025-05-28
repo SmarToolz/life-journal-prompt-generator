@@ -8,7 +8,12 @@
         "Who could you ask for help or advice on this problem, and what might they suggest?",
         "What’s the worst-case scenario if this problem isn’t solved, and how can you prepare for that?",
         "Reflect on a past problem you solved successfully. What strategies can you apply here?",
-        "What resources (time, tools, knowledge) do you need to solve this problem effectively?"
+        "What resources (time, tools, knowledge) do you need to solve this problem effectively?",
+        "How has this problem changed your perspective today?",
+        "What’s one creative approach you haven’t considered yet?",
+        "Describe a moment when you felt progress on this issue.",
+        "Who else might have faced a similar problem?",
+        "Write a plan for the next step to resolve this problem."
       ],
       "Gratitude Journal": [
         "What problem are you currently facing, and what are you grateful for that might help you through it?",
@@ -17,7 +22,12 @@
         "Who in your life could offer support or a fresh perspective on this problem?",
         "Reflect on a time a challenge turned into a growth opportunity. How might that apply here?",
         "Write about something you’ve overcome that makes you feel capable of tackling this problem.",
-        "What resources or strengths do you already have to address this problem?"
+        "What resources or strengths do you already have to address this problem?",
+        "What gratitude can you find in a small step forward?",
+        "Who can you thank for a past solution that worked?",
+        "Describe a moment of relief related to this problem.",
+        "What’s one thing you’re thankful for in this challenge?",
+        "Write a gratitude note to inspire your next move."
       ],
       "Bullet Journal": [
         "List the key components of the problem in bullet points.",
@@ -26,7 +36,12 @@
         "Bullet point 3 obstacles you’re facing with this problem and how to overcome them.",
         "Write a to-do list for solving this problem over the next week.",
         "List 2 people or resources you can turn to for help with this problem.",
-        "Break the problem into 5 smaller tasks and assign deadlines for each."
+        "Break the problem into 5 smaller tasks and assign deadlines for each.",
+        "Add a bullet for a new resource to explore.",
+        "Track a success moment in bullet form.",
+        "List one unexpected insight about the problem.",
+        "Bullet a potential ally for support.",
+        "Outline a quick win in bullet points."
       ],
       "Dream Journal": [
         "What problem appeared in your dreams last night, and how did it manifest?",
@@ -35,7 +50,12 @@
         "Who from your dream (or real life) might offer guidance on solving this problem?",
         "Reflect on how this dream reflects a past challenge you faced. What can you learn?",
         "Write about a hopeful or resolving moment in your dream that boosts your confidence.",
-        "What resources from your dream (ideas, emotions) can you use to tackle this problem?"
+        "What resources from your dream (ideas, emotions) can you use to tackle this problem?",
+        "How did the dream shift your view of the problem?",
+        "What symbol from the dream can guide you?",
+        "Describe a dream solution you can test.",
+        "Who in the dream felt supportive?",
+        "Write about a dream clue for your next step."
       ],
       "Travel Journal": [
         "What problem are you encountering on your current trip, and what’s its context?",
@@ -44,7 +64,12 @@
         "Who could you connect with at your destination to help solve this problem?",
         "Reflect on a travel challenge you’ve overcome before. How can that inform your approach?",
         "Write about a travel experience that gives you hope for resolving this problem.",
-        "What local resources (guides, maps, people) can assist you with this problem?"
+        "What local resources (guides, maps, people) can assist you with this problem?",
+        "How has travel altered your problem perspective?",
+        "What’s one travel fix you can try now?",
+        "Describe a travel moment of problem-solving.",
+        "Who on the trip can assist you?",
+        "Write a travel plan to tackle this issue."
       ],
       "Art Journal": [
         "What problem can you express through a drawing or sketch today?",
@@ -53,7 +78,12 @@
         "Who could you collaborate with to add depth to your art about this problem?",
         "Reflect on a past artwork that helped you process a challenge. How can you replicate that?",
         "Draw something that symbolizes a strength you have to overcome this problem.",
-        "What art supplies or techniques can you use to explore this problem further?"
+        "What art supplies or techniques can you use to explore this problem further?",
+        "How does art change your problem view?",
+        "Sketch a potential solution visually.",
+        "Describe an artistic breakthrough on this issue.",
+        "Who can inspire your art solution?",
+        "Create a follow-up sketch for progress."
       ],
       "Prayer Journal": [
         "What problem are you bringing to your prayer or meditation today?",
@@ -62,7 +92,12 @@
         "Who or what spiritual figure can you seek support from regarding this problem?",
         "Reflect on a time prayer helped you through a difficulty. How can that guide you now?",
         "Write a prayer of gratitude for a strength that will help you solve this problem.",
-        "What spiritual resources (scriptures, rituals) can you draw on for this problem?"
+        "What spiritual resources (scriptures, rituals) can you draw on for this problem?",
+        "How has prayer shifted your problem approach?",
+        "What faith-based step can you take?",
+        "Describe a prayerful insight on this issue.",
+        "Who spiritually supports you here?",
+        "Write a new prayer for resolution."
       ],
       "Food Journal": [
         "What problem is affecting your eating habits or food choices today?",
@@ -71,7 +106,12 @@
         "Who could you talk to (e.g., a nutritionist) for help with this food-related problem?",
         "Reflect on a time a dietary change helped you overcome a challenge. What worked?",
         "Write about a meal that gives you comfort or strength to face this problem.",
-        "What food resources (recipes, ingredients) can support you in solving this problem?"
+        "What food resources (recipes, ingredients) can support you in solving this problem?",
+        "How does food relate to your problem today?",
+        "What’s one meal to improve your focus?",
+        "Describe a food moment aiding this issue.",
+        "Who can guide your food choices?",
+        "Write a food plan to address this problem."
       ],
       "Health and Wellness Journal": [
         "What health or wellness problem are you dealing with right now?",
@@ -80,7 +120,12 @@
         "Who (e.g., doctor, friend) could offer support for this health-related problem?",
         "Reflect on a past health challenge you overcame. What strategies can you reuse?",
         "Write about a wellness moment that boosts your resilience for this problem.",
-        "What health resources (exercise gear, relaxation techniques) can help you tackle this?"
+        "What health resources (exercise gear, relaxation techniques) can help you tackle this?",
+        "How has wellness impacted this problem?",
+        "What’s one health step to try now?",
+        "Describe a wellness win on this issue.",
+        "Who can support your health effort?",
+        "Write a wellness plan for this problem."
       ],
       "Project Journal": [
         "What problem are you facing in your current project, and what’s its context?",
@@ -89,7 +134,12 @@
         "Who on your project team can assist with solving this problem?",
         "Reflect on a past project where you overcame a similar issue. What worked?",
         "Write about a project success that boosts your confidence in solving this problem.",
-        "What project resources (e.g., tools, time) can help you address this problem?"
+        "What project resources (e.g., tools, time) can help you address this problem?",
+        "How does this problem affect your project flow?",
+        "What’s one project tweak to solve this?",
+        "Describe a project moment of progress.",
+        "Who on the team can help here?",
+        "Write a project plan to resolve this."
       ],
       "Learning Journal": [
         "What problem are you encountering in your learning or studies today?",
@@ -98,7 +148,12 @@
         "Who can you ask for help with this learning-related problem?",
         "Reflect on a time you overcame a learning challenge. What strategies can you apply?",
         "Write about a learning achievement that makes you feel capable of solving this problem.",
-        "What learning resources (e.g., books, online courses) can assist with this problem?"
+        "What learning resources (e.g., books, online courses) can assist with this problem?",
+        "How has learning shaped this problem?",
+        "What’s one study fix to try?",
+        "Describe a learning breakthrough on this issue.",
+        "Who can guide your learning effort?",
+        "Write a study plan to tackle this problem."
       ]
     },
     "Stress Reduction": {
@@ -109,7 +164,12 @@
         "Who can you talk to or lean on for support with this stress?",
         "Reflect on a time you managed stress well. What worked then?",
         "Write about a moment today that brought you peace or calm.",
-        "What resources (e.g., music, exercise) can you use to lower your stress tomorrow?"
+        "What resources (e.g., music, exercise) can you use to lower your stress tomorrow?",
+        "How has stress shifted your day?",
+        "What’s one quick stress-relief technique?",
+        "Describe a calm moment today.",
+        "Who helped you feel less stressed?",
+        "Write a plan to manage stress tomorrow."
       ],
       "Gratitude Journal": [
         "What’s stressing you today, and what are you grateful for despite it?",
@@ -118,7 +178,12 @@
         "Who in your life can you thank for helping you feel less stressed?",
         "Reflect on a stressful time that led to a positive outcome. What can you learn?",
         "Write about a person or thing you’re thankful for that calms you.",
-        "What gratitude resources (e.g., a journal, nature) can support your stress relief?"
+        "What gratitude resources (e.g., a journal, nature) can support your stress relief?",
+        "How does gratitude ease your stress?",
+        "What’s one thankful moment today?",
+        "Describe a gratitude-inspired calm.",
+        "Who can you thank for support?",
+        "Write a gratitude note for stress relief."
       ],
       "Bullet Journal": [
         "List the top 3 stressors in your life right now.",
@@ -127,7 +192,12 @@
         "Bullet point 3 strategies to reduce stress and their outcomes.",
         "Create a weekly plan to manage your stress with specific tasks.",
         "List 2 people or tools you can rely on to lower your stress.",
-        "Outline 5 small stress-relief activities to try this week."
+        "Outline 5 small stress-relief activities to try this week.",
+        "Add a bullet for a new stress tool.",
+        "Track a stress-free moment.",
+        "List one stress insight.",
+        "Bullet a support contact.",
+        "Outline a quick stress fix."
       ],
       "Dream Journal": [
         "What stress appeared in your dreams last night, and how did it feel?",
@@ -136,7 +206,12 @@
         "Who or what in your dream might offer comfort for your stress?",
         "Reflect on a dream that helped you process stress before.",
         "Write about a peaceful dream moment that boosts your calm.",
-        "What dream insights can you use as a resource for stress relief?"
+        "What dream insights can you use as a resource for stress relief?",
+        "How did the dream reflect your stress?",
+        "What’s one dream calm to try?",
+        "Describe a dream relief moment.",
+        "Who in the dream comforted you?",
+        "Write a dream plan for calm."
       ],
       "Travel Journal": [
         "What stress are you experiencing on your current trip?",
@@ -145,7 +220,12 @@
         "Who can you connect with while traveling to help ease your stress?",
         "Reflect on a past trip where you managed stress well. What helped?",
         "Write about a travel memory that brings you relaxation.",
-        "What travel resources (e.g., a guide, a quiet spot) can reduce your stress?"
+        "What travel resources (e.g., a guide, a quiet spot) can reduce your stress?",
+        "How has travel affected your stress?",
+        "What’s one travel calm to try?",
+        "Describe a relaxing travel moment.",
+        "Who on the trip can help?",
+        "Write a travel stress plan."
       ],
       "Art Journal": [
         "What stress can you express through a drawing or painting today?",
@@ -154,7 +234,12 @@
         "Who could you collaborate with to express your stress artistically?",
         "Reflect on an art piece that helped you release stress before.",
         "Draw something that symbolizes peace to counter your stress.",
-        "What art supplies can you use to explore and reduce your stress?"
+        "What art supplies can you use to explore and reduce your stress?",
+        "How does art ease your stress?",
+        "Sketch a stress-relief image.",
+        "Describe an artistic calm moment.",
+        "Who can inspire your art relief?",
+        "Create a follow-up art piece."
       ],
       "Prayer Journal": [
         "What stress are you bringing to your prayer or meditation today?",
@@ -163,7 +248,12 @@
         "Who or what spiritual figure can you seek comfort from for this stress?",
         "Reflect on a time prayer eased your stress. How can you apply that?",
         "Write a prayer of thanks for a source of calm in your life.",
-        "What spiritual practices can you use to manage your stress?"
+        "What spiritual practices can you use to manage your stress?",
+        "How has prayer shifted your stress?",
+        "What’s one prayerful calm step?",
+        "Describe a prayerful relief moment.",
+        "Who spiritually comforts you?",
+        "Write a new prayer for peace."
       ],
       "Food Journal": [
         "What stress is affecting your eating habits or food choices today?",
@@ -172,7 +262,12 @@
         "Who can you consult (e.g., a dietitian) to help with stress-related eating?",
         "Reflect on a time a good meal helped you feel less stressed.",
         "Write about a comforting food that eases your stress.",
-        "What food resources (e.g., recipes, snacks) can support stress relief?"
+        "What food resources (e.g., recipes, snacks) can support stress relief?",
+        "How does food relate to your stress?",
+        "What’s one stress-relief meal?",
+        "Describe a food calm moment.",
+        "Who can guide your eating?",
+        "Write a food plan for stress."
       ],
       "Health and Wellness Journal": [
         "What health or wellness issue is causing you stress right now?",
@@ -181,7 +276,12 @@
         "Who (e.g., a therapist) can support you with this stress-related issue?",
         "Reflect on a past wellness practice that lowered your stress.",
         "Write about a healthy moment that boosts your stress resilience.",
-        "What health resources (e.g., meditation apps) can help manage your stress?"
+        "What health resources (e.g., meditation apps) can help manage your stress?",
+        "How has wellness impacted your stress?",
+        "What’s one health calm to try?",
+        "Describe a wellness relief moment.",
+        "Who can support your health?",
+        "Write a wellness plan for stress."
       ],
       "Project Journal": [
         "What stress is tied to your current project, and why?",
@@ -190,7 +290,12 @@
         "Who on your project team can assist with this stress?",
         "Reflect on a project where you managed stress effectively.",
         "Write about a project success that gives you confidence to handle stress.",
-        "What project resources (e.g., time, tools) can help alleviate your stress?"
+        "What project resources (e.g., time, tools) can help alleviate your stress?",
+        "How does stress affect your project?",
+        "What’s one project fix for stress?",
+        "Describe a project calm moment.",
+        "Who on the team can help?",
+        "Write a project stress plan."
       ],
       "Learning Journal": [
         "What stress is related to your learning or studies today?",
@@ -199,7 +304,12 @@
         "Who can you ask for help with your learning-related stress?",
         "Reflect on a time you overcame stress while learning something new.",
         "Write about a learning achievement that boosts your calm.",
-        "What learning resources (e.g., books, breaks) can help manage your stress?"
+        "What learning resources (e.g., books, breaks) can help manage your stress?",
+        "How has learning affected your stress?",
+        "What’s one study calm to try?",
+        "Describe a learning relief moment.",
+        "Who can guide your learning?",
+        "Write a study plan for stress."
       ]
     },
     "Goal Setting": {
@@ -210,7 +320,12 @@
         "Who can you ask for support or advice to achieve this goal?",
         "Reflect on a past goal you didn’t meet. What can you learn from that?",
         "Write about a success that motivates you to pursue this goal.",
-        "What resources (time, skills, tools) will help you reach this goal?"
+        "What resources (time, skills, tools) will help you reach this goal?",
+        "How does this goal fit your current life?",
+        "What’s one milestone to aim for?",
+        "Describe a motivating moment for this goal.",
+        "Who can cheer you on?",
+        "Write a weekly plan for this goal."
       ],
       "Gratitude Journal": [
         "What goal are you setting, and what are you grateful for to support it?",
@@ -219,7 +334,12 @@
         "Who can you thank for inspiring you to set this goal?",
         "Reflect on a time gratitude helped you stay focused on a goal.",
         "Write about something you’re thankful for that aligns with this goal.",
-        "What gratitude resources can sustain your progress toward this goal?"
+        "What gratitude resources can sustain your progress toward this goal?",
+        "How does gratitude boost your goal?",
+        "What’s one thankful milestone?",
+        "Describe a gratitude-inspired moment.",
+        "Who can you thank for support?",
+        "Write a gratitude note for this goal."
       ],
       "Bullet Journal": [
         "List the key components of your new goal in bullet points.",
@@ -228,7 +348,12 @@
         "Bullet point 3 potential challenges and how to overcome them.",
         "Write a to-do list for the next month to work toward this goal.",
         "List 2 people or tools to help you stay on track with this goal.",
-        "Break the goal into 5 tasks with deadlines in a bullet format."
+        "Break the goal into 5 tasks with deadlines in a bullet format.",
+        "Add a bullet for a new resource.",
+        "Track a goal win.",
+        "List one goal insight.",
+        "Bullet a support contact.",
+        "Outline a quick goal step."
       ],
       "Dream Journal": [
         "What goal appeared in your dreams last night, and how did it feel?",
@@ -237,7 +362,12 @@
         "Who or what in your dream might guide you toward this goal?",
         "Reflect on a dream that inspired a past goal you achieved.",
         "Write about a motivating dream moment tied to this goal.",
-        "What dream insights can you use as a resource for this goal?"
+        "What dream insights can you use as a resource for this goal?",
+        "How did the dream shape your goal?",
+        "What’s one dream step to try?",
+        "Describe a dream goal moment.",
+        "Who in the dream inspired you?",
+        "Write a dream plan for this goal."
       ],
       "Travel Journal": [
         "What travel-related goal are you setting for your next trip?",
@@ -246,7 +376,12 @@
         "Who can you connect with to help achieve this travel goal?",
         "Reflect on a past trip where you met a goal. What worked?",
         "Write about a travel experience that inspires this goal.",
-        "What travel resources (e.g., guides, budget) will support this goal?"
+        "What travel resources (e.g., guides, budget) will support this goal?",
+        "How does travel shape this goal?",
+        "What’s one travel step to try?",
+        "Describe a travel goal moment.",
+        "Who can assist on the trip?",
+        "Write a travel goal plan."
       ],
       "Art Journal": [
         "What artistic goal can you set through a drawing or painting?",
@@ -255,7 +390,12 @@
         "Who could you collaborate with to achieve this artistic goal?",
         "Reflect on an art project that met a past goal. How can you replicate it?",
         "Draw something that symbolizes your motivation for this goal.",
-        "What art supplies or techniques will help you reach this goal?"
+        "What art supplies or techniques will help you reach this goal?",
+        "How does art enhance this goal?",
+        "Sketch a goal milestone.",
+        "Describe an art goal moment.",
+        "Who can inspire your art goal?",
+        "Create a follow-up art plan."
       ],
       "Prayer Journal": [
         "What goal are you bringing to your prayer or meditation today?",
@@ -264,7 +404,12 @@
         "Who or what spiritual figure can support you in achieving this goal?",
         "Reflect on a time prayer helped you reach a goal. How can that apply?",
         "Write a prayer of thanks for a strength aiding this goal.",
-        "What spiritual resources (e.g., rituals) can support your progress?"
+        "What spiritual resources (e.g., rituals) can support your progress?",
+        "How has prayer shaped this goal?",
+        "What’s one prayerful step?",
+        "Describe a prayerful goal moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for this goal."
       ],
       "Food Journal": [
         "What food-related goal are you setting for yourself?",
@@ -273,7 +418,12 @@
         "Who can you consult (e.g., a nutritionist) to support this goal?",
         "Reflect on a time a dietary goal improved your life. What worked?",
         "Write about a meal that motivates you toward this goal.",
-        "What food resources (e.g., recipes) will help you achieve this goal?"
+        "What food resources (e.g., recipes) will help you achieve this goal?",
+        "How does food shape this goal?",
+        "What’s one food step to try?",
+        "Describe a food goal moment.",
+        "Who can guide your eating?",
+        "Write a food goal plan."
       ],
       "Health and Wellness Journal": [
         "What health or wellness goal are you setting right now?",
@@ -282,7 +432,12 @@
         "Who (e.g., a trainer) can support you in achieving this goal?",
         "Reflect on a past health goal you met. What strategies worked?",
         "Write about a wellness moment that inspires this goal.",
-        "What health resources (e.g., apps) will help you reach this goal?"
+        "What health resources (e.g., apps) will help you reach this goal?",
+        "How has wellness shaped this goal?",
+        "What’s one health step to try?",
+        "Describe a wellness goal moment.",
+        "Who can support your health?",
+        "Write a wellness goal plan."
       ],
       "Project Journal": [
         "What project-related goal are you setting for your current work?",
@@ -291,7 +446,12 @@
         "Who on your team can assist with achieving this project goal?",
         "Reflect on a past project goal you accomplished. What helped?",
         "Write about a project success that motivates this goal.",
-        "What project resources (e.g., time) will support this goal?"
+        "What project resources (e.g., time) will support this goal?",
+        "How does this goal affect your project?",
+        "What’s one project step to try?",
+        "Describe a project goal moment.",
+        "Who on the team can help?",
+        "Write a project goal plan."
       ],
       "Learning Journal": [
         "What learning or study goal are you setting for yourself?",
@@ -300,7 +460,12 @@
         "Who can you ask for help with this learning goal?",
         "Reflect on a past learning goal you achieved. What worked?",
         "Write about a learning success that inspires this goal.",
-        "What learning resources (e.g., books) will help you reach this goal?"
+        "What learning resources (e.g., books) will help you reach this goal?",
+        "How has learning shaped this goal?",
+        "What’s one study step to try?",
+        "Describe a learning goal moment.",
+        "Who can guide your learning?",
+        "Write a study goal plan."
       ]
     },
     "Boosting Memory": {
@@ -311,7 +476,12 @@
         "Who can you ask for tips or support to boost your memory?",
         "Reflect on a time your memory failed you. What can you learn?",
         "Write about a memory you’re proud of retaining.",
-        "What resources (e.g., apps, exercises) can help strengthen your memory?"
+        "What resources (e.g., apps, exercises) can help strengthen your memory?",
+        "How has memory affected your day?",
+        "What’s one memory trick to try?",
+        "Describe a recall success today.",
+        "Who can help with memory tips?",
+        "Write a memory improvement plan."
       ],
       "Gratitude Journal": [
         "What memory challenge are you facing, and what are you grateful for to support it?",
@@ -320,7 +490,12 @@
         "Who can you thank for helping you recall important memories?",
         "Reflect on a time gratitude aided your memory retention.",
         "Write about a cherished memory you’re grateful for.",
-        "What gratitude practices can boost your memory over time?"
+        "What gratitude practices can boost your memory over time?",
+        "How does gratitude aid your memory?",
+        "What’s one thankful memory?",
+        "Describe a gratitude recall moment.",
+        "Who can you thank for support?",
+        "Write a gratitude note for memory."
       ],
       "Bullet Journal": [
         "List the key memory challenges you’re experiencing.",
@@ -329,7 +504,12 @@
         "Bullet point 3 obstacles to better memory and solutions.",
         "Write a to-do list for memory exercises this month.",
         "List 2 people or tools to help enhance your memory.",
-        "Break your memory goals into 5 tasks with deadlines."
+        "Break your memory goals into 5 tasks with deadlines.",
+        "Add a bullet for a new memory tool.",
+        "Track a memory win.",
+        "List one memory insight.",
+        "Bullet a support contact.",
+        "Outline a quick memory fix."
       ],
       "Dream Journal": [
         "What memory from a dream stood out to you last night?",
@@ -338,7 +518,12 @@
         "Who or what in your dream might help you remember better?",
         "Reflect on a dream that improved your memory recall.",
         "Write about a vivid dream memory that inspires you.",
-        "What dream journaling techniques can enhance your memory?"
+        "What dream journaling techniques can enhance your memory?",
+        "How did the dream boost your memory?",
+        "What’s one dream recall step?",
+        "Describe a dream memory moment.",
+        "Who in the dream helped?",
+        "Write a dream memory plan."
       ],
       "Travel Journal": [
         "What memory challenge are you facing on your trip?",
@@ -347,7 +532,12 @@
         "Who can you connect with to share and reinforce travel memories?",
         "Reflect on a past trip memory you retained well. What helped?",
         "Write about a travel moment you’re proud to remember.",
-        "What travel resources (e.g., photos) can boost your memory?"
+        "What travel resources (e.g., photos) can boost your memory?",
+        "How has travel affected your memory?",
+        "What’s one travel recall step?",
+        "Describe a travel memory moment.",
+        "Who on the trip can help?",
+        "Write a travel memory plan."
       ],
       "Art Journal": [
         "What memory can you capture through a drawing today?",
@@ -356,7 +546,12 @@
         "Who could you collaborate with to depict this memory?",
         "Reflect on an art piece that helped you recall a memory.",
         "Draw something that symbolizes a strong memory of yours.",
-        "What art techniques can you use to improve memory retention?"
+        "What art techniques can you use to improve memory retention?",
+        "How does art boost your memory?",
+        "Sketch a memory detail.",
+        "Describe an art recall moment.",
+        "Who can inspire your art memory?",
+        "Create a follow-up memory sketch."
       ],
       "Prayer Journal": [
         "What memory challenge are you bringing to prayer today?",
@@ -365,7 +560,12 @@
         "Who or what spiritual figure can support your memory goals?",
         "Reflect on a time prayer aided your memory recall.",
         "Write a prayer of thanks for a memory you cherish.",
-        "What spiritual practices can enhance your memory?"
+        "What spiritual practices can enhance your memory?",
+        "How has prayer shaped your memory?",
+        "What’s one prayerful memory step?",
+        "Describe a prayerful recall moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for memory."
       ],
       "Food Journal": [
         "What memory issue is tied to your eating habits today?",
@@ -374,7 +574,12 @@
         "Who can you consult (e.g., a dietitian) for memory-boosting foods?",
         "Reflect on a time a meal improved your memory. What worked?",
         "Write about a food memory that stands out to you.",
-        "What food resources (e.g., recipes) can support memory?"
+        "What food resources (e.g., recipes) can support memory?",
+        "How does food affect your memory?",
+        "What’s one memory-boosting meal?",
+        "Describe a food recall moment.",
+        "Who can guide your eating?",
+        "Write a food memory plan."
       ],
       "Health and Wellness Journal": [
         "What memory problem are you facing with your health?",
@@ -383,7 +588,12 @@
         "Who (e.g., a doctor) can help you improve your memory?",
         "Reflect on a past health habit that enhanced your memory.",
         "Write about a wellness moment that strengthened your recall.",
-        "What health resources (e.g., meditation) can aid your memory?"
+        "What health resources (e.g., meditation) can aid your memory?",
+        "How has health shaped your memory?",
+        "What’s one wellness memory step?",
+        "Describe a health recall moment.",
+        "Who can support your health?",
+        "Write a wellness memory plan."
       ],
       "Project Journal": [
         "What memory challenge is affecting your current project?",
@@ -392,7 +602,12 @@
         "Who on your team can help you recall project details?",
         "Reflect on a project where memory served you well.",
         "Write about a project memory that boosts your confidence.",
-        "What project resources (e.g., notes) can enhance your memory?"
+        "What project resources (e.g., notes) can enhance your memory?",
+        "How does memory affect your project?",
+        "What’s one project recall step?",
+        "Describe a project memory moment.",
+        "Who on the team can help?",
+        "Write a project memory plan."
       ],
       "Learning Journal": [
         "What memory issue are you facing in your studies?",
@@ -401,7 +616,12 @@
         "Who can you ask for help with memory in your learning?",
         "Reflect on a time you mastered a memory challenge in studies.",
         "Write about a learning memory that inspires you.",
-        "What learning resources (e.g., flashcards) can boost your memory?"
+        "What learning resources (e.g., flashcards) can boost your memory?",
+        "How has learning affected your memory?",
+        "What’s one study recall step?",
+        "Describe a learning memory moment.",
+        "Who can guide your learning?",
+        "Write a study memory plan."
       ]
     },
     "Emotional Release": {
@@ -412,7 +632,12 @@
         "Who can you share this emotion with to feel supported?",
         "Reflect on a time you successfully released a similar emotion.",
         "Write about a moment that brings you peace after this emotion.",
-        "What resources (e.g., music, writing) can help you release this feeling?"
+        "What resources (e.g., music, writing) can help you release this feeling?",
+        "How has this emotion shaped your day?",
+        "What’s one release technique to try?",
+        "Describe a peace moment today.",
+        "Who helped you feel supported?",
+        "Write a plan to release this emotion."
       ],
       "Gratitude Journal": [
         "What emotion are you struggling with, and what can you be grateful for despite it?",
@@ -421,7 +646,12 @@
         "Who can you thank for supporting you through this emotional time?",
         "Reflect on a time gratitude helped you release a tough emotion.",
         "Write about a positive memory that counters this emotion.",
-        "What gratitude techniques can help you process this emotion?"
+        "What gratitude techniques can help you process this emotion?",
+        "How does gratitude ease this emotion?",
+        "What’s one thankful moment?",
+        "Describe a gratitude relief moment.",
+        "Who can you thank for support?",
+        "Write a gratitude note for release."
       ],
       "Bullet Journal": [
         "List the emotions you’re feeling right now in bullet points.",
@@ -430,7 +660,12 @@
         "Bullet point 3 ways to release this emotion and their effects.",
         "Create a weekly plan to process this emotion with tasks.",
         "List 2 people or tools to help you release this emotion.",
-        "Outline 5 small activities to help you let go of this emotion."
+        "Outline 5 small activities to help you let go of this emotion.",
+        "Add a bullet for a new release tool.",
+        "Track a release moment.",
+        "List one emotion insight.",
+        "Bullet a support contact.",
+        "Outline a quick release step."
       ],
       "Dream Journal": [
         "What emotion did you feel in your dream last night?",
@@ -439,7 +674,12 @@
         "Who or what in your dream might help you process this feeling?",
         "Reflect on a dream that helped you release an emotion before.",
         "Write about a dream moment that brings emotional relief.",
-        "What dream insights can you use to release this emotion?"
+        "What dream insights can you use to release this emotion?",
+        "How did the dream reflect your emotion?",
+        "What’s one dream release step?",
+        "Describe a dream relief moment.",
+        "Who in the dream helped?",
+        "Write a dream release plan."
       ],
       "Travel Journal": [
         "What emotion are you feeling on your current trip?",
@@ -448,7 +688,12 @@
         "Who can you connect with while traveling to share this emotion?",
         "Reflect on a past trip where you released a strong emotion.",
         "Write about a travel memory that helps you feel lighter.",
-        "What travel resources (e.g., a quiet spot) can aid emotional release?"
+        "What travel resources (e.g., a quiet spot) can aid emotional release?",
+        "How has travel shaped this emotion?",
+        "What’s one travel release step?",
+        "Describe a travel relief moment.",
+        "Who on the trip can help?",
+        "Write a travel release plan."
       ],
       "Art Journal": [
         "What emotion can you express through a drawing today?",
@@ -457,7 +702,12 @@
         "Who could you collaborate with to express this emotion through art?",
         "Reflect on an art piece that helped you release an emotion before.",
         "Draw something that symbolizes relief from this emotion.",
-        "What art supplies can help you process and release this feeling?"
+        "What art supplies can help you process and release this feeling?",
+        "How does art ease this emotion?",
+        "Sketch a release image.",
+        "Describe an art relief moment.",
+        "Who can inspire your art release?",
+        "Create a follow-up art piece."
       ],
       "Prayer Journal": [
         "What emotion are you bringing to your prayer or meditation today?",
@@ -466,7 +716,12 @@
         "Who or what spiritual figure can support you through this emotion?",
         "Reflect on a time prayer helped you release an emotion.",
         "Write a prayer of thanks for a moment of emotional peace.",
-        "What spiritual practices can help you let go of this emotion?"
+        "What spiritual practices can help you let go of this emotion?",
+        "How has prayer shaped this emotion?",
+        "What’s one prayerful release step?",
+        "Describe a prayerful relief moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for release."
       ],
       "Food Journal": [
         "What emotion is affecting your eating habits today?",
@@ -475,7 +730,12 @@
         "Who can you consult (e.g., a friend) to support you through this?",
         "Reflect on a time a meal helped you release an emotion.",
         "Write about a food memory that brings emotional comfort.",
-        "What food resources (e.g., comfort foods) can aid emotional release?"
+        "What food resources (e.g., comfort foods) can aid emotional release?",
+        "How does food affect this emotion?",
+        "What’s one food release step?",
+        "Describe a food relief moment.",
+        "Who can guide your eating?",
+        "Write a food release plan."
       ],
       "Health and Wellness Journal": [
         "What emotion is impacting your health or wellness right now?",
@@ -484,7 +744,12 @@
         "Who (e.g., a therapist) can support you with this emotion?",
         "Reflect on a wellness practice that helped you release an emotion.",
         "Write about a healthy moment that eased this emotion.",
-        "What health resources (e.g., exercise) can help you process this?"
+        "What health resources (e.g., exercise) can help you process this?",
+        "How has wellness shaped this emotion?",
+        "What’s one health release step?",
+        "Describe a wellness relief moment.",
+        "Who can support your health?",
+        "Write a wellness release plan."
       ],
       "Project Journal": [
         "What emotion are you feeling about your current project?",
@@ -493,7 +758,12 @@
         "Who on your team can help you process this emotion?",
         "Reflect on a project where you released a similar emotion.",
         "Write about a project moment that brings emotional relief.",
-        "What project resources (e.g., breaks) can help you let go?"
+        "What project resources (e.g., breaks) can help you let go?",
+        "How does this emotion affect your project?",
+        "What’s one project release step?",
+        "Describe a project relief moment.",
+        "Who on the team can help?",
+        "Write a project release plan."
       ],
       "Learning Journal": [
         "What emotion are you feeling about your studies today?",
@@ -502,7 +772,12 @@
         "Who can you ask for support with this learning-related emotion?",
         "Reflect on a time you released an emotion while learning.",
         "Write about a learning moment that brings emotional relief.",
-        "What learning resources (e.g., breaks) can help you process this?"
+        "What learning resources (e.g., breaks) can help you process this?",
+        "How has learning shaped this emotion?",
+        "What’s one study release step?",
+        "Describe a learning relief moment.",
+        "Who can guide your learning?",
+        "Write a study release plan."
       ]
     },
     "Self-Reflection": {
@@ -513,7 +788,12 @@
         "Who can you discuss these reflections with for clarity?",
         "Reflect on a past moment of self-awareness that shaped you.",
         "Write about a strength you discovered through reflection.",
-        "What tools (e.g., journal, quiet time) can support your self-reflection?"
+        "What tools (e.g., journal, quiet time) can support your self-reflection?",
+        "How has reflection changed your day?",
+        "What’s one new insight to explore?",
+        "Describe a reflective moment today.",
+        "Who can discuss this with you?",
+        "Write a reflection plan for tomorrow."
       ],
       "Gratitude Journal": [
         "What are you reflecting on today, and what are you grateful for in it?",
@@ -522,7 +802,12 @@
         "Who can you thank for helping you reflect on this?",
         "Reflect on a time gratitude enhanced your self-understanding.",
         "Write about a memory of gratitude that guides your reflection.",
-        "What gratitude resources can enrich your self-reflection?"
+        "What gratitude resources can enrich your self-reflection?",
+        "How does gratitude shape your reflection?",
+        "What’s one thankful insight?",
+        "Describe a gratitude reflection moment.",
+        "Who can you thank for support?",
+        "Write a gratitude note for reflection."
       ],
       "Bullet Journal": [
         "List the main topics you want to reflect on today.",
@@ -531,7 +816,12 @@
         "Bullet point 3 insights from this reflection and their value.",
         "Create a weekly plan for regular self-reflection tasks.",
         "List 2 people or tools to aid your reflection process.",
-        "Outline 5 reflection exercises to try this month."
+        "Outline 5 reflection exercises to try this month.",
+        "Add a bullet for a new reflection tool.",
+        "Track a reflection win.",
+        "List one reflection insight.",
+        "Bullet a support contact.",
+        "Outline a quick reflection step."
       ],
       "Dream Journal": [
         "What reflection came from your dream last night?",
@@ -540,7 +830,12 @@
         "Who or what in your dream might guide your reflection?",
         "Reflect on a past dream that offered self-insight.",
         "Write about a dream moment that deepened your understanding.",
-        "What dream journaling techniques can enhance your reflection?"
+        "What dream journaling techniques can enhance your reflection?",
+        "How did the dream shape your reflection?",
+        "What’s one dream insight to try?",
+        "Describe a dream reflection moment.",
+        "Who in the dream helped?",
+        "Write a dream reflection plan."
       ],
       "Travel Journal": [
         "What are you reflecting on from your current trip?",
@@ -549,7 +844,12 @@
         "Who can you share this reflection with from your trip?",
         "Reflect on a past trip that led to personal growth.",
         "Write about a travel memory that sparked self-awareness.",
-        "What travel resources (e.g., photos) can support your reflection?"
+        "What travel resources (e.g., photos) can support your reflection?",
+        "How has travel shaped your reflection?",
+        "What’s one travel insight to try?",
+        "Describe a travel reflection moment.",
+        "Who on the trip can help?",
+        "Write a travel reflection plan."
       ],
       "Art Journal": [
         "What reflection can you express through a drawing today?",
@@ -558,7 +858,12 @@
         "Who could you collaborate with to explore this reflection?",
         "Reflect on an art piece that deepened your self-understanding.",
         "Draw something that symbolizes your reflective insight.",
-        "What art supplies can help you process this reflection?"
+        "What art supplies can help you process this reflection?",
+        "How does art shape your reflection?",
+        "Sketch a reflection image.",
+        "Describe an art reflection moment.",
+        "Who can inspire your art reflection?",
+        "Create a follow-up art piece."
       ],
       "Prayer Journal": [
         "What are you reflecting on in your prayer today?",
@@ -567,7 +872,12 @@
         "Who or what spiritual figure can support this reflection?",
         "Reflect on a time prayer brought you self-awareness.",
         "Write a prayer of thanks for a moment of insight.",
-        "What spiritual practices can enhance your reflection?"
+        "What spiritual practices can enhance your reflection?",
+        "How has prayer shaped your reflection?",
+        "What’s one prayerful insight?",
+        "Describe a prayerful reflection moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for reflection."
       ],
       "Food Journal": [
         "What reflection is tied to your eating habits today?",
@@ -576,7 +886,12 @@
         "Who can you consult about this food-related reflection?",
         "Reflect on a time a meal sparked self-awareness.",
         "Write about a food memory that prompts reflection.",
-        "What food resources (e.g., recipes) can aid your reflection?"
+        "What food resources (e.g., recipes) can aid your reflection?",
+        "How does food shape your reflection?",
+        "What’s one food insight to try?",
+        "Describe a food reflection moment.",
+        "Who can guide your eating?",
+        "Write a food reflection plan."
       ],
       "Health and Wellness Journal": [
         "What health or wellness reflection are you exploring today?",
@@ -585,7 +900,12 @@
         "Who (e.g., a counselor) can help with this reflection?",
         "Reflect on a past wellness moment that brought insight.",
         "Write about a healthy moment that sparked self-awareness.",
-        "What health resources (e.g., meditation) can support reflection?"
+        "What health resources (e.g., meditation) can support reflection?",
+        "How has wellness shaped your reflection?",
+        "What’s one health insight to try?",
+        "Describe a wellness reflection moment.",
+        "Who can support your health?",
+        "Write a wellness reflection plan."
       ],
       "Project Journal": [
         "What are you reflecting on about your current project?",
@@ -594,7 +914,12 @@
         "Who on your team can discuss this reflection with you?",
         "Reflect on a past project that led to self-growth.",
         "Write about a project moment that deepened your understanding.",
-        "What project resources (e.g., notes) can aid your reflection?"
+        "What project resources (e.g., notes) can aid your reflection?",
+        "How does this reflection affect your project?",
+        "What’s one project insight to try?",
+        "Describe a project reflection moment.",
+        "Who on the team can help?",
+        "Write a project reflection plan."
       ],
       "Learning Journal": [
         "What are you reflecting on in your studies today?",
@@ -603,7 +928,12 @@
         "Who can you ask for insight on this learning reflection?",
         "Reflect on a past study moment that brought self-awareness.",
         "Write about a learning achievement that sparked insight.",
-        "What learning resources (e.g., books) can support your reflection?"
+        "What learning resources (e.g., books) can support your reflection?",
+        "How has learning shaped your reflection?",
+        "What’s one study insight to try?",
+        "Describe a learning reflection moment.",
+        "Who can guide your learning?",
+        "Write a study reflection plan."
       ]
     },
     "Standard Entry": {
@@ -614,7 +944,12 @@
         "Who did you interact with today that stood out?",
         "Reflect on how this day compares to others recently.",
         "Write about a highlight or positive moment from today.",
-        "What tools (e.g., pen, app) will help you keep recording daily?"
+        "What tools (e.g., pen, app) will help you keep recording daily?",
+        "How did this day shape your mood?",
+        "What’s one new event to note?",
+        "Describe a standout moment.",
+        "Who made your day special?",
+        "Write a daily recording plan."
       ],
       "Gratitude Journal": [
         "What happened today that you’re grateful for?",
@@ -623,7 +958,12 @@
         "Who can you thank for making today special?",
         "Reflect on how gratitude shaped your day compared to others.",
         "Write about a thankful memory from today.",
-        "What gratitude resources can help you log these entries?"
+        "What gratitude resources can help you log these entries?",
+        "How did gratitude shape your day?",
+        "What’s one thankful moment?",
+        "Describe a gratitude highlight.",
+        "Who can you thank again?",
+        "Write a gratitude log plan."
       ],
       "Bullet Journal": [
         "List the main events of your day in bullet points.",
@@ -632,7 +972,12 @@
         "Bullet point 3 takeaways or actions from today.",
         "Create a to-do list for tomorrow based on today.",
         "List 2 people or tools that helped you today.",
-        "Outline 5 daily habits to maintain this routine."
+        "Outline 5 daily habits to maintain this routine.",
+        "Add a bullet for a new tool.",
+        "Track a daily win.",
+        "List one day insight.",
+        "Bullet a support contact.",
+        "Outline a quick daily step."
       ],
       "Dream Journal": [
         "What happened in your dreams last night to note today?",
@@ -641,7 +986,12 @@
         "Who or what in your dream might relate to your day?",
         "Reflect on how this dream connects to your recent days.",
         "Write about a vivid dream moment from last night.",
-        "What dream journaling tools can help you record nightly?"
+        "What dream journaling tools can help you record nightly?",
+        "How did the dream shape your day?",
+        "What’s one dream action to try?",
+        "Describe a dream moment.",
+        "Who in the dream helped?",
+        "Write a dream log plan."
       ],
       "Travel Journal": [
         "What happened on your trip today worth recording?",
@@ -650,7 +1000,12 @@
         "Who did you meet or connect with on your trip today?",
         "Reflect on how this day compares to other travel days.",
         "Write about a highlight from today’s travel.",
-        "What travel resources (e.g., camera) can aid your entries?"
+        "What travel resources (e.g., camera) can aid your entries?",
+        "How has travel shaped your day?",
+        "What’s one travel note to try?",
+        "Describe a travel highlight.",
+        "Who on the trip helped?",
+        "Write a travel log plan."
       ],
       "Art Journal": [
         "What happened today that you can sketch or paint?",
@@ -659,7 +1014,12 @@
         "Who could you collaborate with to reflect this day artistically?",
         "Reflect on how this art connects to recent days.",
         "Draw a moment from today that stood out.",
-        "What art supplies can help you document your days?"
+        "What art supplies can help you document your days?",
+        "How does art shape your day?",
+        "Sketch a day moment.",
+        "Describe an art highlight.",
+        "Who can inspire your art?",
+        "Create a follow-up art piece."
       ],
       "Prayer Journal": [
         "What happened today to bring to your prayer?",
@@ -668,7 +1028,12 @@
         "Who or what spiritual figure can you thank for today?",
         "Reflect on how today’s events align with your faith journey.",
         "Write a prayer of thanks for a moment from today.",
-        "What spiritual tools (e.g., scriptures) can support your entries?"
+        "What spiritual tools (e.g., scriptures) can support your entries?",
+        "How has prayer shaped your day?",
+        "What’s one prayerful note?",
+        "Describe a prayerful moment.",
+        "Who spiritually helped?",
+        "Write a prayer log plan."
       ],
       "Food Journal": [
         "What did you eat today that you want to record?",
@@ -677,7 +1042,12 @@
         "Who did you share a meal with today?",
         "Reflect on how today’s eating compares to recent days.",
         "Write about a satisfying food moment from today.",
-        "What food tracking tools (e.g., app) can help your entries?"
+        "What food tracking tools (e.g., app) can help your entries?",
+        "How did food shape your day?",
+        "What’s one food note to try?",
+        "Describe a food highlight.",
+        "Who shared your meal?",
+        "Write a food log plan."
       ],
       "Health and Wellness Journal": [
         "What health or wellness events happened today?",
@@ -686,7 +1056,12 @@
         "Who supported your health today (e.g., a friend)?",
         "Reflect on how today’s wellness compares to recent days.",
         "Write about a healthy moment from today.",
-        "What health resources (e.g., tracker) can aid your entries?"
+        "What health resources (e.g., tracker) can aid your entries?",
+        "How has wellness shaped your day?",
+        "What’s one health note to try?",
+        "Describe a wellness highlight.",
+        "Who supported your health?",
+        "Write a wellness log plan."
       ],
       "Project Journal": [
         "What happened with your project today?",
@@ -695,7 +1070,12 @@
         "Who on your team helped with today’s work?",
         "Reflect on how today’s project work compares to recent days.",
         "Write about a project win from today.",
-        "What project tools (e.g., notes) can help you log daily?"
+        "What project tools (e.g., notes) can help you log daily?",
+        "How did the project shape your day?",
+        "What’s one project note to try?",
+        "Describe a project highlight.",
+        "Who on the team helped?",
+        "Write a project log plan."
       ],
       "Learning Journal": [
         "What did you learn today worth recording?",
@@ -704,7 +1084,12 @@
         "Who helped you with your learning today?",
         "Reflect on how today’s learning compares to recent days.",
         "Write about a learning highlight from today.",
-        "What learning resources (e.g., notes) can support your entries?"
+        "What learning resources (e.g., notes) can support your entries?",
+        "How has learning shaped your day?",
+        "What’s one study note to try?",
+        "Describe a learning highlight.",
+        "Who guided your learning?",
+        "Write a study log plan."
       ]
     },
     "Tracking Development": {
@@ -715,7 +1100,12 @@
         "Who can you share your growth with for encouragement?",
         "Reflect on how far you’ve come in this area recently.",
         "Write about a milestone you’re proud of achieving.",
-        "What tools (e.g., journal, app) can help you track your development?"
+        "What tools (e.g., journal, app) can help you track your development?",
+        "How has growth shaped your day?",
+        "What’s one development step to try?",
+        "Describe a growth moment today.",
+        "Who can encourage you?",
+        "Write a development tracking plan."
       ],
       "Gratitude Journal": [
         "What progress are you thankful for noticing today?",
@@ -724,7 +1114,12 @@
         "Who can you thank for helping you grow?",
         "Reflect on how gratitude has fueled your progress.",
         "Write about a growth moment you’re thankful for.",
-        "What gratitude resources can aid your tracking?"
+        "What gratitude resources can aid your tracking?",
+        "How does gratitude shape your growth?",
+        "What’s one thankful milestone?",
+        "Describe a gratitude growth moment.",
+        "Who can you thank for support?",
+        "Write a gratitude tracking note."
       ],
       "Bullet Journal": [
         "List the areas where you’ve seen progress today.",
@@ -733,7 +1128,12 @@
         "Bullet point 3 ways to sustain this growth.",
         "Create a weekly plan to monitor your progress.",
         "List 2 people or tools to support your development.",
-        "Outline 5 tracking habits to maintain your growth."
+        "Outline 5 tracking habits to maintain your growth.",
+        "Add a bullet for a new tracking tool.",
+        "Track a growth win.",
+        "List one growth insight.",
+        "Bullet a support contact.",
+        "Outline a quick growth step."
       ],
       "Dream Journal": [
         "What development did your dream hint at last night?",
@@ -742,7 +1142,12 @@
         "Who or what in your dream might guide your progress?",
         "Reflect on a past dream that showed your development.",
         "Write about a dream moment tied to your growth.",
-        "What dream journaling tools can help track this?"
+        "What dream journaling tools can help track this?",
+        "How did the dream shape your growth?",
+        "What’s one dream step to try?",
+        "Describe a dream growth moment.",
+        "Who in the dream helped?",
+        "Write a dream tracking plan."
       ],
       "Travel Journal": [
         "What growth did you notice on your trip today?",
@@ -751,7 +1156,12 @@
         "Who can you share this growth with from your trip?",
         "Reflect on how past trips contributed to your growth.",
         "Write about a travel milestone you’re proud of.",
-        "What travel resources (e.g., photos) can track your progress?"
+        "What travel resources (e.g., photos) can track your progress?",
+        "How has travel shaped your growth?",
+        "What’s one travel step to try?",
+        "Describe a travel growth moment.",
+        "Who on the trip can help?",
+        "Write a travel tracking plan."
       ],
       "Art Journal": [
         "What development can you express through art today?",
@@ -760,7 +1170,12 @@
         "Who could you collaborate with to explore this growth?",
         "Reflect on an art piece that tracked your development.",
         "Draw a symbol of your recent growth.",
-        "What art supplies can help you document this?"
+        "What art supplies can help you document this?",
+        "How does art shape your growth?",
+        "Sketch a growth image.",
+        "Describe an art growth moment.",
+        "Who can inspire your art growth?",
+        "Create a follow-up art piece."
       ],
       "Prayer Journal": [
         "What growth are you reflecting on in prayer today?",
@@ -769,7 +1184,12 @@
         "Who or what spiritual figure can support your growth?",
         "Reflect on a time prayer aided your development.",
         "Write a prayer of thanks for your growth.",
-        "What spiritual practices can help you track this?"
+        "What spiritual practices can help you track this?",
+        "How has prayer shaped your growth?",
+        "What’s one prayerful step?",
+        "Describe a prayerful growth moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for tracking."
       ],
       "Food Journal": [
         "What progress in your eating habits did you notice today?",
@@ -778,7 +1198,12 @@
         "Who can you consult about this food progress?",
         "Reflect on how past eating changes aided your growth.",
         "Write about a food milestone you’re proud of.",
-        "What food tracking tools can help monitor this?"
+        "What food tracking tools can help monitor this?",
+        "How does food shape your growth?",
+        "What’s one food step to try?",
+        "Describe a food growth moment.",
+        "Who can guide your eating?",
+        "Write a food tracking plan."
       ],
       "Health and Wellness Journal": [
         "What health or wellness progress did you see today?",
@@ -787,7 +1212,12 @@
         "Who (e.g., a coach) can support your growth?",
         "Reflect on a past wellness milestone that helped you.",
         "Write about a healthy moment of progress.",
-        "What health resources (e.g., tracker) can aid tracking?"
+        "What health resources (e.g., tracker) can aid tracking?",
+        "How has wellness shaped your growth?",
+        "What’s one health step to try?",
+        "Describe a wellness growth moment.",
+        "Who can support your health?",
+        "Write a wellness tracking plan."
       ],
       "Project Journal": [
         "What development happened with your project today?",
@@ -796,7 +1226,12 @@
         "Who on your team can encourage this development?",
         "Reflect on a past project milestone that shaped you.",
         "Write about a project win tied to your growth.",
-        "What project tools (e.g., notes) can track this?"
+        "What project tools (e.g., notes) can track this?",
+        "How does this growth affect your project?",
+        "What’s one project step to try?",
+        "Describe a project growth moment.",
+        "Who on the team can help?",
+        "Write a project tracking plan."
       ],
       "Learning Journal": [
         "What learning progress did you make today?",
@@ -805,7 +1240,12 @@
         "Who can support your learning growth?",
         "Reflect on a past learning milestone that helped you.",
         "Write about a learning achievement you’re proud of.",
-        "What learning resources (e.g., notes) can track this?"
+        "What learning resources (e.g., notes) can track this?",
+        "How has learning shaped your growth?",
+        "What’s one study step to try?",
+        "Describe a learning growth moment.",
+        "Who can guide your learning?",
+        "Write a study tracking plan."
       ]
     },
     "Improving Writing Skills": {
@@ -816,7 +1256,12 @@
         "Who can you ask for feedback on your writing to improve?",
         "Reflect on a past piece of writing you struggled with. What can you learn?",
         "Write about a writing moment you’re proud of.",
-        "What resources (e.g., books, apps) can help you improve your writing?"
+        "What resources (e.g., books, apps) can help you improve your writing?",
+        "How has writing shaped your day?",
+        "What’s one writing exercise to try?",
+        "Describe a writing win today.",
+        "Who can give feedback?",
+        "Write a writing improvement plan."
       ],
       "Gratitude Journal": [
         "What writing challenge are you facing, and what are you grateful for to support it?",
@@ -825,7 +1270,12 @@
         "Who can you thank for supporting your writing growth?",
         "Reflect on a time gratitude improved your writing process.",
         "Write about a piece of writing you’re grateful for creating.",
-        "What gratitude resources can aid your writing improvement?"
+        "What gratitude resources can aid your writing improvement?",
+        "How does gratitude shape your writing?",
+        "What’s one thankful writing moment?",
+        "Describe a gratitude writing win.",
+        "Who can you thank for support?",
+        "Write a gratitude writing note."
       ],
       "Bullet Journal": [
         "List the writing challenges you’re facing in bullet points.",
@@ -834,7 +1284,12 @@
         "Bullet point 3 writing exercises to try this week.",
         "Create a weekly plan to improve your writing skills.",
         "List 2 people or tools to help with your writing growth.",
-        "Outline 5 writing goals to achieve this month."
+        "Outline 5 writing goals to achieve this month.",
+        "Add a bullet for a new writing tool.",
+        "Track a writing win.",
+        "List one writing insight.",
+        "Bullet a support contact.",
+        "Outline a quick writing step."
       ],
       "Dream Journal": [
         "What writing challenge appeared in your dreams last night?",
@@ -843,7 +1298,12 @@
         "Who or what in your dream might guide your writing improvement?",
         "Reflect on a dream that inspired better writing in the past.",
         "Write about a dream moment that boosts your writing confidence.",
-        "What dream journaling techniques can improve your writing?"
+        "What dream journaling techniques can improve your writing?",
+        "How did the dream shape your writing?",
+        "What’s one dream writing step?",
+        "Describe a dream writing moment.",
+        "Who in the dream helped?",
+        "Write a dream writing plan."
       ],
       "Travel Journal": [
         "What writing challenge are you facing on your trip?",
@@ -852,7 +1312,12 @@
         "Who can you share your travel writing with for feedback?",
         "Reflect on a past trip where your writing improved.",
         "Write about a travel memory you described well in writing.",
-        "What travel resources (e.g., notebook) can aid your writing?"
+        "What travel resources (e.g., notebook) can aid your writing?",
+        "How has travel shaped your writing?",
+        "What’s one travel writing step?",
+        "Describe a travel writing moment.",
+        "Who on the trip can help?",
+        "Write a travel writing plan."
       ],
       "Art Journal": [
         "What writing challenge can you explore through art today?",
@@ -861,7 +1326,12 @@
         "Who could you collaborate with to blend art and writing?",
         "Reflect on an art piece that improved your writing in the past.",
         "Draw something that symbolizes your writing growth.",
-        "What art supplies can support your writing practice?"
+        "What art supplies can support your writing practice?",
+        "How does art shape your writing?",
+        "Sketch a writing image.",
+        "Describe an art writing moment.",
+        "Who can inspire your art writing?",
+        "Create a follow-up art piece."
       ],
       "Prayer Journal": [
         "What writing challenge are you bringing to prayer today?",
@@ -870,7 +1340,12 @@
         "Who or what spiritual figure can support your writing growth?",
         "Reflect on a time prayer helped your writing process.",
         "Write a prayer of thanks for a writing breakthrough.",
-        "What spiritual practices can enhance your writing skills?"
+        "What spiritual practices can enhance your writing skills?",
+        "How has prayer shaped your writing?",
+        "What’s one prayerful writing step?",
+        "Describe a prayerful writing moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for writing."
       ],
       "Food Journal": [
         "What writing challenge is tied to your food journaling?",
@@ -879,7 +1354,12 @@
         "Who can you ask for feedback on your food writing?",
         "Reflect on a time writing about food felt rewarding.",
         "Write about a food memory you described vividly.",
-        "What food journaling tools can improve your writing?"
+        "What food journaling tools can improve your writing?",
+        "How does food shape your writing?",
+        "What’s one food writing step?",
+        "Describe a food writing moment.",
+        "Who can guide your food writing?",
+        "Write a food writing plan."
       ],
       "Health and Wellness Journal": [
         "What writing challenge are you facing in your wellness journey?",
@@ -888,7 +1368,12 @@
         "Who (e.g., a coach) can provide feedback on your writing?",
         "Reflect on a past wellness entry where your writing shone.",
         "Write about a health moment you captured well in writing.",
-        "What health resources (e.g., apps) can support your writing?"
+        "What health resources (e.g., apps) can support your writing?",
+        "How has wellness shaped your writing?",
+        "What’s one health writing step?",
+        "Describe a wellness writing moment.",
+        "Who can support your health writing?",
+        "Write a wellness writing plan."
       ],
       "Project Journal": [
         "What writing challenge are you facing in your project logs?",
@@ -897,7 +1382,12 @@
         "Who on your team can offer feedback on your writing?",
         "Reflect on a past project entry where your writing improved.",
         "Write about a project moment you documented well.",
-        "What project tools (e.g., templates) can aid your writing?"
+        "What project tools (e.g., templates) can aid your writing?",
+        "How does this challenge affect your project?",
+        "What’s one project writing step?",
+        "Describe a project writing moment.",
+        "Who on the team can help?",
+        "Write a project writing plan."
       ],
       "Learning Journal": [
         "What writing challenge are you facing in your studies?",
@@ -906,7 +1396,12 @@
         "Who can provide feedback on your academic writing?",
         "Reflect on a past study entry where your writing excelled.",
         "Write about a learning moment you captured well in writing.",
-        "What learning resources (e.g., guides) can improve your writing?"
+        "What learning resources (e.g., guides) can improve your writing?",
+        "How has learning shaped your writing?",
+        "What’s one study writing step?",
+        "Describe a learning writing moment.",
+        "Who can guide your learning writing?",
+        "Write a study writing plan."
       ]
     },
     "Capturing Memories": {
@@ -917,7 +1412,12 @@
         "Who can you share this memory with to keep it alive?",
         "Reflect on a past memory you successfully captured. What worked?",
         "Write about a detail from this memory that brings you joy.",
-        "What tools (e.g., journal, camera) can help you capture memories regularly?"
+        "What tools (e.g., journal, camera) can help you capture memories regularly?",
+        "How has this memory shaped your day?",
+        "What’s one new way to record it?",
+        "Describe a joyful memory moment.",
+        "Who can share this memory?",
+        "Write a memory capture plan."
       ],
       "Gratitude Journal": [
         "What memory from today are you grateful for, and why?",
@@ -926,7 +1426,12 @@
         "Who can you thank for being part of this memory?",
         "Reflect on a past memory gratitude helped you preserve.",
         "Write about a thankful moment from this memory.",
-        "What gratitude resources can assist in capturing memories?"
+        "What gratitude resources can assist in capturing memories?",
+        "How does gratitude shape this memory?",
+        "What’s one thankful detail?",
+        "Describe a gratitude memory moment.",
+        "Who can you thank for support?",
+        "Write a gratitude memory note."
       ],
       "Bullet Journal": [
         "List the key moments of the memory you want to capture.",
@@ -935,7 +1440,12 @@
         "Bullet point 3 methods to preserve this memory long-term.",
         "Create a weekly plan to capture more memories.",
         "List 2 people or tools to help you document this memory.",
-        "Outline 5 ways to organize your captured memories."
+        "Outline 5 ways to organize your captured memories.",
+        "Add a bullet for a new memory tool.",
+        "Track a memory win.",
+        "List one memory insight.",
+        "Bullet a support contact.",
+        "Outline a quick memory step."
       ],
       "Dream Journal": [
         "What memory from your dream last night stands out?",
@@ -944,7 +1454,12 @@
         "Who or what in your dream might help you recall this memory?",
         "Reflect on a past dream memory you captured well.",
         "Write about a vivid detail from this dream memory.",
-        "What dream journaling techniques can help you capture more?"
+        "What dream journaling techniques can help you capture more?",
+        "How did the dream shape this memory?",
+        "What’s one dream record step?",
+        "Describe a dream memory moment.",
+        "Who in the dream helped?",
+        "Write a dream memory plan."
       ],
       "Travel Journal": [
         "What travel memory from today do you want to capture?",
@@ -953,7 +1468,12 @@
         "Who can you share this travel memory with?",
         "Reflect on a past trip memory you preserved successfully.",
         "Write about a highlight from this travel memory.",
-        "What travel resources (e.g., photos) can aid memory capture?"
+        "What travel resources (e.g., photos) can aid memory capture?",
+        "How has travel shaped this memory?",
+        "What’s one travel record step?",
+        "Describe a travel memory moment.",
+        "Who on the trip can help?",
+        "Write a travel memory plan."
       ],
       "Art Journal": [
         "What memory can you capture through a drawing today?",
@@ -962,7 +1482,12 @@
         "Who could you collaborate with to depict this memory?",
         "Reflect on an art piece that captured a past memory.",
         "Draw a detail from this memory that stands out.",
-        "What art supplies can help you capture memories artistically?"
+        "What art supplies can help you capture memories artistically?",
+        "How does art shape this memory?",
+        "Sketch a memory image.",
+        "Describe an art memory moment.",
+        "Who can inspire your art memory?",
+        "Create a follow-up memory piece."
       ],
       "Prayer Journal": [
         "What memory are you bringing to prayer today?",
@@ -971,7 +1496,12 @@
         "Who or what spiritual figure can guide you in capturing it?",
         "Reflect on a past memory prayer helped you retain.",
         "Write a prayer of thanks for this memory.",
-        "What spiritual practices can assist in capturing memories?"
+        "What spiritual practices can assist in capturing memories?",
+        "How has prayer shaped this memory?",
+        "What’s one prayerful record step?",
+        "Describe a prayerful memory moment.",
+        "Who spiritually supports you?",
+        "Write a new prayer for memory."
       ],
       "Food Journal": [
         "What food-related memory do you want to capture today?",
@@ -980,7 +1510,12 @@
         "Who can you share this food memory with?",
         "Reflect on a past food memory you captured well.",
         "Write about a tasty detail from this memory.",
-        "What food journaling tools can help capture memories?"
+        "What food journaling tools can help capture memories?",
+        "How does food shape this memory?",
+        "What’s one food record step?",
+        "Describe a food memory moment.",
+        "Who shared this memory?",
+        "Write a food memory plan."
       ],
       "Health and Wellness Journal": [
         "What health or wellness memory do you want to capture?",
@@ -989,127 +1524,9 @@
         "Who can support you in capturing this health memory?",
         "Reflect on a past wellness memory you preserved.",
         "Write about a healthy moment from this memory.",
-        "What health resources (e.g., tracker) can aid memory capture?"
-      ],
-      "Project Journal": [
-        "What project memory do you want to capture today?",
-        "Break down the project details (tasks, team) of this memory.",
-        "What’s one way to document this project memory?",
-        "Who on your team can help you capture this memory?",
-        "Reflect on a past project memory you recorded well.",
-        "Write about a project success from this memory.",
-        "What project tools (e.g., notes) can assist in capturing it?"
-      ],
-      "Learning Journal": [
-        "What learning memory do you want to capture today?",
-        "Break down the study details (concepts, insights) of this memory.",
-        "What study method can help you record this memory?",
-        "Who can you share this learning memory with?",
-        "Reflect on a past learning memory you captured effectively.",
-        "Write about a key takeaway from this memory.",
-        "What learning resources (e.g., notes) can help capture memories?"
-      ]
-    },
-    "Enhancing Creativity": {
-      "Standard": [
-        "What creative challenge are you facing today, and how does it feel?",
-        "Break down the areas where your creativity feels blocked or limited.",
-        "What’s one creative exercise you can try today to spark inspiration?",
-        "Who can you collaborate with or seek inspiration from to boost your creativity?",
-        "Reflect on a past moment when your creativity flourished. What sparked it?",
-        "Write about a creative idea or moment you’re proud of.",
-        "What resources (e.g., books, music, nature) can help you enhance your creativity?"
-      ],
-      "Gratitude Journal": [
-        "What creative challenge are you facing, and what are you grateful for to support it?",
-        "List 3 things you’re thankful for that inspire your creativity.",
-        "What gratitude-inspired creative exercise can you try today?",
-        "Who can you thank for sparking your creative ideas?",
-        "Reflect on a time gratitude boosted your creativity.",
-        "Write about a creative moment you’re grateful for.",
-        "What gratitude resources can enhance your creative process?"
-      ],
-      "Bullet Journal": [
-        "List the creative challenges you’re facing in bullet points.",
-        "Break these challenges into specific areas to explore creatively.",
-        "Track your creative progress weekly with bullet points.",
-        "Bullet point 3 creative exercises to try this week.",
-        "Create a weekly plan to boost your creativity with tasks.",
-        "List 2 people or tools to inspire your creative growth.",
-        "Outline 5 creativity goals to achieve this month."
-      ],
-      "Dream Journal": [
-        "What creative idea or challenge appeared in your dreams last night?",
-        "Break down the dream elements that could inspire your creativity.",
-        "What creative action can you take based on this dream?",
-        "Who or what in your dream might guide your creative process?",
-        "Reflect on a past dream that sparked a creative idea.",
-        "Write about a dream moment that boosts your creative confidence.",
-        "What dream journaling techniques can enhance your creativity?"
-      ],
-      "Travel Journal": [
-        "What creative challenge are you facing on your trip?",
-        "Break down the travel experiences that could inspire creativity.",
-        "What travel-inspired creative exercise can you try today?",
-        "Who can you meet or observe on your trip to spark creativity?",
-        "Reflect on a past trip that boosted your creative ideas.",
-        "Write about a travel moment that inspired creativity.",
-        "What travel resources (e.g., scenery, culture) can enhance your creativity?"
-      ],
-      "Art Journal": [
-        "What creative challenge can you explore through art today?",
-        "Break down the creative block into a visual concept.",
-        "Create an artwork to spark a new creative idea.",
-        "Who could you collaborate with to boost your artistic creativity?",
-        "Reflect on an art piece that unlocked your creativity in the past.",
-        "Draw something that symbolizes your creative potential.",
-        "What art supplies or techniques can help you enhance creativity?"
-      ],
-      "Prayer Journal": [
-        "What creative challenge are you bringing to prayer today?",
-        "Break down the spiritual aspects of your creative struggles.",
-        "What prayer can guide you toward creative inspiration?",
-        "Who or what spiritual figure can support your creative growth?",
-        "Reflect on a time prayer sparked your creativity.",
-        "Write a prayer of thanks for a creative breakthrough.",
-        "What spiritual practices can enhance your creativity?"
-      ],
-      "Food Journal": [
-        "What creative challenge is tied to your food experiences?",
-        "Break down how food could inspire your creative process.",
-        "What food-inspired creative exercise can you try today?",
-        "Who can you collaborate with to explore food creatively?",
-        "Reflect on a time a meal or recipe sparked creativity.",
-        "Write about a food moment that felt creatively inspiring.",
-        "What food resources (e.g., recipes, cooking) can boost creativity?"
-      ],
-      "Health and Wellness Journal": [
-        "What creative challenge are you facing in your wellness journey?",
-        "Break down the health aspects that could inspire creativity.",
-        "What wellness-inspired creative exercise can you try?",
-        "Who (e.g., a coach) can help you unlock creativity through wellness?",
-        "Reflect on a past wellness moment that sparked creativity.",
-        "Write about a health moment that felt creatively inspiring.",
-        "What health resources (e.g., exercise) can support your creativity?"
-      ],
-      "Project Journal": [
-        "What creative challenge are you facing in your project?",
-        "Break down the project elements where creativity is needed.",
-        "What project-related creative exercise can you try today?",
-        "Who on your team can help spark creative ideas for this project?",
-        "Reflect on a past project where your creativity shone.",
-        "Write about a project moment that felt creatively rewarding.",
-        "What project tools (e.g., brainstorming sessions) can enhance creativity?"
-      ],
-      "Learning Journal": [
-        "What creative challenge are you facing in your studies?",
-        "Break down the learning topics where creativity is needed.",
-        "What study-related creative exercise can you try today?",
-        "Who can you collaborate with to boost creativity in learning?",
-        "Reflect on a past study moment where creativity helped you.",
-        "Write about a learning moment that felt creatively inspiring.",
-        "What learning resources (e.g., projects) can enhance your creativity?"
-      ]
+        "What health resources (e.g., tracker) can aid memory capture?",
+        "How has health shaped this memory"
+         ]
     }
   }
 }
