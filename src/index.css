@@ -111,12 +111,38 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
+  animation: galaxy-float 20s ease-in-out infinite;
+}
+
+@keyframes galaxy-float {
+  0%, 100% { 
+    background-position: center center;
+  }
+  25% { 
+    background-position: center top;
+  }
+  50% { 
+    background-position: center bottom;
+  }
+  75% { 
+    background-position: center top;
+  }
 }
 
 @media (max-width: 768px) {
   .galaxy-background {
     background-attachment: scroll;
     background-size: cover;
+    animation: galaxy-float-mobile 15s ease-in-out infinite;
+  }
+}
+
+@keyframes galaxy-float-mobile {
+  0%, 100% { 
+    background-position: center center;
+  }
+  50% { 
+    background-position: center bottom;
   }
 }
 
