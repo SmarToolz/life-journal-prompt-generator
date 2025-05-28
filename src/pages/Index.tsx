@@ -41,12 +41,13 @@ const Index = () => {
     <div className="min-h-screen galaxy-background">
       <div className="container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
+          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-2xl mb-3 text-shadow-lg">
+            Life Journal Prompt Generator
+          </h1>
           <div className="flex items-center justify-center gap-3 mb-3">
-            <img 
-              src="/lovable-uploads/47f1b7ba-df6a-43cd-829b-aa0a7f685abe.png" 
-              alt="Journal Icon" 
-              className="h-4 w-4 drop-shadow-lg" 
-            />
+            <p className="text-lg max-w-lg text-white/90 drop-shadow-lg font-semibold text-shadow">
+              Daily Ideas for Gratitude, Dreams, and More
+            </p>
             <Button 
               variant="outline" 
               size="icon" 
@@ -57,12 +58,6 @@ const Index = () => {
               <Heart className="h-6 w-6 text-white drop-shadow-lg" />
             </Button>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-2xl mb-3 text-shadow-lg">
-            Life Journal Prompt Generator
-          </h1>
-          <p className="text-lg max-w-lg mx-auto text-white/90 drop-shadow-lg font-semibold text-shadow">
-            Daily Ideas for Gratitude, Dreams, and More
-          </p>
         </header>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
