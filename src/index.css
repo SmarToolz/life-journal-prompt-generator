@@ -103,7 +103,7 @@
   }
 }
 
-/* Animated Galaxy Background */
+/* Fallback Galaxy Background */
 .galaxy-background {
   background-image: url('/lovable-uploads/900384b2-a91a-4a21-8145-9071a352f697.png');
   background-size: cover;
@@ -112,60 +112,6 @@
   background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
-}
-
-/* Ensure the background animation plays continuously */
-.galaxy-background::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/lovable-uploads/900384b2-a91a-4a21-8145-9071a352f697.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  animation: galaxy-float 20s ease-in-out infinite;
-}
-
-@keyframes galaxy-float {
-  0%, 100% { 
-    background-position: center center;
-    transform: scale(1);
-  }
-  25% { 
-    background-position: center top;
-    transform: scale(1.05);
-  }
-  50% { 
-    background-position: center bottom;
-    transform: scale(1.1);
-  }
-  75% { 
-    background-position: center top;
-    transform: scale(1.05);
-  }
-}
-
-@media (max-width: 768px) {
-  .galaxy-background::before {
-    background-attachment: scroll;
-    background-size: cover;
-    animation: galaxy-float-mobile 15s ease-in-out infinite;
-  }
-}
-
-@keyframes galaxy-float-mobile {
-  0%, 100% { 
-    background-position: center center;
-    transform: scale(1);
-  }
-  50% { 
-    background-position: center bottom;
-    transform: scale(1.02);
-  }
 }
 
 /* Glassmorphism Effect */
@@ -201,136 +147,15 @@
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Breathing wave animation - slow and subtle */
-.breathing-wave-animation {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, 
-    rgba(148, 163, 184, 0.6),
-    rgba(99, 102, 241, 0.6),
-    rgba(139, 92, 246, 0.6),
-    rgba(219, 39, 119, 0.6),
-    rgba(236, 72, 153, 0.6)
-  );
-  background-size: 300% 100%;
-  animation: breathing-gradient 4s ease-in-out infinite, breathing-wave 6s ease-in-out infinite;
-  opacity: 0.8;
-}
-
-.breathing-wave-animation::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  transform: translateY(-50%);
-  filter: blur(6px);
-  animation: breathing-motion 8s ease-in-out infinite;
-  transition: all 0.8s ease;
-}
-
-@keyframes breathing-gradient {
-  0%, 100% { 
-    background-position: 0% 50%; 
-    opacity: 0.6;
-  }
-  50% { 
-    background-position: 100% 50%; 
-    opacity: 0.8;
-  }
-}
-
-@keyframes breathing-wave {
-  0%, 100% { 
-    transform: scale(1);
-  }
-  50% { 
-    transform: scale(1.02);
-  }
-}
-
-@keyframes breathing-motion {
-  0%, 100% { 
-    height: 40%; 
-    filter: blur(4px);
-    transform: translateY(-50%) scaleY(0.8);
-  }
-  50% { 
-    height: 60%; 
-    filter: blur(8px);
-    transform: translateY(-50%) scaleY(1.1);
-  }
-}
-
-/* Original soft wave animation */
-.soft-wave-animation {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, 
-    #14B8A6,
-    #06B6D4,
-    #0EA5E9,
-    #3B82F6,
-    #6366F1
-  );
-  background-size: 300% 100%;
-  animation: soft-gradient-wave 8s ease-in-out infinite;
-  opacity: 0.6;
-}
-
-.soft-wave-animation::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  transform: translateY(-50%);
-  filter: blur(8px);
-  animation: soft-wave-motion 6s ease-in-out infinite alternate;
-  transition: all 0.5s ease;
-}
-
-@keyframes soft-gradient-wave {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes soft-wave-motion {
-  0% { 
-    height: 30%; 
-    filter: blur(5px);
-  }
-  100% { 
-    height: 70%; 
-    filter: blur(12px);
-  }
-}
-
+/* Animation keyframes for floating elements */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 
-@keyframes float-meditation {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px); }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-meditation {
-  animation: float-meditation 3s ease-in-out infinite;
 }
 
 /* Custom color utilities */
@@ -362,12 +187,11 @@
   background-color: hsl(var(--pastel-purple));
 }
 
-/* Emoji size reduction (70-80% of original size) */
+/* Emoji size reduction */
 .emoji-text {
   font-size: 0.75em;
 }
 
-/* Apply to form sections and other emoji containers */
 select option:first-child,
 .category-emoji,
 .toast-emoji {

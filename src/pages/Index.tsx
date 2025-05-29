@@ -38,8 +38,25 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen galaxy-background">
-      <div className="container px-4 py-10 mx-auto max-w-4xl">
+    <div className="min-h-screen relative">
+      {/* Video Background */}
+      <div className="fixed inset-0 z-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          {/* Replace this src with your actual video file URL */}
+          <source src="/path-to-your-video.mp4" type="video/mp4" />
+          {/* Fallback to the existing background */}
+          <div className="galaxy-background w-full h-full"></div>
+        </video>
+      </div>
+      
+      {/* Content overlay */}
+      <div className="relative z-10 container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
           <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-2xl mb-3 text-shadow-lg">
             Life Journal Prompt Generator
@@ -118,16 +135,9 @@ const Index = () => {
         </Tabs>
 
         <footer className="mt-16 text-center">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <img 
-              src="/lovable-uploads/515855b2-0759-4b67-aec5-26ca9e56c57e.png" 
-              alt="Meditation" 
-              className="w-48 h-48 animate-float-meditation drop-shadow-lg"
-            />
-            <p className="text-xl font-semibold text-white drop-shadow-lg text-shadow">
-              Take a deep breath and let these prompts guide your journaling journey
-            </p>
-          </div>
+          <p className="text-xl font-semibold text-white drop-shadow-lg text-shadow">
+            Take a deep breath and let these prompts guide your journaling journey
+          </p>
         </footer>
       </div>
       
