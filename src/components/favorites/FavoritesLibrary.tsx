@@ -45,19 +45,19 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto glass-morphism border-white/30">
+        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto glass-morphism border-blue-200/40">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-xl text-white drop-shadow-lg">
+            <DialogTitle className="flex items-center gap-2 text-xl text-enhanced-lg">
               Favorites Library
             </DialogTitle>
-            <DialogDescription className="text-white/80 drop-shadow-lg">
+            <DialogDescription className="text-enhanced">
               Your saved journal prompts for daily inspiration.
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 my-4">
             {favorites.length === 0 ? (
-              <div className="text-center py-10 text-white/70 drop-shadow-lg">
+              <div className="text-center py-10 text-enhanced">
                 No saved journal prompts yet. Generate some prompts and save your favorites!
               </div>
             ) : (
@@ -65,16 +65,16 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                 {favorites.map((affirmation, index) => (
                   <div 
                     key={index} 
-                    className="p-4 rounded-lg glass-morphism backdrop-blur-sm relative border border-white/20"
+                    className="p-4 rounded-lg glass-morphism backdrop-blur-sm relative border border-blue-200/30"
                   >
-                    <p className="pr-16 text-white drop-shadow-lg">{affirmation}</p>
+                    <p className="pr-16 text-enhanced">{affirmation}</p>
                     <div className="absolute top-2 right-2 flex gap-1">
                       <Button 
                         variant="ghost" 
                         size="icon" 
                         onClick={() => handleCopy(affirmation)}
                         title="Copy to clipboard"
-                        className="text-white hover:text-white hover:bg-white/20"
+                        className="text-enhanced hover:text-enhanced hover:bg-blue-100/30"
                       >
                         <Clipboard className="h-4 w-4" />
                       </Button>
@@ -83,7 +83,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                         size="icon"
                         onClick={() => handleRemove(affirmation)}
                         title="Remove from favorites"
-                        className="text-white hover:text-white hover:bg-white/20"
+                        className="text-enhanced hover:text-enhanced hover:bg-blue-100/30"
                       >
                         <X className="h-4 w-4" />
                       </Button>
@@ -98,7 +98,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
             <Button 
               variant="outline" 
               onClick={() => onOpenChange(false)}
-              className="glass-morphism border-white/30 text-white hover:text-white hover:bg-white/20"
+              className="glass-morphism border-blue-200/40 text-enhanced hover:text-enhanced hover:bg-blue-100/30"
             >
               Close
             </Button>
@@ -106,7 +106,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
               <Button 
                 variant="destructive" 
                 onClick={() => setConfirmDialogOpen(true)}
-                className="gap-2 bg-red-500/80 hover:bg-red-600/80 backdrop-blur-sm"
+                className="gap-2 bg-red-500/80 hover:bg-red-600/80 backdrop-blur-sm text-white"
               >
                 <Trash2 className="h-4 w-4" />
                 Clear All
@@ -117,19 +117,19 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
       </Dialog>
 
       <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
-        <AlertDialogContent className="glass-morphism border-white/30">
+        <AlertDialogContent className="glass-morphism border-blue-200/40">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-white drop-shadow-lg">Are you sure?</AlertDialogTitle>
-            <AlertDialogDescription className="text-white/80 drop-shadow-lg">
+            <AlertDialogTitle className="text-enhanced-lg">Are you sure?</AlertDialogTitle>
+            <AlertDialogDescription className="text-enhanced">
               Are you sure you want to clear all your saved journal prompts?
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="glass-morphism border-white/30 text-white hover:text-white hover:bg-white/20">Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={handleClearAll} className="bg-red-500/80 hover:bg-red-600/80 backdrop-blur-sm">Continue</AlertDialogAction>
+            <AlertDialogCancel className="glass-morphism border-blue-200/40 text-enhanced hover:text-enhanced hover:bg-blue-100/30">Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleClearAll} className="bg-red-500/80 hover:bg-red-600/80 backdrop-blur-sm text-white">Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>
+      </Dialog>
     </>
   );
 };
