@@ -65,18 +65,18 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
   return (
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <div className="space-y-2">
-        <label htmlFor="journalGoal" className="text-lg font-medium text-white drop-shadow-lg">
+        <label htmlFor="journalGoal" className="text-lg font-medium text-enhanced">
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
-          <SelectTrigger id="journalGoal" className="glass-morphism border-white/30 text-white placeholder:text-white/70">
+          <SelectTrigger id="journalGoal" className="glass-morphism border-amber-200/40 text-enhanced placeholder:text-amber-100/80 focus:border-amber-300/60">
             <SelectValue placeholder="Select a journal goal" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/30 backdrop-blur-md">
+          <SelectContent position="popper" className="glass-morphism border-amber-200/40 backdrop-blur-md">
             {journalGoals.map((goal) => (
-              <SelectItem key={goal.value} value={goal.value} className="text-white hover:bg-white/20">
+              <SelectItem key={goal.value} value={goal.value} className="text-enhanced hover:bg-amber-100/30">
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl">{goal.emoji}</span> <span className="text-white">{goal.label}</span>
+                  <span className="text-2xl">{goal.emoji}</span> <span>{goal.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -85,18 +85,18 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="journalType" className="text-lg font-medium text-white drop-shadow-lg">
+        <label htmlFor="journalType" className="text-lg font-medium text-enhanced">
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
-          <SelectTrigger id="journalType" className="glass-morphism border-white/30 text-white placeholder:text-white/70">
+          <SelectTrigger id="journalType" className="glass-morphism border-amber-200/40 text-enhanced placeholder:text-amber-100/80 focus:border-amber-300/60">
             <SelectValue placeholder="Select a journal type" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/30 backdrop-blur-md">
+          <SelectContent position="popper" className="glass-morphism border-amber-200/40 backdrop-blur-md">
             {journalTypes.map((type) => (
-              <SelectItem key={type.value} value={type.value} className="text-white hover:bg-white/20">
+              <SelectItem key={type.value} value={type.value} className="text-enhanced hover:bg-amber-100/30">
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl">{type.emoji}</span> <span className="text-white">{type.label}</span>
+                  <span className="text-2xl">{type.emoji}</span> <span>{type.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -106,7 +106,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <Button 
         type="submit" 
-        className="w-full bg-gradient-to-r from-purple-500/80 to-pink-500/80 hover:from-purple-600/80 hover:to-pink-600/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/20"
+        className="w-full bg-gradient-to-r from-amber-600/80 to-orange-600/80 hover:from-amber-700/80 hover:to-orange-700/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-amber-200/30"
         disabled={!journalGoal || !journalType || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}

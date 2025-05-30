@@ -39,55 +39,47 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Video Background */}
+      {/* Library Background with Dark Overlay */}
       <div className="fixed inset-0 z-0">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          {/* Replace this src with your actual video file URL */}
-          <source src="/path-to-your-video.mp4" type="video/mp4" />
-          {/* Fallback to the existing background */}
-          <div className="galaxy-background w-full h-full"></div>
-        </video>
+        <div className="library-background w-full h-full">
+          <div className="dark-overlay w-full h-full"></div>
+        </div>
       </div>
       
       {/* Content overlay */}
       <div className="relative z-10 container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-2xl mb-3 text-shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-bold text-enhanced-lg mb-4">
             Life Journal Prompt Generator
           </h1>
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <p className="text-lg max-w-lg text-white/90 drop-shadow-lg font-semibold text-shadow">
+          <div className="flex flex-col items-center gap-3 mb-3">
+            <p className="text-lg max-w-lg text-enhanced font-semibold">
               Daily Ideas for Gratitude, Dreams, and More
             </p>
             <Button 
               variant="outline" 
-              size="icon" 
-              className="rounded-full glass-morphism border-white/20 hover:bg-white/20"
+              size="default" 
+              className="glass-morphism border-amber-200/40 hover:bg-amber-100/30 text-enhanced font-semibold px-6 py-2"
               onClick={() => setShowFavorites(true)}
               title="Favorites Library"
             >
-              <Heart className="h-6 w-6 text-white drop-shadow-lg" />
+              <Heart className="h-5 w-5 mr-2 text-amber-200 drop-shadow-lg" />
+              My Favorites
             </Button>
           </div>
         </header>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8 glass-morphism border-white/20">
+          <TabsList className="grid w-full grid-cols-2 mb-8 glass-morphism border-amber-200/30">
             <TabsTrigger 
               value="generated" 
-              className="data-[state=active]:bg-white/30 data-[state=active]:text-white text-white/90 font-semibold"
+              className="data-[state=active]:bg-amber-100/40 data-[state=active]:text-enhanced text-enhanced font-semibold"
             >
               Generated Prompts
             </TabsTrigger>
             <TabsTrigger 
               value="custom"
-              className="data-[state=active]:bg-white/30 data-[state=active]:text-white text-white/90 font-semibold"
+              className="data-[state=active]:bg-amber-100/40 data-[state=active]:text-enhanced text-enhanced font-semibold"
             >
               Custom Prompts
             </TabsTrigger>
@@ -95,7 +87,7 @@ const Index = () => {
 
           <TabsContent value="generated">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-              <div className="glass-morphism border-white/20 p-6 rounded-xl">
+              <div className="glass-morphism border-amber-200/30 p-6 rounded-xl">
                 <AffirmationForm 
                   onGenerate={handleGenerateAffirmation} 
                   isGenerating={isGenerating}
@@ -110,17 +102,17 @@ const Index = () => {
                         <AffirmationCard 
                           key={index}
                           affirmation={affirmation}
-                          className="glass-morphism animate-float border-white/20"
+                          className="glass-morphism animate-float border-amber-200/30"
                         />
                       ))}
                     </div>
                   </>
                 ) : (
-                  <div className="glass-morphism border-white/20 p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
-                    <h3 className="text-xl font-semibold mb-3 text-white drop-shadow-lg">
+                  <div className="glass-morphism border-amber-200/30 p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
+                    <h3 className="text-xl font-semibold mb-3 text-enhanced">
                       Your journal prompts will appear here
                     </h3>
-                    <p className="text-white/90 drop-shadow-lg font-medium">
+                    <p className="text-enhanced font-medium">
                       Select options and fill in the form to generate your personalized journal prompts
                     </p>
                   </div>
@@ -135,7 +127,7 @@ const Index = () => {
         </Tabs>
 
         <footer className="mt-16 text-center">
-          <p className="text-xl font-semibold text-white drop-shadow-lg text-shadow">
+          <p className="text-xl font-semibold text-enhanced">
             Take a deep breath and let these prompts guide your journaling journey
           </p>
         </footer>

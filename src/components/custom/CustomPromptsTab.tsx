@@ -147,19 +147,19 @@ const CustomPromptsTab: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Add New Prompt Section */}
-      <Card className="glass-morphism border-white/20">
+      <Card className="glass-morphism border-amber-200/30">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4 text-white drop-shadow-lg">Add New Custom Prompt</h3>
+          <h3 className="text-lg font-semibold mb-4 text-enhanced">Add New Custom Prompt</h3>
           <div className="space-y-4">
             <Textarea
               placeholder="Enter your custom journal prompt..."
               value={newPromptText}
               onChange={(e) => setNewPromptText(e.target.value)}
-              className="min-h-[100px] resize-none glass-morphism border-white/30 text-white placeholder:text-white/70"
+              className="min-h-[100px] resize-none glass-morphism border-amber-200/40 text-enhanced placeholder:text-amber-100/80 focus:border-amber-300/60"
             />
             <Button 
               onClick={addCustomPrompt}
-              className="bg-gradient-to-r from-purple-500/80 to-pink-500/80 hover:from-purple-600/80 hover:to-pink-600/80 text-white font-semibold backdrop-blur-sm border border-white/20"
+              className="bg-gradient-to-r from-amber-600/80 to-orange-600/80 hover:from-amber-700/80 hover:to-orange-700/80 text-white font-semibold backdrop-blur-sm border border-amber-200/30"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Prompt
@@ -171,19 +171,19 @@ const CustomPromptsTab: React.FC = () => {
       {/* Custom Prompts List */}
       <div className="space-y-4">
         {customPrompts.length === 0 ? (
-          <Card className="glass-morphism border-white/20">
+          <Card className="glass-morphism border-amber-200/30">
             <CardContent className="p-8 text-center">
-              <h3 className="text-xl font-medium mb-3 text-white drop-shadow-lg">
+              <h3 className="text-xl font-medium mb-3 text-enhanced">
                 No custom prompts yet
               </h3>
-              <p className="text-white/80 drop-shadow-lg">
+              <p className="text-enhanced">
                 Create your first custom prompt using the form above
               </p>
             </CardContent>
           </Card>
         ) : (
           customPrompts.map((prompt) => (
-            <Card key={prompt.id} className="glass-morphism border-white/20 overflow-hidden">
+            <Card key={prompt.id} className="glass-morphism border-amber-200/30 overflow-hidden">
               <div className="relative h-8 overflow-hidden">
                 <div className="breathing-wave-animation absolute inset-0 h-full w-full"></div>
               </div>
@@ -193,13 +193,13 @@ const CustomPromptsTab: React.FC = () => {
                     <Textarea
                       value={editingText}
                       onChange={(e) => setEditingText(e.target.value)}
-                      className="min-h-[100px] resize-none glass-morphism border-white/30 text-white placeholder:text-white/70"
+                      className="min-h-[100px] resize-none glass-morphism border-amber-200/40 text-enhanced placeholder:text-amber-100/80 focus:border-amber-300/60"
                     />
                     <div className="flex gap-2">
                       <Button 
                         onClick={saveEdit}
                         size="sm"
-                        className="bg-gradient-to-r from-purple-500/80 to-pink-500/80 hover:from-purple-600/80 hover:to-pink-600/80 text-white backdrop-blur-sm"
+                        className="bg-gradient-to-r from-amber-600/80 to-orange-600/80 hover:from-amber-700/80 hover:to-orange-700/80 text-white backdrop-blur-sm"
                       >
                         Save
                       </Button>
@@ -207,7 +207,7 @@ const CustomPromptsTab: React.FC = () => {
                         onClick={cancelEdit}
                         variant="outline"
                         size="sm"
-                        className="glass-morphism border-white/30 text-white hover:bg-white/20"
+                        className="glass-morphism border-amber-200/40 text-enhanced hover:bg-amber-100/30"
                       >
                         Cancel
                       </Button>
@@ -215,11 +215,11 @@ const CustomPromptsTab: React.FC = () => {
                   </div>
                 ) : (
                   <>
-                    <p className="text-lg md:text-xl font-medium leading-relaxed tracking-wide text-white drop-shadow-lg mb-4">
+                    <p className="text-lg md:text-xl font-medium leading-relaxed tracking-wide text-enhanced mb-4">
                       {prompt.text}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-white/70 drop-shadow-lg">
+                      <span className="text-sm text-enhanced">
                         Created: {prompt.createdAt.toLocaleDateString()}
                       </span>
                       <div className="flex gap-2">
@@ -227,7 +227,7 @@ const CustomPromptsTab: React.FC = () => {
                           onClick={() => handleCopy(prompt.text)}
                           variant="outline"
                           size="sm"
-                          className="glass-morphism border-white/30 hover:bg-white/20 text-white"
+                          className="glass-morphism border-amber-200/40 hover:bg-amber-100/30 text-enhanced"
                         >
                           <Copy className="h-4 w-4" />
                         </Button>
@@ -238,16 +238,16 @@ const CustomPromptsTab: React.FC = () => {
                           className={cn(
                             isFavorite(prompt.text) 
                               ? "bg-red-500/80 hover:bg-red-600/80 text-white backdrop-blur-sm" 
-                              : "glass-morphism border-white/30 hover:bg-red-50/20 text-white"
+                              : "glass-morphism border-amber-200/40 hover:bg-red-50/20 text-enhanced"
                           )}
                         >
-                          <Heart className={cn("h-4 w-4", isFavorite(prompt.text) ? "fill-white text-white" : "text-red-300")} />
+                          <Heart className={cn("h-4 w-4", isFavorite(prompt.text) ? "fill-white text-white" : "text-red-400")} />
                         </Button>
                         <Button
                           onClick={() => startEditing(prompt)}
                           variant="outline"
                           size="sm"
-                          className="glass-morphism border-white/30 hover:bg-white/20 text-white"
+                          className="glass-morphism border-amber-200/40 hover:bg-amber-100/30 text-enhanced"
                         >
                           <Pencil className="h-4 w-4" />
                         </Button>
@@ -255,7 +255,7 @@ const CustomPromptsTab: React.FC = () => {
                           onClick={() => deleteCustomPrompt(prompt.id)}
                           variant="outline"
                           size="sm"
-                          className="glass-morphism border-red-300/50 hover:bg-red-500/20 text-red-300"
+                          className="glass-morphism border-red-300/50 hover:bg-red-500/20 text-red-400"
                         >
                           <Trash2 className="h-4 w-4" />
                         </Button>

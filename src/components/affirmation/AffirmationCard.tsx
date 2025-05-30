@@ -51,7 +51,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
       </div>
       <CardContent className="p-6 flex flex-col items-center justify-center space-y-6">
         <div className="text-center">
-          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-white drop-shadow-lg">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-enhanced">
             {affirmation}
           </p>
         </div>
@@ -61,10 +61,10 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             onClick={handleCopy}
             variant="outline"
             size="icon"
-            className="rounded-full w-10 h-10 glass-morphism border-white/30 hover:bg-white/20 text-white"
+            className="rounded-full w-10 h-10 glass-morphism border-amber-200/40 hover:bg-amber-100/30 text-enhanced"
             title="Copy to clipboard"
           >
-            <Copy className="h-5 w-5 text-white" />
+            <Copy className="h-5 w-5" />
           </Button>
           
           <Button
@@ -75,11 +75,11 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
               "rounded-full w-10 h-10",
               isFavorited 
                 ? "bg-red-500/80 hover:bg-red-600/80 text-white backdrop-blur-sm" 
-                : "glass-morphism border-white/30 hover:bg-red-50/20 text-white"
+                : "glass-morphism border-amber-200/40 hover:bg-red-50/20 text-enhanced"
             )}
             title={isFavorited ? "Remove from favorites" : "Add to favorites"}
           >
-            <Heart className={cn("h-5 w-5", isFavorited ? "fill-white text-white" : "text-red-300")} />
+            <Heart className={cn("h-5 w-5", isFavorited ? "fill-white text-white" : "text-red-400")} />
           </Button>
         </div>
       </CardContent>
