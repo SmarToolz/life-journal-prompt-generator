@@ -1,5 +1,4 @@
 
-
 /* Background Styles */
 
 /* Cosmic Galaxy Background */
@@ -32,16 +31,6 @@
   object-fit: cover;
 }
 
-/* Dark overlay for better text readability */
-.dark-overlay {
-  background: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* Custom color utilities for cosmic theme */
 .text-deep-space {
   color: hsl(var(--deep-space));
@@ -70,4 +59,3 @@
 .bg-cosmic-glow {
   background-color: hsl(var(--cosmic-glow));
 }
-
