@@ -3,42 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import organized stylesheets */
-@import './styles/backgrounds.css';
-@import './styles/glassmorphism.css';
-@import './styles/animations.css';
-@import './styles/text-effects.css';
-@import './styles/responsive.css';
-
 @layer base {
   :root {
-    --background: 220 100% 95%;
-    --foreground: 220 50% 15%;
+    --background: 195 100% 98%;
+    --foreground: 195 50% 15%;
 
-    --card: 220 30% 98%;
-    --card-foreground: 220 50% 15%;
+    --card: 195 30% 98%;
+    --card-foreground: 195 50% 15%;
 
-    --popover: 220 30% 98%;
-    --popover-foreground: 220 50% 15%;
+    --popover: 195 30% 98%;
+    --popover-foreground: 195 50% 15%;
 
-    --primary: 240 70% 50%;
-    --primary-foreground: 240 10% 98%;
+    --primary: 270 70% 50%;
+    --primary-foreground: 270 10% 98%;
 
-    --secondary: 240 30% 90%;
-    --secondary-foreground: 240 50% 25%;
+    --secondary: 270 30% 90%;
+    --secondary-foreground: 270 50% 25%;
 
-    --muted: 240 30% 90%;
-    --muted-foreground: 240 40% 40%;
+    --muted: 270 30% 90%;
+    --muted-foreground: 270 40% 40%;
 
-    --accent: 240 30% 90%;
-    --accent-foreground: 240 50% 25%;
+    --accent: 270 30% 90%;
+    --accent-foreground: 270 50% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 20% 85%;
-    --input: 240 20% 85%;
-    --ring: 240 85% 40%;
+    --border: 270 20% 85%;
+    --input: 270 20% 85%;
+    --ring: 270 85% 40%;
 
     --radius: 0.75rem;
 
@@ -51,43 +44,43 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Updated colors for cosmic galaxy theme */
-    --deep-space: 240 20% 8%;
-    --cosmic-blue: 220 100% 85%;
-    --stellar-white: 60 100% 98%;
-    --nebula-purple: 260 50% 25%;
-    --starlight: 220 100% 90%;
-    --cosmic-glow: 240 80% 60%;
+    /* Updated colors for warm library theme */
+    --charcoal: 30 15% 8%;
+    --warm-cream: 45 100% 98%;
+    --soft-amber: 45 100% 92%;
+    --forest-green: 140 30% 25%;
+    --golden-yellow: 45 100% 70%;
+    --rich-brown: 25 40% 20%;
   }
 
   .dark {
-    --background: 220 50% 10%;
-    --foreground: 220 10% 98%;
+    --background: 195 50% 10%;
+    --foreground: 195 10% 98%;
 
-    --card: 220 50% 15%;
-    --card-foreground: 220 10% 98%;
+    --card: 195 50% 15%;
+    --card-foreground: 195 10% 98%;
 
-    --popover: 220 50% 15%;
-    --popover-foreground: 220 10% 98%;
+    --popover: 195 50% 15%;
+    --popover-foreground: 195 10% 98%;
 
-    --primary: 240 85% 60%;
-    --primary-foreground: 240 50% 10%;
+    --primary: 270 85% 60%;
+    --primary-foreground: 270 50% 10%;
 
-    --secondary: 240 50% 20%;
-    --secondary-foreground: 240 10% 98%;
+    --secondary: 270 50% 20%;
+    --secondary-foreground: 270 10% 98%;
 
-    --muted: 240 50% 20%;
-    --muted-foreground: 240 40% 70%;
+    --muted: 270 50% 20%;
+    --muted-foreground: 270 40% 70%;
 
-    --accent: 240 50% 20%;
-    --accent-foreground: 240 10% 98%;
+    --accent: 270 50% 20%;
+    --accent-foreground: 270 10% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 50% 25%;
-    --input: 240 50% 25%;
-    --ring: 240 85% 60%;
+    --border: 270 50% 25%;
+    --input: 270 50% 25%;
+    --ring: 270 85% 60%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -108,4 +101,142 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Cozy Library Background */
+.library-background {
+  background-image: url('/lovable-uploads/d04ad1d1-a830-46c9-81c4-5b5001f96d5b.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Enhanced glassmorphism for warm tones */
+.glass-morphism {
+  background: rgba(255, 248, 220, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 248, 220, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(139, 69, 19, 0.2);
+}
+
+/* Enhanced glassmorphism for better mobile performance */
+@media (max-width: 768px) {
+  .glass-morphism {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 248, 220, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-morphism {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 248, 220, 0.25);
+  }
+}
+
+/* Enhanced text shadow utilities for better readability on warm background */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px rgba(139, 69, 19, 0.6);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 2px 2px 4px rgba(139, 69, 19, 0.7);
+}
+
+/* Animation keyframes for floating elements */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Updated custom color utilities for library theme */
+.text-charcoal {
+  color: hsl(var(--charcoal));
+}
+
+.bg-charcoal {
+  background-color: hsl(var(--charcoal));
+}
+
+.bg-warm-cream {
+  background-color: hsl(var(--warm-cream));
+}
+
+.bg-soft-amber {
+  background-color: hsl(var(--soft-amber));
+}
+
+.bg-forest-green {
+  background-color: hsl(var(--forest-green));
+}
+
+.bg-golden-yellow {
+  background-color: hsl(var(--golden-yellow));
+}
+
+.bg-rich-brown {
+  background-color: hsl(var(--rich-brown));
+}
+
+/* Emoji size reduction */
+.emoji-text {
+  font-size: 0.75em;
+}
+
+select option:first-child,
+.category-emoji,
+.toast-emoji {
+  font-size: 0.8em;
+}
+
+/* Enhanced breathing wave animation for warm theme */
+.breathing-wave-animation {
+  background: linear-gradient(90deg, 
+    rgba(255, 215, 0, 0.3) 0%, 
+    rgba(255, 140, 0, 0.4) 25%, 
+    rgba(218, 165, 32, 0.3) 50%, 
+    rgba(255, 140, 0, 0.4) 75%, 
+    rgba(255, 215, 0, 0.3) 100%);
+  background-size: 200% 100%;
+  animation: breathingWave 3s ease-in-out infinite;
+}
+
+@keyframes breathingWave {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.8;
+  }
+}
+
+/* Dark overlay for better text readability */
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced text visibility classes */
+.text-enhanced {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 1px 1px 2px rgba(139, 69, 19, 0.8);
+  font-weight: 600;
+}
+
+.text-enhanced-lg {
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.95), 2px 2px 4px rgba(139, 69, 19, 0.9);
+  font-weight: 700;
 }
