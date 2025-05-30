@@ -43,14 +43,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    
-    /* Updated colors for warm library theme */
-    --charcoal: 30 15% 8%;
-    --warm-cream: 45 100% 98%;
-    --soft-amber: 45 100% 92%;
-    --forest-green: 140 30% 25%;
-    --golden-yellow: 45 100% 70%;
-    --rich-brown: 25 40% 20%;
   }
 
   .dark {
@@ -103,9 +95,9 @@
   }
 }
 
-/* Cozy Library Background */
-.library-background {
-  background-image: url('/lovable-uploads/d04ad1d1-a830-46c9-81c4-5b5001f96d5b.png');
+/* Galaxy Background */
+.galaxy-background {
+  background-image: url('/lovable-uploads/db2c8526-59ec-4b92-a0ec-4b94c6bf08e2.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -114,39 +106,39 @@
   min-height: 100vh;
 }
 
-/* Enhanced glassmorphism for warm tones */
+/* Enhanced glassmorphism for cosmic theme */
 .glass-morphism {
-  background: rgba(255, 248, 220, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 248, 220, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(139, 69, 19, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 /* Enhanced glassmorphism for better mobile performance */
 @media (max-width: 768px) {
   .glass-morphism {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 248, 220, 0.2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
 @media (max-width: 480px) {
   .glass-morphism {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background: rgba(255, 248, 220, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.12);
   }
 }
 
-/* Enhanced text shadow utilities for better readability on warm background */
+/* Enhanced text shadow utilities for better readability on cosmic background */
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px rgba(139, 69, 19, 0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .text-shadow-lg {
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 2px 2px 4px rgba(139, 69, 19, 0.7);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Animation keyframes for floating elements */
@@ -160,35 +152,6 @@
   animation: float 6s ease-in-out infinite;
 }
 
-/* Updated custom color utilities for library theme */
-.text-charcoal {
-  color: hsl(var(--charcoal));
-}
-
-.bg-charcoal {
-  background-color: hsl(var(--charcoal));
-}
-
-.bg-warm-cream {
-  background-color: hsl(var(--warm-cream));
-}
-
-.bg-soft-amber {
-  background-color: hsl(var(--soft-amber));
-}
-
-.bg-forest-green {
-  background-color: hsl(var(--forest-green));
-}
-
-.bg-golden-yellow {
-  background-color: hsl(var(--golden-yellow));
-}
-
-.bg-rich-brown {
-  background-color: hsl(var(--rich-brown));
-}
-
 /* Emoji size reduction */
 .emoji-text {
   font-size: 0.75em;
@@ -200,14 +163,14 @@ select option:first-child,
   font-size: 0.8em;
 }
 
-/* Enhanced breathing wave animation for warm theme */
+/* Enhanced breathing wave animation for cosmic theme */
 .breathing-wave-animation {
   background: linear-gradient(90deg, 
-    rgba(255, 215, 0, 0.3) 0%, 
-    rgba(255, 140, 0, 0.4) 25%, 
-    rgba(218, 165, 32, 0.3) 50%, 
-    rgba(255, 140, 0, 0.4) 75%, 
-    rgba(255, 215, 0, 0.3) 100%);
+    rgba(135, 206, 250, 0.4) 0%, 
+    rgba(173, 216, 230, 0.5) 25%, 
+    rgba(138, 43, 226, 0.4) 50%, 
+    rgba(173, 216, 230, 0.5) 75%, 
+    rgba(135, 206, 250, 0.4) 100%);
   background-size: 200% 100%;
   animation: breathingWave 3s ease-in-out infinite;
 }
@@ -223,20 +186,15 @@ select option:first-child,
   }
 }
 
-/* Dark overlay for better text readability */
-.dark-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-/* Enhanced text visibility classes */
+/* Enhanced text visibility classes for cosmic theme */
 .text-enhanced {
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 1px 1px 2px rgba(139, 69, 19, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 1px 1px 2px rgba(0, 0, 0, 0.8);
   font-weight: 600;
 }
 
 .text-enhanced-lg {
   color: #ffffff;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.95), 2px 2px 4px rgba(139, 69, 19, 0.9);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.95), 2px 2px 4px rgba(0, 0, 0, 0.9);
   font-weight: 700;
 }
