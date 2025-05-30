@@ -39,9 +39,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Galaxy Background */}
+      {/* Galaxy Background with Dark Overlay */}
       <div className="fixed inset-0 z-0">
-        <div className="library-background w-full h-full"></div>
+        <div className="library-background w-full h-full">
+          <div className="dark-overlay w-full h-full"></div>
+        </div>
       </div>
       
       {/* Content overlay */}

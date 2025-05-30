@@ -3,15 +3,13 @@
 
 /* Cosmic Galaxy Background */
 .library-background {
-  background-image: url('/lovable-uploads/9db065ae-9c83-4eaa-aa73-3fe5b7b2d38c.png');
+  background-image: url('/lovable-uploads/7779f6dc-9bb9-4d6b-ae85-2d2ac54f52ec.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
-  width: 100%;
-  height: 100%;
 }
 
 /* Video Background Styles */
@@ -29,6 +27,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Dark overlay for better text readability */
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* Custom color utilities for cosmic theme */
