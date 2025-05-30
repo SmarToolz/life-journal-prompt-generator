@@ -61,7 +61,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             onClick={handleCopy}
             variant="outline"
             size="icon"
-            className="rounded-full w-10 h-10 glass-morphism border-amber-200/40 hover:bg-amber-100/30 text-enhanced"
+            className="rounded-full w-10 h-10 glass-morphism border-blue-200/50 hover:bg-blue-100/30 text-enhanced"
             title="Copy to clipboard"
           >
             <Copy className="h-5 w-5" />
@@ -75,7 +75,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
               "rounded-full w-10 h-10",
               isFavorited 
                 ? "bg-red-500/80 hover:bg-red-600/80 text-white backdrop-blur-sm" 
-                : "glass-morphism border-amber-200/40 hover:bg-red-50/20 text-enhanced"
+                : "glass-morphism border-blue-200/50 hover:bg-red-50/20 text-enhanced"
             )}
             title={isFavorited ? "Remove from favorites" : "Add to favorites"}
           >
