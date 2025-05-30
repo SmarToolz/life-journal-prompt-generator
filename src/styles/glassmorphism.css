@@ -1,0 +1,28 @@
+
+/* Glassmorphism Effects */
+
+/* Enhanced glassmorphism for cosmic theme */
+.glass-morphism {
+  background: rgba(135, 206, 250, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 216, 230, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(70, 130, 180, 0.25);
+}
+
+/* Enhanced glassmorphism for better mobile performance */
+@media (max-width: 768px) {
+  .glass-morphism {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(135, 206, 250, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-morphism {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(135, 206, 250, 0.25);
+  }
+}

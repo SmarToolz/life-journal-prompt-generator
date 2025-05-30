@@ -1,0 +1,35 @@
+
+/* Text Effects and Typography */
+
+/* Enhanced text shadow utilities for better readability on cosmic background */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 1px 1px 2px rgba(30, 144, 255, 0.6);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.95), 2px 2px 4px rgba(30, 144, 255, 0.8);
+}
+
+/* Enhanced text visibility classes for cosmic theme */
+.text-enhanced {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.95), 1px 1px 2px rgba(30, 144, 255, 0.8);
+  font-weight: 600;
+}
+
+.text-enhanced-lg {
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.98), 2px 2px 4px rgba(30, 144, 255, 0.9);
+  font-weight: 700;
+}
+
+/* Emoji size reduction */
+.emoji-text {
+  font-size: 0.75em;
+}
+
+select option:first-child,
+.category-emoji,
+.toast-emoji {
+  font-size: 0.8em;
+}

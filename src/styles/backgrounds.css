@@ -1,0 +1,64 @@
+
+/* Background Styles */
+
+/* Cosmic Galaxy Background */
+.library-background {
+  background-image: url('/lovable-uploads/85bfc6ff-b77c-4edf-b181-8b32f04d3298.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Video Background Styles */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay for better text readability */
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Custom color utilities for cosmic theme */
+.text-deep-space {
+  color: hsl(var(--deep-space));
+}
+
+.bg-deep-space {
+  background-color: hsl(var(--deep-space));
+}
+
+.bg-cosmic-blue {
+  background-color: hsl(var(--cosmic-blue));
+}
+
+.bg-stellar-white {
+  background-color: hsl(var(--stellar-white));
+}
+
+.bg-nebula-purple {
+  background-color: hsl(var(--nebula-purple));
+}
+
+.bg-starlight {
+  background-color: hsl(var(--starlight));
+}
+
+.bg-cosmic-glow {
+  background-color: hsl(var(--cosmic-glow));
+}

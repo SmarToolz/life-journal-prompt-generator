@@ -1,0 +1,36 @@
+
+/* Animation Keyframes and Classes */
+
+/* Animation keyframes for floating elements */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced breathing wave animation for cosmic theme */
+.breathing-wave-animation {
+  background: linear-gradient(90deg, 
+    rgba(135, 206, 250, 0.4) 0%, 
+    rgba(173, 216, 230, 0.5) 25%, 
+    rgba(70, 130, 180, 0.4) 50%, 
+    rgba(173, 216, 230, 0.5) 75%, 
+    rgba(135, 206, 250, 0.4) 100%);
+  background-size: 200% 100%;
+  animation: breathingWave 3s ease-in-out infinite;
+}
+
+@keyframes breathingWave {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.7;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.9;
+  }
+}
