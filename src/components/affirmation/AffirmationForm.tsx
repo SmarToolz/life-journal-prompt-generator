@@ -69,12 +69,12 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
-          <SelectTrigger id="journalGoal" className="glass-morphism border-white/20 text-enhanced placeholder:text-white/80 focus:border-white/40">
+          <SelectTrigger id="journalGoal" className="glass-morphism border-white/30 text-enhanced placeholder:text-gray-600 focus:border-white/50">
             <SelectValue placeholder="Select a journal goal" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/20 backdrop-blur-md">
+          <SelectContent position="popper" className="glass-morphism border-white/30 backdrop-blur-md">
             {journalGoals.map((goal) => (
-              <SelectItem key={goal.value} value={goal.value} className="text-enhanced hover:bg-white/20">
+              <SelectItem key={goal.value} value={goal.value} className="dropdown-option-text hover:bg-white/30">
                 <span className="inline-flex items-center gap-2">
                   <span className="text-2xl">{goal.emoji}</span> <span>{goal.label}</span>
                 </span>
@@ -89,12 +89,12 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
-          <SelectTrigger id="journalType" className="glass-morphism border-white/20 text-enhanced placeholder:text-white/80 focus:border-white/40">
+          <SelectTrigger id="journalType" className="glass-morphism border-white/30 text-enhanced placeholder:text-gray-600 focus:border-white/50">
             <SelectValue placeholder="Select a journal type" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/20 backdrop-blur-md">
+          <SelectContent position="popper" className="glass-morphism border-white/30 backdrop-blur-md">
             {journalTypes.map((type) => (
-              <SelectItem key={type.value} value={type.value} className="text-enhanced hover:bg-white/20">
+              <SelectItem key={type.value} value={type.value} className="dropdown-option-text hover:bg-white/30">
                 <span className="inline-flex items-center gap-2">
                   <span className="text-2xl">{type.emoji}</span> <span>{type.label}</span>
                 </span>
@@ -106,7 +106,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <Button 
         type="submit" 
-        className="w-full bg-gradient-to-r from-blue-600/80 to-purple-600/80 hover:from-blue-700/80 hover:to-purple-700/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/20"
+        className="w-full bg-gradient-to-r from-green-600/80 to-blue-600/80 hover:from-green-700/80 hover:to-blue-700/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/30"
         disabled={!journalGoal || !journalType || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}

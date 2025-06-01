@@ -39,9 +39,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Galaxy Background */}
+      {/* Nature Background */}
       <div className="fixed inset-0 z-0">
-        <div className="galaxy-background w-full h-full"></div>
+        <div className="nature-background w-full h-full"></div>
       </div>
       
       {/* Content overlay */}
@@ -57,27 +57,27 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="default" 
-              className="glass-morphism border-white/20 hover:bg-white/10 text-enhanced font-semibold px-6 py-2"
+              className="glass-morphism border-white/30 hover:bg-white/20 text-enhanced font-semibold px-6 py-2"
               onClick={() => setShowFavorites(true)}
               title="Favorites Library"
             >
-              <Heart className="h-5 w-5 mr-2 text-blue-200 drop-shadow-lg" />
+              <Heart className="h-5 w-5 mr-2 text-green-600 drop-shadow-lg" />
               My Favorites
             </Button>
           </div>
         </header>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8 glass-morphism border-white/20">
+          <TabsList className="grid w-full grid-cols-2 mb-8 glass-morphism border-white/30">
             <TabsTrigger 
               value="generated" 
-              className="data-[state=active]:bg-white/20 data-[state=active]:text-enhanced text-enhanced font-semibold"
+              className="data-[state=active]:bg-white/30 data-[state=active]:text-enhanced text-enhanced font-semibold"
             >
               Generated Prompts
             </TabsTrigger>
             <TabsTrigger 
               value="custom"
-              className="data-[state=active]:bg-white/20 data-[state=active]:text-enhanced text-enhanced font-semibold"
+              className="data-[state=active]:bg-white/30 data-[state=active]:text-enhanced text-enhanced font-semibold"
             >
               Custom Prompts
             </TabsTrigger>
@@ -85,7 +85,7 @@ const Index = () => {
 
           <TabsContent value="generated">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-              <div className="glass-morphism border-white/20 p-6 rounded-xl">
+              <div className="glass-morphism border-white/30 p-6 rounded-xl">
                 <AffirmationForm 
                   onGenerate={handleGenerateAffirmation} 
                   isGenerating={isGenerating}
@@ -100,13 +100,13 @@ const Index = () => {
                         <AffirmationCard 
                           key={index}
                           affirmation={affirmation}
-                          className="glass-morphism animate-float border-white/20"
+                          className="glass-morphism animate-float border-white/30"
                         />
                       ))}
                     </div>
                   </>
                 ) : (
-                  <div className="glass-morphism border-white/20 p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
+                  <div className="glass-morphism border-white/30 p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
                     <h3 className="text-xl font-semibold mb-3 text-enhanced">
                       Your journal prompts will appear here
                     </h3>
