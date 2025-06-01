@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AffirmationForm from '@/components/affirmation/AffirmationForm';
 import AffirmationCard from '@/components/affirmation/AffirmationCard';
@@ -9,36 +8,32 @@ import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import FavoritesLibrary from '@/components/favorites/FavoritesLibrary';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const Index = () => {
   const [affirmations, setAffirmations] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [currentCategory, setCurrentCategory] = useState<string>("");
   const [showFavorites, setShowFavorites] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("generated");
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleGenerateAffirmation = (category: string, goal: string, promptFocus: string) => {
     setIsGenerating(true);
-    
+
     // Simulate API call with setTimeout
     setTimeout(() => {
       // Generate three unique affirmations using the new function
       const newAffirmations = generateUniqueAffirmations(category, goal, promptFocus, 3);
-      
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
       setIsGenerating(false);
-      
       toast({
         title: `${getCategoryEmoji(category)} Journal Prompts Generated`,
-        description: "Your personalized prompts are ready.",
+        description: "Your personalized prompts are ready."
       });
     }, 1500);
   };
-
-  return (
-    <div className="min-h-screen relative">
+  return <div className="min-h-screen relative">
       {/* Nature Background */}
       <div className="fixed inset-0 z-0">
         <div className="nature-background w-full h-full"></div>
@@ -54,13 +49,7 @@ const Index = () => {
             <p className="text-lg max-w-lg text-enhanced font-semibold">
               Daily Ideas for Gratitude, Dreams, and More
             </p>
-            <Button 
-              variant="outline" 
-              size="default" 
-              className="glass-morphism border-white/30 hover:bg-white/20 text-enhanced font-semibold px-6 py-2"
-              onClick={() => setShowFavorites(true)}
-              title="Favorites Library"
-            >
+            <Button variant="outline" size="default" className="glass-morphism border-white/30 hover:bg-white/20 text-enhanced font-semibold px-6 py-2" onClick={() => setShowFavorites(true)} title="Favorites Library">
               <Heart className="h-5 w-5 mr-2 text-green-600 drop-shadow-lg" />
               My Favorites
             </Button>
@@ -69,16 +58,10 @@ const Index = () => {
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-8 glass-morphism border-white/30">
-            <TabsTrigger 
-              value="generated" 
-              className="data-[state=active]:bg-white/30 data-[state=active]:text-enhanced text-enhanced font-semibold"
-            >
+            <TabsTrigger value="generated" className="data-[state=active]:bg-white/30 data-[state=active]:text-enhanced text-enhanced font-semibold">
               Generated Prompts
             </TabsTrigger>
-            <TabsTrigger 
-              value="custom"
-              className="data-[state=active]:bg-white/30 data-[state=active]:text-enhanced text-enhanced font-semibold"
-            >
+            <TabsTrigger value="custom" className="data-[state=active]:bg-white/30 data-[state=active]:text-enhanced text-enhanced font-semibold">
               Custom Prompts
             </TabsTrigger>
           </TabsList>
@@ -86,35 +69,22 @@ const Index = () => {
           <TabsContent value="generated">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="glass-morphism border-white/30 p-6 rounded-xl">
-                <AffirmationForm 
-                  onGenerate={handleGenerateAffirmation} 
-                  isGenerating={isGenerating}
-                />
+                <AffirmationForm onGenerate={handleGenerateAffirmation} isGenerating={isGenerating} />
               </div>
 
               <div className="space-y-6">
-                {affirmations.length > 0 ? (
-                  <>
+                {affirmations.length > 0 ? <>
                     <div className="space-y-6">
-                      {affirmations.map((affirmation, index) => (
-                        <AffirmationCard 
-                          key={index}
-                          affirmation={affirmation}
-                          className="glass-morphism animate-float border-white/30"
-                        />
-                      ))}
+                      {affirmations.map((affirmation, index) => <AffirmationCard key={index} affirmation={affirmation} className="glass-morphism animate-float border-white/30" />)}
                     </div>
-                  </>
-                ) : (
-                  <div className="glass-morphism border-white/30 p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
+                  </> : <div className="glass-morphism border-white/30 p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
                     <h3 className="text-xl font-semibold mb-3 text-enhanced">
                       Your journal prompts will appear here
                     </h3>
                     <p className="text-enhanced font-medium">
                       Select options and fill in the form to generate your personalized journal prompts
                     </p>
-                  </div>
-                )}
+                  </div>}
               </div>
             </div>
           </TabsContent>
@@ -124,16 +94,14 @@ const Index = () => {
           </TabsContent>
         </Tabs>
 
-        <footer className="mt-16 text-center">
-          <p className="text-xl font-semibold text-enhanced">
+        <footer className="mt-16 text-center rounded-none">
+          <p className="text-enhanced text-2xl text-slate-950 font-bold">
             Take a deep breath and let these prompts guide your journaling journey
           </p>
         </footer>
       </div>
       
       <FavoritesLibrary open={showFavorites} onOpenChange={setShowFavorites} />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
