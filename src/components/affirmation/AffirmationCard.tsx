@@ -45,7 +45,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
   };
 
   return (
-    <Card className={cn("overflow-hidden", className)}>
+    <Card className={cn("overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300", className)}>
       <div className="relative h-8 overflow-hidden">
         <div className="breathing-wave-animation absolute inset-0 h-full w-full"></div>
       </div>
@@ -61,7 +61,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             onClick={handleCopy}
             variant="outline"
             size="icon"
-            className="rounded-full w-10 h-10 glass-morphism border-white/40 hover:bg-white/40 text-enhanced shadow-md hover:shadow-lg transition-all duration-200"
+            className="rounded-full w-10 h-10 glass-morphism border-white/50 hover:bg-gradient-to-r hover:from-blue-100/60 hover:to-purple-100/60 text-enhanced shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-110"
             title="Copy to clipboard"
           >
             <Copy className="h-5 w-5" />
@@ -72,10 +72,10 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             variant={isFavorited ? "default" : "outline"}
             size="icon"
             className={cn(
-              "rounded-full w-10 h-10 transition-all duration-200",
+              "rounded-full w-10 h-10 transition-all duration-200 transform hover:scale-110",
               isFavorited 
-                ? "bg-rose-400/80 hover:bg-rose-500/80 text-white backdrop-blur-sm shadow-lg hover:shadow-xl" 
-                : "glass-morphism border-white/40 hover:bg-rose-50/40 text-enhanced shadow-md hover:shadow-lg"
+                ? "bg-gradient-to-r from-rose-400/90 to-pink-400/90 hover:from-rose-500/90 hover:to-pink-500/90 text-white backdrop-blur-sm shadow-lg hover:shadow-xl border-none" 
+                : "glass-morphism border-white/50 hover:bg-gradient-to-r hover:from-rose-100/60 hover:to-pink-100/60 text-enhanced shadow-md hover:shadow-lg"
             )}
             title={isFavorited ? "Remove from favorites" : "Add to favorites"}
           >

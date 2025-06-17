@@ -69,14 +69,14 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
-          <SelectTrigger id="journalGoal" className="glass-morphism border-white/40 text-enhanced placeholder:text-gray-500 focus:border-white/60 shadow-md transition-all duration-200">
+          <SelectTrigger id="journalGoal" className="glass-morphism border-white/50 text-enhanced placeholder:text-gray-500 focus:border-blue-300/60 shadow-lg transition-all duration-200 hover:shadow-xl">
             <SelectValue placeholder="Select a journal goal" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/40 backdrop-blur-md shadow-xl">
+          <SelectContent position="popper" className="glass-morphism border-white/50 backdrop-blur-md shadow-2xl">
             {journalGoals.map((goal) => (
-              <SelectItem key={goal.value} value={goal.value} className="dropdown-option-text hover:bg-white/40 transition-colors duration-200">
+              <SelectItem key={goal.value} value={goal.value} className="dropdown-option-text hover:bg-gradient-to-r hover:from-blue-100/50 hover:to-purple-100/50 transition-all duration-200 rounded-md">
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl">{goal.emoji}</span> <span>{goal.label}</span>
+                  <span className="text-2xl drop-shadow-sm">{goal.emoji}</span> <span>{goal.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -89,14 +89,14 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
-          <SelectTrigger id="journalType" className="glass-morphism border-white/40 text-enhanced placeholder:text-gray-500 focus:border-white/60 shadow-md transition-all duration-200">
+          <SelectTrigger id="journalType" className="glass-morphism border-white/50 text-enhanced placeholder:text-gray-500 focus:border-purple-300/60 shadow-lg transition-all duration-200 hover:shadow-xl">
             <SelectValue placeholder="Select a journal type" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/40 backdrop-blur-md shadow-xl">
+          <SelectContent position="popper" className="glass-morphism border-white/50 backdrop-blur-md shadow-2xl">
             {journalTypes.map((type) => (
-              <SelectItem key={type.value} value={type.value} className="dropdown-option-text hover:bg-white/40 transition-colors duration-200">
+              <SelectItem key={type.value} value={type.value} className="dropdown-option-text hover:bg-gradient-to-r hover:from-purple-100/50 hover:to-pink-100/50 transition-all duration-200 rounded-md">
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl">{type.emoji}</span> <span>{type.label}</span>
+                  <span className="text-2xl drop-shadow-sm">{type.emoji}</span> <span>{type.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -106,7 +106,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <Button 
         type="submit" 
-        className="w-full bg-gradient-to-r from-violet-400/80 to-purple-400/80 hover:from-violet-500/80 hover:to-purple-500/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/30"
+        className="w-full btn-gradient-primary font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/40"
         disabled={!journalGoal || !journalType || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}
