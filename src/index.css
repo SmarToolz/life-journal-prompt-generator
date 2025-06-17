@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 195 100% 98%;
-    --foreground: 195 50% 15%;
+    --background: 240 20% 98%;
+    --foreground: 220 15% 25%;
 
-    --card: 195 30% 98%;
-    --card-foreground: 195 50% 15%;
+    --card: 240 15% 96%;
+    --card-foreground: 220 15% 25%;
 
-    --popover: 195 30% 98%;
-    --popover-foreground: 195 50% 15%;
+    --popover: 240 15% 96%;
+    --popover-foreground: 220 15% 25%;
 
-    --primary: 270 70% 50%;
-    --primary-foreground: 270 10% 98%;
+    --primary: 260 50% 60%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 270 30% 90%;
-    --secondary-foreground: 270 50% 25%;
+    --secondary: 240 10% 90%;
+    --secondary-foreground: 220 15% 30%;
 
-    --muted: 270 30% 90%;
-    --muted-foreground: 270 40% 40%;
+    --muted: 240 10% 90%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 270 30% 90%;
-    --accent-foreground: 270 50% 25%;
+    --accent: 240 10% 90%;
+    --accent-foreground: 220 15% 30%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 270 20% 85%;
-    --input: 270 20% 85%;
-    --ring: 270 85% 40%;
+    --border: 240 10% 85%;
+    --input: 240 10% 85%;
+    --ring: 260 50% 60%;
 
     --radius: 0.75rem;
 
@@ -46,33 +46,33 @@
   }
 
   .dark {
-    --background: 195 50% 10%;
-    --foreground: 195 10% 98%;
+    --background: 220 15% 8%;
+    --foreground: 220 10% 95%;
 
-    --card: 195 50% 15%;
-    --card-foreground: 195 10% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 220 10% 95%;
 
-    --popover: 195 50% 15%;
-    --popover-foreground: 195 10% 98%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 220 10% 95%;
 
-    --primary: 270 85% 60%;
-    --primary-foreground: 270 50% 10%;
+    --primary: 260 50% 70%;
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 270 50% 20%;
-    --secondary-foreground: 270 10% 98%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 220 10% 95%;
 
-    --muted: 270 50% 20%;
-    --muted-foreground: 270 40% 70%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 70%;
 
-    --accent: 270 50% 20%;
-    --accent-foreground: 270 10% 98%;
+    --accent: 220 15% 18%;
+    --accent-foreground: 220 10% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 270 50% 25%;
-    --input: 270 50% 25%;
-    --ring: 270 85% 60%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 260 50% 70%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -95,50 +95,65 @@
   }
 }
 
-/* Nature Background */
-.nature-background {
-  background-image: url('/lovable-uploads/e8fc4063-0e64-41d7-b58d-64a78a9692fa.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+/* Soft pastel gradient background */
+.pastel-background {
+  background: linear-gradient(135deg, 
+    #f8f9ff 0%,
+    #f0f4ff 20%,
+    #e8f2ff 40%,
+    #f5f0ff 60%,
+    #fff0f8 80%,
+    #f8f9ff 100%);
+  background-size: 300% 300%;
+  animation: pastelShift 20s ease-in-out infinite;
   position: relative;
   min-height: 100vh;
 }
 
-/* Enhanced glassmorphism for nature theme */
+@keyframes pastelShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced glassmorphism for pastel theme */
 .glass-morphism {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(34, 139, 34, 0.1);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05), 
+              0 4px 16px 0 rgba(0, 0, 0, 0.03),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* Enhanced glassmorphism for better mobile performance */
 @media (max-width: 768px) {
   .glass-morphism {
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.3);
   }
 }
 
 @media (max-width: 480px) {
   .glass-morphism {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.35);
   }
 }
 
-/* Enhanced text shadow utilities for better readability on nature background */
+/* Soft text shadow utilities for better readability */
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .text-shadow-lg {
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* Animation keyframes for floating elements */
@@ -163,14 +178,14 @@ select option:first-child,
   font-size: 0.8em;
 }
 
-/* Enhanced breathing wave animation for nature theme */
+/* Soft breathing wave animation for pastel theme */
 .breathing-wave-animation {
   background: linear-gradient(90deg, 
-    rgba(34, 139, 34, 0.4) 0%, 
-    rgba(46, 125, 50, 0.5) 25%, 
-    rgba(76, 175, 80, 0.4) 50%, 
-    rgba(46, 125, 50, 0.5) 75%, 
-    rgba(34, 139, 34, 0.4) 100%);
+    rgba(147, 197, 253, 0.3) 0%, 
+    rgba(196, 181, 253, 0.4) 25%, 
+    rgba(251, 207, 232, 0.3) 50%, 
+    rgba(196, 181, 253, 0.4) 75%, 
+    rgba(147, 197, 253, 0.3) 100%);
   background-size: 200% 100%;
   animation: breathingWave 3s ease-in-out infinite;
 }
@@ -186,22 +201,48 @@ select option:first-child,
   }
 }
 
-/* Enhanced text visibility classes for nature theme */
+/* Enhanced text visibility classes for pastel theme */
 .text-enhanced {
-  color: #2e2e2e;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  color: #374151;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   font-weight: 600;
 }
 
 .text-enhanced-lg {
-  color: #1a1a1a;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9), 1px 1px 2px rgba(255, 255, 255, 0.7);
+  color: #1f2937;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9), 0 1px 3px rgba(255, 255, 255, 0.7);
   font-weight: 700;
 }
 
-/* Remove text shadows from dropdown options */
+/* Clean dropdown options without text shadows */
 .dropdown-option-text {
-  color: #2e2e2e;
+  color: #374151;
   text-shadow: none;
   font-weight: 500;
+}
+
+/* Pastel colored cards */
+.pastel-card-pink {
+  background: linear-gradient(135deg, rgba(251, 207, 232, 0.3), rgba(244, 224, 255, 0.3));
+  border: 1px solid rgba(251, 207, 232, 0.4);
+}
+
+.pastel-card-blue {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.3), rgba(196, 181, 253, 0.3));
+  border: 1px solid rgba(147, 197, 253, 0.4);
+}
+
+.pastel-card-green {
+  background: linear-gradient(135deg, rgba(209, 250, 229, 0.3), rgba(196, 181, 253, 0.3));
+  border: 1px solid rgba(167, 243, 208, 0.4);
+}
+
+.pastel-card-yellow {
+  background: linear-gradient(135deg, rgba(254, 249, 195, 0.3), rgba(251, 207, 232, 0.3));
+  border: 1px solid rgba(254, 240, 138, 0.4);
+}
+
+.pastel-card-purple {
+  background: linear-gradient(135deg, rgba(237, 233, 254, 0.3), rgba(219, 234, 254, 0.3));
+  border: 1px solid rgba(196, 181, 253, 0.4);
 }

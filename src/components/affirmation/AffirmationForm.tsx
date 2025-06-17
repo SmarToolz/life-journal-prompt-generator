@@ -65,16 +65,16 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
   return (
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
       <div className="space-y-2">
-        <label htmlFor="journalGoal" className="text-lg font-medium text-enhanced">
+        <label htmlFor="journalGoal" className="text-lg font-medium text-enhanced text-shadow">
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
-          <SelectTrigger id="journalGoal" className="glass-morphism border-white/30 text-enhanced placeholder:text-gray-600 focus:border-white/50">
+          <SelectTrigger id="journalGoal" className="glass-morphism border-white/40 text-enhanced placeholder:text-gray-500 focus:border-white/60 shadow-md transition-all duration-200">
             <SelectValue placeholder="Select a journal goal" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/30 backdrop-blur-md">
+          <SelectContent position="popper" className="glass-morphism border-white/40 backdrop-blur-md shadow-xl">
             {journalGoals.map((goal) => (
-              <SelectItem key={goal.value} value={goal.value} className="dropdown-option-text hover:bg-white/30">
+              <SelectItem key={goal.value} value={goal.value} className="dropdown-option-text hover:bg-white/40 transition-colors duration-200">
                 <span className="inline-flex items-center gap-2">
                   <span className="text-2xl">{goal.emoji}</span> <span>{goal.label}</span>
                 </span>
@@ -85,16 +85,16 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="journalType" className="text-lg font-medium text-enhanced">
+        <label htmlFor="journalType" className="text-lg font-medium text-enhanced text-shadow">
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
-          <SelectTrigger id="journalType" className="glass-morphism border-white/30 text-enhanced placeholder:text-gray-600 focus:border-white/50">
+          <SelectTrigger id="journalType" className="glass-morphism border-white/40 text-enhanced placeholder:text-gray-500 focus:border-white/60 shadow-md transition-all duration-200">
             <SelectValue placeholder="Select a journal type" />
           </SelectTrigger>
-          <SelectContent position="popper" className="glass-morphism border-white/30 backdrop-blur-md">
+          <SelectContent position="popper" className="glass-morphism border-white/40 backdrop-blur-md shadow-xl">
             {journalTypes.map((type) => (
-              <SelectItem key={type.value} value={type.value} className="dropdown-option-text hover:bg-white/30">
+              <SelectItem key={type.value} value={type.value} className="dropdown-option-text hover:bg-white/40 transition-colors duration-200">
                 <span className="inline-flex items-center gap-2">
                   <span className="text-2xl">{type.emoji}</span> <span>{type.label}</span>
                 </span>
@@ -106,7 +106,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <Button 
         type="submit" 
-        className="w-full bg-gradient-to-r from-green-600/80 to-blue-600/80 hover:from-green-700/80 hover:to-blue-700/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/30"
+        className="w-full bg-gradient-to-r from-violet-400/80 to-purple-400/80 hover:from-violet-500/80 hover:to-purple-500/80 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 backdrop-blur-sm border border-white/30"
         disabled={!journalGoal || !journalType || isGenerating}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}
