@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AffirmationForm from '@/components/affirmation/AffirmationForm';
 import AffirmationCard from '@/components/affirmation/AffirmationCard';
@@ -59,7 +58,7 @@ const Index = () => {
               onClick={() => setShowFavorites(true)} 
               title="Favorites Library"
             >
-              <Heart className="h-5 w-5 mr-2 text-white drop-shadow-lg" />
+              <Heart className="h-5 w-5 mr-2 text-gray-700" />
               My Favorites
             </Button>
           </div>

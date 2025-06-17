@@ -45,19 +45,19 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto glass-morphism border-white/30">
+        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto bg-gradient-to-br from-purple-100 to-pink-100 border-purple-300/50">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-xl text-white drop-shadow-lg">
+            <DialogTitle className="flex items-center gap-2 text-xl text-gray-800 font-bold">
               Favorites Library
             </DialogTitle>
-            <DialogDescription className="text-white/80 drop-shadow-lg">
+            <DialogDescription className="text-gray-700 font-medium">
               Your saved journal prompts for daily inspiration.
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 my-4">
             {favorites.length === 0 ? (
-              <div className="text-center py-10 text-white/70 drop-shadow-lg">
+              <div className="text-center py-10 text-gray-600 font-medium">
                 No saved journal prompts yet. Generate some prompts and save your favorites!
               </div>
             ) : (
@@ -65,16 +65,16 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                 {favorites.map((affirmation, index) => (
                   <div 
                     key={index} 
-                    className="p-4 rounded-lg glass-morphism backdrop-blur-sm relative border border-white/20"
+                    className="p-4 rounded-lg bg-gradient-to-r from-white/80 to-purple-50/80 backdrop-blur-sm relative border border-purple-200/60 shadow-lg"
                   >
-                    <p className="pr-16 text-white drop-shadow-lg">{affirmation}</p>
+                    <p className="pr-16 text-gray-800 font-medium">{affirmation}</p>
                     <div className="absolute top-2 right-2 flex gap-1">
                       <Button 
                         variant="ghost" 
                         size="icon" 
                         onClick={() => handleCopy(affirmation)}
                         title="Copy to clipboard"
-                        className="text-white hover:text-white hover:bg-white/20"
+                        className="text-gray-700 hover:text-gray-900 hover:bg-purple-200/40"
                       >
                         <Clipboard className="h-4 w-4" />
                       </Button>
@@ -83,7 +83,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                         size="icon"
                         onClick={() => handleRemove(affirmation)}
                         title="Remove from favorites"
-                        className="text-white hover:text-white hover:bg-white/20"
+                        className="text-gray-700 hover:text-gray-900 hover:bg-purple-200/40"
                       >
                         <X className="h-4 w-4" />
                       </Button>
@@ -98,7 +98,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
             <Button 
               variant="outline" 
               onClick={() => onOpenChange(false)}
-              className="glass-morphism border-white/30 text-white hover:text-white hover:bg-white/20"
+              className="bg-gradient-to-r from-purple-100 to-pink-100 border-purple-300/60 text-gray-800 hover:text-gray-900 hover:bg-gradient-to-r hover:from-purple-200 hover:to-pink-200 font-medium"
             >
               Close
             </Button>
@@ -106,7 +106,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
               <Button 
                 variant="destructive" 
                 onClick={() => setConfirmDialogOpen(true)}
-                className="gap-2 bg-red-500/80 hover:bg-red-600/80 backdrop-blur-sm"
+                className="gap-2 bg-red-500/90 hover:bg-red-600/90 text-white font-medium"
               >
                 <Trash2 className="h-4 w-4" />
                 Clear All
@@ -117,16 +117,16 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
       </Dialog>
 
       <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
-        <AlertDialogContent className="glass-morphism border-white/30">
+        <AlertDialogContent className="bg-gradient-to-br from-purple-100 to-pink-100 border-purple-300/50">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-white drop-shadow-lg">Are you sure?</AlertDialogTitle>
-            <AlertDialogDescription className="text-white/80 drop-shadow-lg">
+            <AlertDialogTitle className="text-gray-800 font-bold">Are you sure?</AlertDialogTitle>
+            <AlertDialogDescription className="text-gray-700 font-medium">
               Are you sure you want to clear all your saved journal prompts?
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="glass-morphism border-white/30 text-white hover:text-white hover:bg-white/20">Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={handleClearAll} className="bg-red-500/80 hover:bg-red-600/80 backdrop-blur-sm">Continue</AlertDialogAction>
+            <AlertDialogCancel className="bg-gradient-to-r from-purple-100 to-pink-100 border-purple-300/60 text-gray-800 hover:text-gray-900 hover:bg-gradient-to-r hover:from-purple-200 hover:to-pink-200 font-medium">Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleClearAll} className="bg-red-500/90 hover:bg-red-600/90 text-white font-medium">Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
