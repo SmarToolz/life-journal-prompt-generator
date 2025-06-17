@@ -51,7 +51,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
       </div>
       <CardContent className="p-6 flex flex-col items-center justify-center space-y-6">
         <div className="text-center">
-          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-enhanced text-shadow">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-enhanced">
             {affirmation}
           </p>
         </div>
@@ -61,7 +61,7 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             onClick={handleCopy}
             variant="outline"
             size="icon"
-            className="rounded-full w-10 h-10 glass-morphism border-white/50 hover:bg-gradient-to-r hover:from-blue-100/60 hover:to-purple-100/60 text-enhanced shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-110"
+            className="rounded-full w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 border-none hover:from-blue-500 hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110"
             title="Copy to clipboard"
           >
             <Copy className="h-5 w-5" />
@@ -74,12 +74,12 @@ const AffirmationCard: React.FC<AffirmationCardProps> = ({
             className={cn(
               "rounded-full w-10 h-10 transition-all duration-200 transform hover:scale-110",
               isFavorited 
-                ? "bg-gradient-to-r from-rose-400/90 to-pink-400/90 hover:from-rose-500/90 hover:to-pink-500/90 text-white backdrop-blur-sm shadow-lg hover:shadow-xl border-none" 
-                : "glass-morphism border-white/50 hover:bg-gradient-to-r hover:from-rose-100/60 hover:to-pink-100/60 text-enhanced shadow-md hover:shadow-lg"
+                ? "bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white shadow-lg hover:shadow-xl border-none" 
+                : "bg-gradient-to-r from-rose-300 to-pink-300 hover:from-rose-400 hover:to-pink-400 text-white shadow-lg hover:shadow-xl border-none"
             )}
             title={isFavorited ? "Remove from favorites" : "Add to favorites"}
           >
-            <Heart className={cn("h-5 w-5", isFavorited ? "fill-white text-white" : "text-rose-500")} />
+            <Heart className={cn("h-5 w-5", isFavorited ? "fill-white text-white" : "text-white")} />
           </Button>
         </div>
       </CardContent>

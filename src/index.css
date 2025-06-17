@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -94,76 +95,74 @@
   }
 }
 
-/* Soft pastel gradient background */
-.pastel-background {
+/* Solid color background */
+.solid-background {
   background: linear-gradient(135deg, 
-    #f8f9ff 0%,
-    #e8f4fd 15%,
-    #f0f4ff 25%,
-    #e8f2ff 35%,
-    #f5f0ff 45%,
-    #fff0f8 55%,
-    #f0fff4 65%,
-    #fff8f0 75%,
-    #f8f0ff 85%,
-    #f8f9ff 100%);
-  background-size: 400% 400%;
-  animation: pastelShift 25s ease-in-out infinite;
-  position: relative;
+    #e8f5e8 0%,
+    #f0e8f5 25%,
+    #e8f0f5 50%,
+    #f5f0e8 75%,
+    #f5e8f0 100%);
   min-height: 100vh;
 }
 
-@keyframes pastelShift {
+/* Colorful card backgrounds without glassmorphism */
+.colorful-card {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  border: 2px solid rgba(255, 154, 158, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.2);
+}
+
+.colorful-form-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border: 2px solid rgba(168, 237, 234, 0.4);
+  box-shadow: 0 8px 25px rgba(168, 237, 234, 0.3);
+}
+
+.colorful-empty-card {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  border: 2px solid rgba(210, 153, 194, 0.4);
+  box-shadow: 0 8px 25px rgba(210, 153, 194, 0.3);
+}
+
+/* Enhanced text visibility classes */
+.text-enhanced {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.text-enhanced-lg {
+  color: #1a202c;
+  font-weight: 700;
+}
+
+/* Clean dropdown options */
+.dropdown-option-text {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+/* Breathing wave animation for cards */
+.breathing-wave-animation {
+  background: linear-gradient(90deg, 
+    rgba(255, 107, 107, 0.6) 0%, 
+    rgba(255, 142, 83, 0.6) 25%, 
+    rgba(255, 193, 7, 0.6) 50%, 
+    rgba(76, 175, 80, 0.6) 75%, 
+    rgba(33, 150, 243, 0.6) 100%);
+  background-size: 200% 100%;
+  animation: breathingWave 3s ease-in-out infinite;
+}
+
+@keyframes breathingWave {
   0%, 100% {
     background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 25%;
+    opacity: 0.8;
   }
   50% {
-    background-position: 100% 75%;
+    background-position: 100% 50%;
+    opacity: 1;
   }
-  75% {
-    background-position: 0% 75%;
-  }
-}
-
-/* Enhanced glassmorphism for pastel theme */
-.glass-morphism {
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08), 
-              0 4px 16px 0 rgba(0, 0, 0, 0.05),
-              inset 0 1px 0 rgba(255, 255, 255, 0.5),
-              inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-}
-
-/* Enhanced glassmorphism for better mobile performance */
-@media (max-width: 768px) {
-  .glass-morphism {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.3);
-  }
-}
-
-@media (max-width: 480px) {
-  .glass-morphism {
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    background: rgba(255, 255, 255, 0.35);
-  }
-}
-
-/* Soft text shadow utilities for better readability */
-.text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.text-shadow-lg {
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
 /* Animation keyframes for floating elements */
@@ -177,114 +176,69 @@
   animation: float 6s ease-in-out infinite;
 }
 
-/* Emoji size reduction */
-.emoji-text {
-  font-size: 0.75em;
-}
-
-select option:first-child,
-.category-emoji,
-.toast-emoji {
-  font-size: 0.8em;
-}
-
-/* Soft breathing wave animation for pastel theme */
-.breathing-wave-animation {
-  background: linear-gradient(90deg, 
-    rgba(147, 197, 253, 0.3) 0%, 
-    rgba(196, 181, 253, 0.4) 25%, 
-    rgba(251, 207, 232, 0.3) 50%, 
-    rgba(196, 181, 253, 0.4) 75%, 
-    rgba(147, 197, 253, 0.3) 100%);
-  background-size: 200% 100%;
-  animation: breathingWave 3s ease-in-out infinite;
-}
-
-@keyframes breathingWave {
-  0%, 100% {
-    background-position: 0% 50%;
-    opacity: 0.6;
-  }
-  50% {
-    background-position: 100% 50%;
-    opacity: 0.8;
-  }
-}
-
-/* Enhanced text visibility classes for pastel theme */
-.text-enhanced {
-  color: #2d3748;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9), 0 1px 2px rgba(147, 197, 253, 0.3);
-  font-weight: 600;
-}
-
-.text-enhanced-lg {
-  color: #1a202c;
-  text-shadow: 0 3px 6px rgba(255, 255, 255, 0.95), 0 2px 4px rgba(196, 181, 253, 0.4);
-  font-weight: 700;
-}
-
-/* Clean dropdown options without text shadows */
-.dropdown-option-text {
-  color: #2d3748;
-  text-shadow: none;
-  font-weight: 500;
-}
-
-/* Pastel colored cards */
-.pastel-card-pink {
-  background: linear-gradient(135deg, rgba(251, 207, 232, 0.4), rgba(244, 224, 255, 0.4));
-  border: 1px solid rgba(251, 207, 232, 0.5);
-  box-shadow: 0 4px 16px rgba(251, 207, 232, 0.2);
-}
-
-.pastel-card-blue {
-  background: linear-gradient(135deg, rgba(219, 234, 254, 0.4), rgba(196, 181, 253, 0.4));
-  border: 1px solid rgba(147, 197, 253, 0.5);
-  box-shadow: 0 4px 16px rgba(147, 197, 253, 0.2);
-}
-
-.pastel-card-green {
-  background: linear-gradient(135deg, rgba(209, 250, 229, 0.4), rgba(167, 243, 208, 0.4));
-  border: 1px solid rgba(167, 243, 208, 0.5);
-  box-shadow: 0 4px 16px rgba(167, 243, 208, 0.2);
-}
-
-.pastel-card-yellow {
-  background: linear-gradient(135deg, rgba(254, 249, 195, 0.4), rgba(254, 240, 138, 0.4));
-  border: 1px solid rgba(254, 240, 138, 0.5);
-  box-shadow: 0 4px 16px rgba(254, 240, 138, 0.2);
-}
-
-.pastel-card-purple {
-  background: linear-gradient(135deg, rgba(237, 233, 254, 0.4), rgba(196, 181, 253, 0.4));
-  border: 1px solid rgba(196, 181, 253, 0.5);
-  box-shadow: 0 4px 16px rgba(196, 181, 253, 0.2);
-}
-
 /* Colorful button gradients */
 .btn-gradient-primary {
-  background: linear-gradient(135deg, rgba(147, 197, 253, 0.8), rgba(196, 181, 253, 0.8));
-  border: 1px solid rgba(147, 197, 253, 0.6);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid rgba(102, 126, 234, 0.3);
   color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 .btn-gradient-primary:hover {
-  background: linear-gradient(135deg, rgba(147, 197, 253, 0.9), rgba(196, 181, 253, 0.9));
-  transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(147, 197, 253, 0.3);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
 }
 
 .btn-gradient-secondary {
-  background: linear-gradient(135deg, rgba(251, 207, 232, 0.8), rgba(254, 240, 138, 0.8));
-  border: 1px solid rgba(251, 207, 232, 0.6);
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  border: 2px solid rgba(255, 154, 158, 0.3);
   color: #2d3748;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
 }
 
 .btn-gradient-secondary:hover {
-  background: linear-gradient(135deg, rgba(251, 207, 232, 0.9), rgba(254, 240, 138, 0.9));
+  background: linear-gradient(135deg, #ff8a95 0%, #fdb2c0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.5);
+}
+
+/* Colorful select and input styling */
+.colorful-select {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border: 2px solid rgba(252, 182, 159, 0.4);
+  box-shadow: 0 4px 15px rgba(252, 182, 159, 0.3);
+}
+
+.colorful-select:focus {
+  border-color: rgba(252, 182, 159, 0.6);
+  box-shadow: 0 6px 20px rgba(252, 182, 159, 0.4);
+}
+
+/* Colorful dropdown content */
+.colorful-dropdown {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border: 2px solid rgba(252, 182, 159, 0.4);
+  box-shadow: 0 8px 30px rgba(252, 182, 159, 0.4);
+}
+
+/* Tab styling */
+.colorful-tabs {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border: 2px solid rgba(168, 237, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(168, 237, 234, 0.3);
+}
+
+/* Button hover effects */
+.colorful-button-outline {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: 2px solid rgba(240, 147, 251, 0.4);
+  color: white;
+  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+}
+
+.colorful-button-outline:hover {
+  background: linear-gradient(135deg, #e865e8 0%, #e74c3c 100%);
   transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(251, 207, 232, 0.3);
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
 }
