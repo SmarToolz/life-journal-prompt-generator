@@ -45,7 +45,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto bg-gradient-to-br from-fefce8 to-eff6ff border-2 border-sky-100">
+        <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] overflow-y-auto bg-gradient-to-br from-pink-50 via-yellow-50 to-blue-50 border-2 border-pink-200">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-xl text-gray-800 font-bold">
               Favorites Library
@@ -65,7 +65,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
                 {favorites.map((affirmation, index) => (
                   <div 
                     key={index} 
-                    className="p-4 rounded-lg bg-gradient-to-r from-yellow-50 to-blue-50 backdrop-blur-sm relative border border-sky-100 shadow-lg"
+                    className="p-4 rounded-lg bg-gradient-to-r from-green-50 via-blue-50 to-purple-50 backdrop-blur-sm relative border border-green-200 shadow-lg"
                   >
                     <p className="pr-16 text-gray-800 font-medium">{affirmation}</p>
                     <div className="absolute top-2 right-2 flex gap-1">
@@ -98,7 +98,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
             <Button 
               variant="outline" 
               onClick={() => onOpenChange(false)}
-              className="bg-gradient-to-r from-yellow-50 to-blue-50 border-sky-200 text-gray-800 hover:text-gray-900 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 font-medium"
+              className="bg-gradient-to-r from-yellow-50 to-blue-50 border-yellow-200 text-gray-800 hover:text-gray-900 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 font-medium"
             >
               Close
             </Button>
@@ -106,7 +106,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
               <Button 
                 variant="destructive" 
                 onClick={() => setConfirmDialogOpen(true)}
-                className="gap-2 bg-red-500/90 hover:bg-red-600/90 text-white font-medium"
+                className="gap-2 bg-red-400/90 hover:bg-red-500/90 text-white font-medium"
               >
                 <Trash2 className="h-4 w-4" />
                 Clear All
@@ -117,7 +117,7 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
       </Dialog>
 
       <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
-        <AlertDialogContent className="bg-gradient-to-br from-yellow-50 to-blue-50 border-2 border-sky-100">
+        <AlertDialogContent className="bg-gradient-to-br from-pink-50 via-yellow-50 to-blue-50 border-2 border-pink-200">
           <AlertDialogHeader>
             <AlertDialogTitle className="text-gray-800 font-bold">Are you sure?</AlertDialogTitle>
             <AlertDialogDescription className="text-gray-700 font-medium">
@@ -125,8 +125,8 @@ const FavoritesLibrary: React.FC<FavoritesLibraryProps> = ({ open, onOpenChange 
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="bg-gradient-to-r from-yellow-50 to-blue-50 border-sky-200 text-gray-800 hover:text-gray-900 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 font-medium">Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={handleClearAll} className="bg-red-500/90 hover:bg-red-600/90 text-white font-medium">Continue</AlertDialogAction>
+            <AlertDialogCancel className="bg-gradient-to-r from-yellow-50 to-blue-50 border-yellow-200 text-gray-800 hover:text-gray-900 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 font-medium">Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleClearAll} className="bg-red-400/90 hover:bg-red-500/90 text-white font-medium">Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
