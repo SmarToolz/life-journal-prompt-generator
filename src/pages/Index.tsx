@@ -1,131 +1,94 @@
-import React, { useState } from 'react';
-import AffirmationForm from '@/components/affirmation/AffirmationForm';
-import AffirmationCard from '@/components/affirmation/AffirmationCard';
-import CustomPromptsTab from '@/components/custom/CustomPromptsTab';
-import { generateUniqueAffirmations, getCategoryEmoji } from '@/utils/affirmationGenerator';
-import { useToast } from "@/hooks/use-toast";
+
+import React, { useState, Suspense, lazy } from 'react';
 import { Button } from "@/components/ui/button";
-import { Heart } from "lucide-react";
-import FavoritesLibrary from '@/components/favorites/FavoritesLibrary';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Heart } from "lucide-react";
+import AffirmationForm from '../components/affirmation/AffirmationForm';
+import AffirmationCard from '../components/affirmation/AffirmationCard';
+import AudioPlayer from '../components/audio/AudioPlayer';
+
+// Lazy load heavy components
+const LazyFavoritesLibrary = lazy(() => import('../components/lazy/LazyFavoritesLibrary'));
+const LazyCustomPromptsTab = lazy(() => import('../components/lazy/LazyCustomPromptsTab'));
 
 const Index = () => {
-  const [affirmations, setAffirmations] = useState<string[]>([]);
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [currentCategory, setCurrentCategory] = useState<string>("");
-  const [showFavorites, setShowFavorites] = useState<boolean>(false);
-  const [activeTab, setActiveTab] = useState<string>("generated");
-  const { toast } = useToast();
+  const [currentAffirmation, setCurrentAffirmation] = useState<string>("");
+  const [favoritesOpen, setFavoritesOpen] = useState(false);
 
-  const handleGenerateAffirmation = (category: string, goal: string, promptFocus: string) => {
-    setIsGenerating(true);
-
-    // Simulate API call with setTimeout
-    setTimeout(() => {
-      // Generate three unique affirmations using the new function
-      const newAffirmations = generateUniqueAffirmations(category, goal, promptFocus, 3);
-      setAffirmations(newAffirmations);
-      setCurrentCategory(category);
-      setIsGenerating(false);
-      toast({
-        title: `${getCategoryEmoji(category)} Journal Prompts Generated`,
-        description: "Your personalized prompts are ready."
-      });
-    }, 1500);
+  const handleAffirmationGenerated = (affirmation: string) => {
+    setCurrentAffirmation(affirmation);
   };
 
   return (
-    <div className="min-h-screen relative">
-      {/* Solid Colorful Background */}
-      <div className="fixed inset-0 z-0">
-        <div className="solid-background w-full h-full"></div>
-      </div>
-      
-      {/* Content overlay */}
-      <div className="relative z-10 container px-4 py-10 mx-auto max-w-4xl">
-        <header className="text-center mb-10 relative">
-          <h1 className="text-3xl md:text-4xl font-bold text-enhanced-lg mb-4">
-            Life Journal Prompt Generator
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Daily Journal Prompts
           </h1>
-          <div className="flex flex-col items-center gap-3 mb-3">
-            <p className="text-lg max-w-lg text-enhanced font-semibold">
-              Daily Ideas for Gratitude, Dreams, and More
-            </p>
-            <Button 
-              variant="outline" 
-              size="default" 
-              className="colorful-button-outline font-semibold px-6 py-2 transition-all duration-200" 
-              onClick={() => setShowFavorites(true)} 
-              title="Favorites Library"
-            >
-              <Heart className="h-5 w-5 mr-2 text-gray-700" />
-              My Favorites
-            </Button>
-          </div>
-        </header>
+          <p className="text-lg text-gray-700 mb-6 font-medium">
+            Transform your thoughts into insights with personalized journal prompts
+          </p>
+          
+          <Button
+            onClick={() => setFavoritesOpen(true)}
+            className="mb-6 bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+          >
+            <Heart className="mr-2 h-5 w-5" />
+            View Favorites Library
+          </Button>
+        </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8 colorful-tabs">
+        {/* Tabs */}
+        <Tabs defaultValue="generate" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 mb-8 bg-gradient-to-r from-blue-100 to-purple-100 border-2 border-blue-200 rounded-lg p-1">
             <TabsTrigger 
-              value="generated" 
-              className="data-[state=active]:bg-white/60 data-[state=active]:text-enhanced data-[state=active]:shadow-md text-enhanced font-semibold transition-all duration-200"
+              value="generate" 
+              className="font-semibold text-gray-700 data-[state=active]:bg-white data-[state=active]:text-indigo-700 data-[state=active]:shadow-md transition-all duration-200"
             >
-              Generated Prompts
+              Generate Prompts
             </TabsTrigger>
             <TabsTrigger 
               value="custom" 
-              className="data-[state=active]:bg-white/60 data-[state=active]:text-enhanced data-[state=active]:shadow-md text-enhanced font-semibold transition-all duration-200"
+              className="font-semibold text-gray-700 data-[state=active]:bg-white data-[state=active]:text-indigo-700 data-[state=active]:shadow-md transition-all duration-200"
             >
               Custom Prompts
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="generated">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-              <div className="colorful-form-card p-6 rounded-xl">
-                <AffirmationForm onGenerate={handleGenerateAffirmation} isGenerating={isGenerating} />
-              </div>
-
-              <div className="space-y-6">
-                {affirmations.length > 0 ? (
-                  <>
-                    <div className="space-y-6">
-                      {affirmations.map((affirmation, index) => (
-                        <AffirmationCard 
-                          key={index} 
-                          affirmation={affirmation} 
-                          className="colorful-card animate-float" 
-                        />
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <div className="colorful-empty-card p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
-                    <h3 className="text-xl font-semibold mb-3 text-enhanced">
-                      Your journal prompts will appear here
-                    </h3>
-                    <p className="text-enhanced font-medium">
-                      Select options and fill in the form to generate your personalized journal prompts
-                    </p>
-                  </div>
-                )}
-              </div>
+          <TabsContent value="generate" className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <AffirmationForm onAffirmationGenerated={handleAffirmationGenerated} />
+              <AudioPlayer />
             </div>
+            
+            {currentAffirmation && (
+              <div className="mt-8">
+                <AffirmationCard affirmation={currentAffirmation} />
+              </div>
+            )}
           </TabsContent>
 
           <TabsContent value="custom">
-            <CustomPromptsTab />
+            <Suspense fallback={
+              <div className="w-full bg-gradient-to-br from-green-100 to-emerald-200 border-2 border-green-300 rounded-lg p-8 text-center">
+                <div className="animate-pulse text-gray-700 font-medium">Loading custom prompts...</div>
+              </div>
+            }>
+              <LazyCustomPromptsTab />
+            </Suspense>
           </TabsContent>
         </Tabs>
-
-        <footer className="mt-16 text-center rounded-none">
-          <p className="text-enhanced text-2xl font-bold">
-            Take a deep breath and let these prompts guide your journaling journey
-          </p>
-        </footer>
       </div>
-      
-      <FavoritesLibrary open={showFavorites} onOpenChange={setShowFavorites} />
+
+      {/* Lazy loaded favorites dialog */}
+      <Suspense fallback={null}>
+        <LazyFavoritesLibrary 
+          open={favoritesOpen} 
+          onOpenChange={setFavoritesOpen} 
+        />
+      </Suspense>
     </div>
   );
 };
