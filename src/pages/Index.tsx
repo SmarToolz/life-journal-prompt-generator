@@ -18,16 +18,13 @@ const Index = () => {
   const handleGenerate = async (category: string, goal: string, promptFocus: string) => {
     setIsGenerating(true);
     try {
-      // Import the optimized generator
-      const { generateOptimizedAffirmation } = await import('../utils/optimizedAffirmationGenerator');
+      // Import the optimized generator that generates multiple unique prompts
+      const { generateMultipleOptimizedAffirmations } = await import('../utils/optimizedAffirmationGenerator');
       
-      // Generate 2 prompts
-      const [affirmation1, affirmation2] = await Promise.all([
-        generateOptimizedAffirmation(category, goal, promptFocus),
-        generateOptimizedAffirmation(category, goal, promptFocus)
-      ]);
+      // Generate 2 unique prompts
+      const affirmations = await generateMultipleOptimizedAffirmations(category, goal, promptFocus, 2);
       
-      setCurrentAffirmations([affirmation1, affirmation2]);
+      setCurrentAffirmations(affirmations);
     } catch (error) {
       console.error('Error generating affirmations:', error);
     } finally {
