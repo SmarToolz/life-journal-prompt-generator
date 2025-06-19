@@ -95,34 +95,29 @@
   }
 }
 
-/* Soft pastel background inspired by reference image */
+/* Solid white background */
 .solid-background {
-  background: linear-gradient(135deg, 
-    #f5f3ff 0%,     /* Very light lavender */
-    #fef3f2 25%,    /* Very light pink */
-    #fefce8 50%,    /* Very light yellow */
-    #f0fdf4 75%,    /* Very light green */
-    #eff6ff 100%);  /* Very light blue */
+  background: #ffffff;
   min-height: 100vh;
 }
 
-/* Soft pastel card backgrounds matching reference image */
+/* Soothing pale yellow and blue card backgrounds */
 .colorful-card {
-  background: linear-gradient(135deg, #fce7f3 0%, #e0e7ff 100%); /* Soft pink to soft blue */
-  border: 2px solid rgba(236, 72, 153, 0.1);
-  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.08);
+  background: linear-gradient(135deg, #fefce8 0%, #e0f2fe 100%); /* Pale yellow to pale blue */
+  border: 2px solid rgba(186, 230, 253, 0.3);
+  box-shadow: 0 8px 25px rgba(186, 230, 253, 0.15);
 }
 
 .colorful-form-card {
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%); /* Soft green to soft yellow */
-  border: 2px solid rgba(34, 197, 94, 0.15);
-  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.1);
+  background: linear-gradient(135deg, #fffbeb 0%, #dbeafe 100%); /* Very pale yellow to pale blue */
+  border: 2px solid rgba(254, 249, 195, 0.4);
+  box-shadow: 0 8px 25px rgba(254, 249, 195, 0.2);
 }
 
 .colorful-empty-card {
-  background: linear-gradient(135deg, #fef7ff 0%, #f0f9ff 100%); /* Soft purple to soft blue */
-  border: 2px solid rgba(147, 51, 234, 0.1);
-  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.08);
+  background: linear-gradient(135deg, #fefce8 0%, #eff6ff 100%); /* Pale yellow to very pale blue */
+  border: 2px solid rgba(219, 234, 254, 0.3);
+  box-shadow: 0 8px 25px rgba(219, 234, 254, 0.15);
 }
 
 /* Enhanced text visibility classes with darker colors for better readability */
@@ -144,14 +139,14 @@
   font-weight: 500;
 }
 
-/* Soft breathing wave animation for cards */
+/* Soft breathing wave animation for cards with pale colors */
 .breathing-wave-animation {
   background: linear-gradient(90deg, 
-    rgba(236, 72, 153, 0.3) 0%,   /* Soft pink */
-    rgba(251, 146, 60, 0.3) 25%,  /* Soft orange */
-    rgba(34, 197, 94, 0.3) 50%,   /* Soft green */
-    rgba(59, 130, 246, 0.3) 75%,  /* Soft blue */
-    rgba(147, 51, 234, 0.3) 100%); /* Soft purple */
+    rgba(254, 249, 195, 0.4) 0%,   /* Pale yellow */
+    rgba(186, 230, 253, 0.4) 25%,  /* Pale blue */
+    rgba(254, 249, 195, 0.4) 50%,  /* Pale yellow */
+    rgba(219, 234, 254, 0.4) 75%,  /* Very pale blue */
+    rgba(254, 249, 195, 0.4) 100%); /* Pale yellow */
   background-size: 200% 100%;
   animation: breathingWave 4s ease-in-out infinite;
 }
@@ -178,70 +173,70 @@
   animation: float 6s ease-in-out infinite;
 }
 
-/* Soft pastel button gradients */
+/* Soothing pale button gradients */
 .btn-gradient-primary {
-  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%); /* Soft purple to pink */
-  border: 2px solid rgba(167, 139, 250, 0.2);
-  color: white;
-  box-shadow: 0 6px 20px rgba(167, 139, 250, 0.25);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%); /* Pale blue to pale yellow */
+  border: 2px solid rgba(186, 230, 253, 0.3);
+  color: #374151;
+  box-shadow: 0 6px 20px rgba(186, 230, 253, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .btn-gradient-primary:hover {
-  background: linear-gradient(135deg, #8b5cf6 0%, #db2777 100%);
+  background: linear-gradient(135deg, #bfdbfe 0%, #fde68a 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.35);
+  box-shadow: 0 8px 25px rgba(186, 230, 253, 0.25);
 }
 
 .btn-gradient-secondary {
-  background: linear-gradient(135deg, #fce7f3 0%, #dbeafe 100%); /* Very soft pink to blue */
-  border: 2px solid rgba(236, 72, 153, 0.15);
+  background: linear-gradient(135deg, #fefce8 0%, #eff6ff 100%); /* Very pale yellow to very pale blue */
+  border: 2px solid rgba(254, 249, 195, 0.3);
   color: #374151;
-  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.1);
+  box-shadow: 0 6px 20px rgba(254, 249, 195, 0.15);
 }
 
 .btn-gradient-secondary:hover {
-  background: linear-gradient(135deg, #fbcfe8 0%, #bfdbfe 100%);
+  background: linear-gradient(135deg, #fef3c7 0%, #dbeafe 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.15);
+  box-shadow: 0 8px 25px rgba(254, 249, 195, 0.2);
 }
 
-/* Soft pastel select and input styling */
+/* Soothing pale select and input styling */
 .colorful-select {
-  background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%); /* Soft yellow to pink */
-  border: 2px solid rgba(251, 191, 36, 0.2);
-  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.1);
+  background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 100%); /* Very pale yellow to very pale blue */
+  border: 2px solid rgba(254, 249, 195, 0.4);
+  box-shadow: 0 4px 15px rgba(254, 249, 195, 0.15);
 }
 
 .colorful-select:focus {
-  border-color: rgba(251, 191, 36, 0.3);
-  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.15);
+  border-color: rgba(186, 230, 253, 0.4);
+  box-shadow: 0 6px 20px rgba(186, 230, 253, 0.2);
 }
 
-/* Soft pastel dropdown content */
+/* Soothing pale dropdown content */
 .colorful-dropdown {
-  background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
-  border: 2px solid rgba(251, 191, 36, 0.2);
-  box-shadow: 0 8px 30px rgba(251, 191, 36, 0.15);
+  background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 100%);
+  border: 2px solid rgba(254, 249, 195, 0.4);
+  box-shadow: 0 8px 30px rgba(254, 249, 195, 0.2);
 }
 
-/* Tab styling with soft pastels */
+/* Tab styling with soothing pale colors */
 .colorful-tabs {
-  background: linear-gradient(135deg, #ecfdf5 0%, #eff6ff 100%); /* Soft green to blue */
-  border: 2px solid rgba(34, 197, 94, 0.15);
-  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);
+  background: linear-gradient(135deg, #fefce8 0%, #eff6ff 100%); /* Pale yellow to very pale blue */
+  border: 2px solid rgba(254, 249, 195, 0.3);
+  box-shadow: 0 4px 15px rgba(254, 249, 195, 0.15);
 }
 
-/* Button hover effects with soft colors */
+/* Button hover effects with soothing pale colors */
 .colorful-button-outline {
-  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); /* Soft purple to pink */
-  border: 2px solid rgba(147, 51, 234, 0.2);
+  background: linear-gradient(135deg, #f0f9ff 0%, #fefce8 100%); /* Very pale blue to pale yellow */
+  border: 2px solid rgba(219, 234, 254, 0.3);
   color: #374151;
-  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.1);
+  box-shadow: 0 4px 15px rgba(219, 234, 254, 0.15);
 }
 
 .colorful-button-outline:hover {
-  background: linear-gradient(135deg, #e9d5ff 0%, #fbcfe8 100%);
+  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.15);
+  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.2);
 }

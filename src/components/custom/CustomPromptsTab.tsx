@@ -147,7 +147,7 @@ const CustomPromptsTab: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Add New Prompt Section */}
-      <Card className="bg-gradient-to-r from-amber-100 to-orange-100 border-amber-300/60 shadow-lg">
+      <Card className="bg-gradient-to-r from-yellow-100 to-blue-100 border-2 border-sky-200 shadow-lg">
         <CardContent className="p-6">
           <h3 className="text-lg font-semibold mb-4 text-enhanced">Add New Custom Prompt</h3>
           <div className="space-y-4">
@@ -155,11 +155,11 @@ const CustomPromptsTab: React.FC = () => {
               placeholder="Enter your custom journal prompt..."
               value={newPromptText}
               onChange={(e) => setNewPromptText(e.target.value)}
-              className="min-h-[100px] resize-none bg-gradient-to-r from-amber-50 to-orange-50 border-amber-400/60 text-gray-800 placeholder:text-gray-600 focus:border-amber-500/80 font-medium"
+              className="min-h-[100px] resize-none bg-gradient-to-r from-yellow-50 to-blue-50 border-2 border-sky-200 text-gray-800 placeholder:text-gray-600 focus:border-sky-300 font-medium"
             />
             <Button 
               onClick={addCustomPrompt}
-              className="bg-gradient-to-r from-amber-600/90 to-orange-600/90 hover:from-amber-700/90 hover:to-orange-700/90 text-white font-semibold border border-amber-300/60 shadow-lg"
+              className="bg-gradient-to-r from-blue-200 to-yellow-200 hover:from-blue-300 hover:to-yellow-300 text-gray-800 font-semibold border-2 border-sky-200 shadow-lg"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Prompt
@@ -171,7 +171,7 @@ const CustomPromptsTab: React.FC = () => {
       {/* Custom Prompts List */}
       <div className="space-y-4">
         {customPrompts.length === 0 ? (
-          <Card className="bg-gradient-to-r from-amber-100 to-orange-100 border-amber-300/60 shadow-lg">
+          <Card className="bg-gradient-to-r from-yellow-100 to-blue-100 border-2 border-sky-200 shadow-lg">
             <CardContent className="p-8 text-center">
               <h3 className="text-xl font-medium mb-3 text-enhanced">
                 No custom prompts yet
@@ -183,7 +183,7 @@ const CustomPromptsTab: React.FC = () => {
           </Card>
         ) : (
           customPrompts.map((prompt) => (
-            <Card key={prompt.id} className="bg-gradient-to-r from-amber-100 to-orange-100 border-amber-300/60 shadow-lg overflow-hidden">
+            <Card key={prompt.id} className="bg-gradient-to-r from-yellow-100 to-blue-100 border-2 border-sky-200 shadow-lg overflow-hidden">
               <div className="relative h-8 overflow-hidden">
                 <div className="breathing-wave-animation absolute inset-0 h-full w-full"></div>
               </div>
@@ -193,13 +193,13 @@ const CustomPromptsTab: React.FC = () => {
                     <Textarea
                       value={editingText}
                       onChange={(e) => setEditingText(e.target.value)}
-                      className="min-h-[100px] resize-none bg-gradient-to-r from-amber-50 to-orange-50 border-amber-400/60 text-gray-800 placeholder:text-gray-600 focus:border-amber-500/80 font-medium"
+                      className="min-h-[100px] resize-none bg-gradient-to-r from-yellow-50 to-blue-50 border-2 border-sky-200 text-gray-800 placeholder:text-gray-600 focus:border-sky-300 font-medium"
                     />
                     <div className="flex gap-2">
                       <Button 
                         onClick={saveEdit}
                         size="sm"
-                        className="bg-gradient-to-r from-amber-600/90 to-orange-600/90 hover:from-amber-700/90 hover:to-orange-700/90 text-white font-medium"
+                        className="bg-gradient-to-r from-blue-200 to-yellow-200 hover:from-blue-300 hover:to-yellow-300 text-gray-800 font-medium"
                       >
                         Save
                       </Button>
@@ -207,7 +207,7 @@ const CustomPromptsTab: React.FC = () => {
                         onClick={cancelEdit}
                         variant="outline"
                         size="sm"
-                        className="bg-gradient-to-r from-amber-50 to-orange-50 border-amber-400/60 text-gray-800 hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 font-medium"
+                        className="bg-gradient-to-r from-yellow-50 to-blue-50 border-2 border-sky-200 text-gray-800 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 font-medium"
                       >
                         Cancel
                       </Button>
@@ -227,7 +227,7 @@ const CustomPromptsTab: React.FC = () => {
                           onClick={() => handleCopy(prompt.text)}
                           variant="outline"
                           size="sm"
-                          className="bg-gradient-to-r from-amber-50 to-orange-50 border-amber-400/60 hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 text-gray-800 font-medium"
+                          className="bg-gradient-to-r from-yellow-50 to-blue-50 border-2 border-sky-200 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 text-gray-800 font-medium"
                         >
                           <Copy className="h-4 w-4" />
                         </Button>
@@ -238,7 +238,7 @@ const CustomPromptsTab: React.FC = () => {
                           className={cn(
                             isFavorite(prompt.text) 
                               ? "bg-red-500/90 hover:bg-red-600/90 text-white font-medium" 
-                              : "bg-gradient-to-r from-amber-50 to-orange-50 border-amber-400/60 hover:bg-red-50/60 text-gray-800 font-medium"
+                              : "bg-gradient-to-r from-yellow-50 to-blue-50 border-2 border-sky-200 hover:bg-red-50/60 text-gray-800 font-medium"
                           )}
                         >
                           <Heart className={cn("h-4 w-4", isFavorite(prompt.text) ? "fill-white text-white" : "text-red-500")} />
@@ -247,7 +247,7 @@ const CustomPromptsTab: React.FC = () => {
                           onClick={() => startEditing(prompt)}
                           variant="outline"
                           size="sm"
-                          className="bg-gradient-to-r from-amber-50 to-orange-50 border-amber-400/60 hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 text-gray-800 font-medium"
+                          className="bg-gradient-to-r from-yellow-50 to-blue-50 border-2 border-sky-200 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-blue-100 text-gray-800 font-medium"
                         >
                           <Pencil className="h-4 w-4" />
                         </Button>
@@ -255,7 +255,7 @@ const CustomPromptsTab: React.FC = () => {
                           onClick={() => deleteCustomPrompt(prompt.id)}
                           variant="outline"
                           size="sm"
-                          className="bg-gradient-to-r from-red-50 to-red-100 border-red-400/60 hover:bg-red-200/60 text-red-600 font-medium"
+                          className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-200 hover:bg-red-200/60 text-red-600 font-medium"
                         >
                           <Trash2 className="h-4 w-4" />
                         </Button>
