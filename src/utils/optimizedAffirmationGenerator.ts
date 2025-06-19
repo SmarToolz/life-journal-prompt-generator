@@ -1,6 +1,5 @@
 
 // Optimized affirmation generator with lazy loading and memoization
-import { useMemo } from 'react';
 
 interface PromptData {
   journalGoals: {
@@ -27,18 +26,19 @@ const getRandomPrompt = (prompts: string[]): string => {
   return prompts[index];
 };
 
-// Memoized prompt generation
-export const useOptimizedAffirmationGenerator = () => {
-  return useMemo(() => ({
-    generatePrompt: async (goal: string, journalType: string): Promise<string> => {
-      const data = await loadPromptData();
-      const prompts = data.journalGoals[goal]?.[journalType];
-      
-      if (!prompts?.length) {
-        return "What are you grateful for today, and how can you build upon that gratitude?";
-      }
-      
-      return getRandomPrompt(prompts);
+// Main function to generate optimized affirmations
+export const generateOptimizedAffirmation = async (journalType: string, goal: string, promptFocus: string): Promise<string> => {
+  try {
+    const data = await loadPromptData();
+    const prompts = data.journalGoals[goal]?.[journalType];
+    
+    if (!prompts?.length) {
+      return "What are you grateful for today, and how can you build upon that gratitude?";
     }
-  }), []);
+    
+    return getRandomPrompt(prompts);
+  } catch (error) {
+    console.error('Error loading prompt data:', error);
+    return "What are you grateful for today, and how can you build upon that gratitude?";
+  }
 };
