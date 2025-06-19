@@ -11,7 +11,7 @@ const LazyFavoritesLibrary = lazy(() => import('../components/lazy/LazyFavorites
 const LazyCustomPromptsTab = lazy(() => import('../components/lazy/LazyCustomPromptsTab'));
 
 const Index = () => {
-  const [currentAffirmation, setCurrentAffirmation] = useState<string>("");
+  const [currentAffirmations, setCurrentAffirmations] = useState<string[]>([]);
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -20,10 +20,16 @@ const Index = () => {
     try {
       // Import the optimized generator
       const { generateOptimizedAffirmation } = await import('../utils/optimizedAffirmationGenerator');
-      const affirmation = await generateOptimizedAffirmation(category, goal, promptFocus);
-      setCurrentAffirmation(affirmation);
+      
+      // Generate 2 prompts
+      const [affirmation1, affirmation2] = await Promise.all([
+        generateOptimizedAffirmation(category, goal, promptFocus),
+        generateOptimizedAffirmation(category, goal, promptFocus)
+      ]);
+      
+      setCurrentAffirmations([affirmation1, affirmation2]);
     } catch (error) {
-      console.error('Error generating affirmation:', error);
+      console.error('Error generating affirmations:', error);
     } finally {
       setIsGenerating(false);
     }
@@ -75,9 +81,14 @@ const Index = () => {
               />
             </div>
             
-            {currentAffirmation && (
-              <div className="mt-8">
-                <AffirmationCard affirmation={currentAffirmation} />
+            {currentAffirmations.length > 0 && (
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                {currentAffirmations.map((affirmation, index) => (
+                  <AffirmationCard 
+                    key={index} 
+                    affirmation={affirmation} 
+                  />
+                ))}
               </div>
             )}
           </TabsContent>
