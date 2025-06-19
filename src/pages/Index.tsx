@@ -5,7 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Heart } from "lucide-react";
 import AffirmationForm from '../components/affirmation/AffirmationForm';
 import AffirmationCard from '../components/affirmation/AffirmationCard';
-import AudioPlayer from '../components/audio/AudioPlayer';
 
 // Lazy load heavy components
 const LazyFavoritesLibrary = lazy(() => import('../components/lazy/LazyFavoritesLibrary'));
@@ -14,9 +13,20 @@ const LazyCustomPromptsTab = lazy(() => import('../components/lazy/LazyCustomPro
 const Index = () => {
   const [currentAffirmation, setCurrentAffirmation] = useState<string>("");
   const [favoritesOpen, setFavoritesOpen] = useState(false);
+  const [isGenerating, setIsGenerating] = useState(false);
 
-  const handleAffirmationGenerated = (affirmation: string) => {
-    setCurrentAffirmation(affirmation);
+  const handleGenerate = async (category: string, goal: string, promptFocus: string) => {
+    setIsGenerating(true);
+    try {
+      // Import the optimized generator
+      const { generateOptimizedAffirmation } = await import('../utils/optimizedAffirmationGenerator');
+      const affirmation = await generateOptimizedAffirmation(category, goal, promptFocus);
+      setCurrentAffirmation(affirmation);
+    } catch (error) {
+      console.error('Error generating affirmation:', error);
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   return (
@@ -58,9 +68,11 @@ const Index = () => {
           </TabsList>
 
           <TabsContent value="generate" className="space-y-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <AffirmationForm onAffirmationGenerated={handleAffirmationGenerated} />
-              <AudioPlayer />
+            <div className="max-w-2xl mx-auto">
+              <AffirmationForm 
+                onGenerate={handleGenerate}
+                isGenerating={isGenerating}
+              />
             </div>
             
             {currentAffirmation && (
