@@ -1,4 +1,3 @@
-
 import React, { useState, Suspense } from 'react';
 import AffirmationForm from '@/components/affirmation/AffirmationForm';
 import AffirmationCard from '@/components/affirmation/AffirmationCard';
@@ -17,11 +16,11 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState<string>("generated");
   const { toast } = useToast();
 
-  const handleGenerateAffirmation = (category: string, goal: string, promptFocus: string) => {
+  const handleGenerateAffirmation = async (category: string, goal: string, promptFocus: string) => {
     setIsGenerating(true);
 
-    setTimeout(() => {
-      const newAffirmations = generateUniquePrompts(category, goal, promptFocus, 3);
+    try {
+      const newAffirmations = await generateUniquePrompts(category, goal, promptFocus, 3);
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
       setIsGenerating(false);
@@ -29,7 +28,14 @@ const Index = () => {
         title: `${getCategoryEmoji(category)} Journal Prompts Generated`,
         description: "Your personalized prompts are ready."
       });
-    }, 1500);
+    } catch (error) {
+      console.error('Error generating affirmations:', error);
+      setIsGenerating(false);
+      toast({
+        title: "Error",
+        description: "Failed to generate prompts. Please try again."
+      });
+    }
   };
 
   return (
