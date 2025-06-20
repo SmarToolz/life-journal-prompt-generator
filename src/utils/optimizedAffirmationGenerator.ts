@@ -26,6 +26,7 @@ const loadPromptData = async (): Promise<PromptData> => {
     
     // Try to parse the JSON
     cachedPromptData = JSON.parse(text);
+    console.log('Loaded prompt data structure:', Object.keys(cachedPromptData.journalGoals));
     return cachedPromptData;
   } catch (error) {
     console.error('Error loading prompts.json:', error);
@@ -34,11 +35,11 @@ const loadPromptData = async (): Promise<PromptData> => {
       journalGoals: {
         "Standard Entry": {
           "Standard": [
+            "What happened today that you want to record?",
             "What are you grateful for today, and how can you build upon that gratitude?",
             "Describe a challenge you faced recently and what you learned from it.",
             "What is one small step you can take today toward a goal that matters to you?",
-            "Reflect on a moment today when you felt genuinely happy. What made it special?",
-            "What would you like to let go of today, and what would you like to embrace instead?"
+            "Reflect on a moment today when you felt genuinely happy. What made it special?"
           ]
         },
         "Self-Reflection": {
@@ -66,15 +67,24 @@ const loadPromptData = async (): Promise<PromptData> => {
 
 // Get multiple unique prompts
 const getMultipleRandomPrompts = (prompts: string[], count: number): string[] => {
+  console.log('Getting multiple prompts from array:', prompts?.length || 0, 'prompts, requesting', count);
+  
   if (!prompts || prompts.length === 0) {
-    return Array(count).fill("What are you grateful for today, and how can you build upon that gratitude?");
+    const fallback = [
+      "What are you grateful for today, and how can you build upon that gratitude?",
+      "Describe one thing that brought you joy today and why it was meaningful.",
+      "What is one small step you can take tomorrow to improve your well-being?",
+      "Reflect on a recent challenge and identify one lesson you learned from it."
+    ];
+    return fallback.slice(0, count);
   }
   
   if (prompts.length <= count) {
-    // If we don't have enough prompts, return all available and fill with duplicates
+    // If we don't have enough prompts, return all available and fill with duplicates if needed
     const result = [...prompts];
-    while (result.length < count) {
-      result.push(...prompts.slice(0, count - result.length));
+    while (result.length < count && prompts.length > 0) {
+      const remaining = count - result.length;
+      result.push(...prompts.slice(0, Math.min(remaining, prompts.length)));
     }
     return result.slice(0, count);
   }
@@ -90,41 +100,71 @@ const getMultipleRandomPrompts = (prompts: string[], count: number): string[] =>
     }
   }
   
+  console.log('Selected unique prompts:', selectedPrompts);
   return selectedPrompts;
 };
 
-// Function to generate multiple prompts at once
+// Function to generate multiple prompts at once - FIXED PARAMETER ORDER
 export const generateMultipleOptimizedAffirmations = async (journalType: string, goal: string, promptFocus: string, count: number = 2): Promise<string[]> => {
-  console.log('Generating prompts for:', { journalType, goal, promptFocus, count });
+  console.log('=== GENERATING PROMPTS ===');
+  console.log('Parameters received:', { journalType, goal, promptFocus, count });
   
   try {
     const data = await loadPromptData();
-    console.log('Loaded data structure:', Object.keys(data.journalGoals));
+    console.log('Available goals in data:', Object.keys(data.journalGoals));
     
-    const prompts = data.journalGoals[goal]?.[journalType];
-    console.log('Found prompts for', goal, journalType, ':', prompts?.length || 0);
+    // The correct path should be: journalGoals[goal][journalType]
+    const goalData = data.journalGoals[goal];
+    console.log('Goal data for', goal, ':', goalData ? Object.keys(goalData) : 'NOT FOUND');
     
-    if (!prompts?.length) {
-      console.log('No prompts found, using fallback');
+    if (!goalData) {
+      console.log('Goal not found, using fallback');
       const fallbackPrompts = [
         "What are you grateful for today, and how can you build upon that gratitude?",
         "Describe one thing that brought you joy today and why it was meaningful.",
         "What is one small step you can take tomorrow to improve your well-being?",
         "Reflect on a recent challenge and identify one lesson you learned from it.",
-        "What would you like to focus your energy on this week?"
+        "What would you like to focus your energy on this week?",
+        "How can you show kindness to yourself today?"
+      ];
+      return getMultipleRandomPrompts(fallbackPrompts, count);
+    }
+    
+    const prompts = goalData[journalType];
+    console.log('Prompts for', goal, '->', journalType, ':', prompts?.length || 0, 'prompts available');
+    
+    if (!prompts?.length) {
+      console.log('No prompts found for this combination, checking available journal types:', Object.keys(goalData));
+      
+      // Try to use "Standard" as fallback if available
+      const standardPrompts = goalData["Standard"];
+      if (standardPrompts?.length) {
+        console.log('Using Standard prompts as fallback');
+        return getMultipleRandomPrompts(standardPrompts, count);
+      }
+      
+      // Use general fallback
+      const fallbackPrompts = [
+        "What are you grateful for today, and how can you build upon that gratitude?",
+        "Describe one thing that brought you joy today and why it was meaningful.",
+        "What is one small step you can take tomorrow to improve your well-being?",
+        "Reflect on a recent challenge and identify one lesson you learned from it.",
+        "What would you like to focus your energy on this week?",
+        "How can you show kindness to yourself today?"
       ];
       return getMultipleRandomPrompts(fallbackPrompts, count);
     }
     
     const selectedPrompts = getMultipleRandomPrompts(prompts, count);
-    console.log('Selected prompts:', selectedPrompts);
+    console.log('Final selected prompts:', selectedPrompts);
     return selectedPrompts;
   } catch (error) {
     console.error('Error generating prompts:', error);
     const fallbackPrompts = [
       "What are you grateful for today, and how can you build upon that gratitude?",
       "Describe one thing that brought you joy today and why it was meaningful.",
-      "What is one small step you can take tomorrow to improve your well-being?"
+      "What is one small step you can take tomorrow to improve your well-being?",
+      "Reflect on a recent challenge and identify one lesson you learned from it."
     ];
     return getMultipleRandomPrompts(fallbackPrompts, count);
   }
