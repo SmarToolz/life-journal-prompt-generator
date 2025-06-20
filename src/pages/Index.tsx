@@ -20,7 +20,7 @@ const Index = () => {
     setIsGenerating(true);
 
     try {
-      const newAffirmations = await generateUniquePrompts(category, goal, promptFocus, 3);
+      const newAffirmations = await generateUniquePrompts(category, goal, promptFocus, 2);
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
       setIsGenerating(false);
