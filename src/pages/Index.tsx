@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+
+import React, { useState, Suspense } from 'react';
 import AffirmationForm from '@/components/affirmation/AffirmationForm';
 import AffirmationCard from '@/components/affirmation/AffirmationCard';
-import CustomPromptsTab from '@/components/custom/CustomPromptsTab';
-import { generateUniqueAffirmations, getCategoryEmoji } from '@/utils/affirmationGenerator';
+import { LazyCustomPromptsTab, LazyFavoritesLibrary, ComponentLoader } from '@/components/LazyComponents';
+import { generateUniquePrompts, getCategoryEmoji } from '@/utils/optimizedPromptGenerator';
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
-import FavoritesLibrary from '@/components/favorites/FavoritesLibrary';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -20,10 +20,8 @@ const Index = () => {
   const handleGenerateAffirmation = (category: string, goal: string, promptFocus: string) => {
     setIsGenerating(true);
 
-    // Simulate API call with setTimeout
     setTimeout(() => {
-      // Generate three unique affirmations using the new function
-      const newAffirmations = generateUniqueAffirmations(category, goal, promptFocus, 3);
+      const newAffirmations = generateUniquePrompts(category, goal, promptFocus, 3);
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
       setIsGenerating(false);
@@ -36,12 +34,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Solid Colorful Background */}
       <div className="fixed inset-0 z-0">
         <div className="solid-background w-full h-full"></div>
       </div>
       
-      {/* Content overlay */}
       <div className="relative z-10 container px-4 py-10 mx-auto max-w-4xl">
         <header className="text-center mb-10 relative">
           <h1 className="text-3xl md:text-4xl font-bold text-enhanced-lg mb-4">
@@ -88,17 +84,15 @@ const Index = () => {
 
               <div className="space-y-6">
                 {affirmations.length > 0 ? (
-                  <>
-                    <div className="space-y-6">
-                      {affirmations.map((affirmation, index) => (
-                        <AffirmationCard 
-                          key={index} 
-                          affirmation={affirmation} 
-                          className="colorful-card animate-float" 
-                        />
-                      ))}
-                    </div>
-                  </>
+                  <div className="space-y-6">
+                    {affirmations.map((affirmation, index) => (
+                      <AffirmationCard 
+                        key={`${currentCategory}-${index}`}
+                        affirmation={affirmation} 
+                        className="colorful-card animate-float" 
+                      />
+                    ))}
+                  </div>
                 ) : (
                   <div className="colorful-empty-card p-8 rounded-xl flex flex-col items-center justify-center h-64 text-center">
                     <h3 className="text-xl font-semibold mb-3 text-enhanced">
@@ -114,7 +108,9 @@ const Index = () => {
           </TabsContent>
 
           <TabsContent value="custom">
-            <CustomPromptsTab />
+            <Suspense fallback={<ComponentLoader />}>
+              <LazyCustomPromptsTab />
+            </Suspense>
           </TabsContent>
         </Tabs>
 
@@ -125,7 +121,9 @@ const Index = () => {
         </footer>
       </div>
       
-      <FavoritesLibrary open={showFavorites} onOpenChange={setShowFavorites} />
+      <Suspense fallback={<ComponentLoader />}>
+        <LazyFavoritesLibrary open={showFavorites} onOpenChange={setShowFavorites} />
+      </Suspense>
     </div>
   );
 };
