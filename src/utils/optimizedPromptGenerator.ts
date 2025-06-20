@@ -1,19 +1,37 @@
 
-import promptsData from '/prompts.json';
-
 interface PromptsData {
   journalGoals: Record<string, Record<string, string[]>>;
 }
 
-const prompts = promptsData as PromptsData;
+let cachedPrompts: PromptsData | null = null;
 
-export const generateUniquePrompts = (
+const loadPrompts = async (): Promise<PromptsData> => {
+  if (cachedPrompts) {
+    return cachedPrompts;
+  }
+
+  try {
+    const response = await fetch('/prompts.json');
+    if (!response.ok) {
+      throw new Error(`Failed to fetch prompts: ${response.status}`);
+    }
+    cachedPrompts = await response.json();
+    return cachedPrompts;
+  } catch (error) {
+    console.error('Error loading prompts:', error);
+    // Return empty structure as fallback
+    return { journalGoals: {} };
+  }
+};
+
+export const generateUniquePrompts = async (
   category: string,
   goal: string,
   promptFocus: string,
   count: number = 3
-): string[] => {
+): Promise<string[]> => {
   try {
+    const prompts = await loadPrompts();
     const categoryPrompts = prompts.journalGoals[goal]?.[promptFocus];
     
     if (!categoryPrompts || categoryPrompts.length === 0) {
