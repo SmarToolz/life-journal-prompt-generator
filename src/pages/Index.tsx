@@ -14,6 +14,7 @@ const Index = () => {
   const [currentCategory, setCurrentCategory] = useState<string>("");
   const [showFavorites, setShowFavorites] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("generated");
+  const [generationCount, setGenerationCount] = useState<number>(0);
   const { toast } = useToast();
 
   const handleGenerateAffirmation = async (category: string, goal: string, promptFocus: string) => {
@@ -23,6 +24,7 @@ const Index = () => {
       const newAffirmations = await generateUniquePrompts(category, goal, promptFocus, 2);
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
+      setGenerationCount(prev => prev + 1);
       setIsGenerating(false);
       toast({
         title: `${getCategoryEmoji(category)} Journal Prompts Generated`,
@@ -93,7 +95,7 @@ const Index = () => {
                   <div className="space-y-6">
                     {affirmations.map((affirmation, index) => (
                       <AffirmationCard 
-                        key={`${currentCategory}-${index}`}
+                        key={`generation-${generationCount}-${index}`}
                         affirmation={affirmation} 
                         className="colorful-card animate-float" 
                       />
