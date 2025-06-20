@@ -58,7 +58,8 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (journalGoal && journalType) {
-      onGenerate(journalType, journalGoal, "");
+      // Pass journalType as the promptFocus parameter
+      onGenerate(journalType, journalGoal, journalType);
     }
   };
 
