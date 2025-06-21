@@ -18,14 +18,19 @@ const Index = () => {
   const { toast } = useToast();
 
   const handleGenerateAffirmation = async (category: string, goal: string, promptFocus: string) => {
+    console.log('handleGenerateAffirmation called with:', { category, goal, promptFocus });
     setIsGenerating(true);
 
     try {
+      console.log('Calling generateUniquePrompts...');
       const newAffirmations = await generateUniquePrompts(category, goal, promptFocus, 2);
+      console.log('Generated affirmations:', newAffirmations);
+      
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
       setGenerationCount(prev => prev + 1);
       setIsGenerating(false);
+      
       toast({
         title: `${getCategoryEmoji(category)} Journal Prompts Generated`,
         description: "Your personalized prompts are ready."

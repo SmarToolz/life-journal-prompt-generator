@@ -57,9 +57,13 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submitted with:', { journalGoal, journalType });
+    
     if (journalGoal && journalType) {
-      // Pass journalType as the promptFocus parameter
+      console.log('Calling onGenerate with:', journalType, journalGoal, journalType);
       onGenerate(journalType, journalGoal, journalType);
+    } else {
+      console.log('Missing required fields:', { journalGoal: !!journalGoal, journalType: !!journalType });
     }
   };
 
@@ -109,6 +113,10 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
         type="submit" 
         className="w-full btn-gradient-primary font-semibold py-3 px-6 rounded-lg transition-all duration-200"
         disabled={!journalGoal || !journalType || isGenerating}
+        onClick={(e) => {
+          console.log('Button clicked');
+          handleSubmit(e);
+        }}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}
       </Button>
