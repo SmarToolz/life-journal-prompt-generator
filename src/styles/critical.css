@@ -1,0 +1,38 @@
+
+/* Critical CSS - Load first for above-the-fold content */
+@tailwind base;
+@tailwind components;
+
+/* Essential base styles */
+:root {
+  --background: 240 20% 98%;
+  --foreground: 220 15% 25%;
+  --card: 240 15% 96%;
+  --card-foreground: 220 15% 25%;
+  --primary: 260 50% 60%;
+  --primary-foreground: 0 0% 98%;
+  --border: 240 10% 85%;
+  --radius: 0.75rem;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-display: swap;
+}
+
+/* Critical layout styles */
+.solid-background {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* Enhanced text visibility */
+.text-enhanced {
+  color: #374151;
+  font-weight: 600;
+}
+
+.text-enhanced-lg {
+  color: #1f2937;
+  font-weight: 700;
+}

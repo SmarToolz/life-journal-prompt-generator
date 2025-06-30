@@ -1,0 +1,77 @@
+
+/* Component-specific styles - Load after critical CSS */
+
+/* Pastel card backgrounds */
+.colorful-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f0f4ff 100%);
+  border: 2px solid rgba(219, 234, 254, 0.4);
+  box-shadow: 0 8px 25px rgba(219, 234, 254, 0.2);
+}
+
+.colorful-form-card {
+  background: linear-gradient(135deg, #fefce8 0%, #f0fdf4 100%);
+  border: 2px solid rgba(254, 249, 195, 0.5);
+  box-shadow: 0 8px 25px rgba(254, 249, 195, 0.3);
+}
+
+.colorful-empty-card {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fdf4ff 100%);
+  border: 2px solid rgba(233, 213, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(233, 213, 255, 0.2);
+}
+
+/* Button styles */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
+  border: 2px solid rgba(219, 234, 254, 0.4);
+  color: #374151;
+  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, #bfdbfe 0%, #fde68a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(219, 234, 254, 0.3);
+}
+
+.colorful-button-outline {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fefce8 100%);
+  border: 2px solid rgba(219, 234, 254, 0.4);
+  color: #374151;
+  box-shadow: 0 4px 15px rgba(219, 234, 254, 0.2);
+}
+
+.colorful-button-outline:hover {
+  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
+}
+
+/* Form elements */
+.colorful-select {
+  background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 100%);
+  border: 2px solid rgba(254, 249, 195, 0.5);
+  box-shadow: 0 4px 15px rgba(254, 249, 195, 0.2);
+}
+
+.colorful-select:focus {
+  border-color: rgba(219, 234, 254, 0.5);
+  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
+}
+
+.colorful-dropdown {
+  background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 100%);
+  border: 2px solid rgba(254, 249, 195, 0.5);
+  box-shadow: 0 8px 30px rgba(254, 249, 195, 0.25);
+}
+
+.colorful-tabs {
+  background: linear-gradient(135deg, #fef7ff 0%, #f0fdf4 100%);
+  border: 2px solid rgba(251, 207, 232, 0.4);
+  box-shadow: 0 4px 15px rgba(251, 207, 232, 0.2);
+}
+
+.dropdown-option-text {
+  color: #374151;
+  font-weight: 500;
+}

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -22,6 +22,7 @@ type JournalTypeOption = {
   emoji: string;
 };
 
+// Memoize static data to prevent re-creation on re-renders
 const journalGoals: JournalGoalOption[] = [
   { value: "Standard Entry", label: "Standard Entry", emoji: "📝" },
   { value: "Self-Reflection", label: "Self-Reflection", emoji: "🪞" },
@@ -55,7 +56,14 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
   const [journalGoal, setJournalGoal] = useState<string>("");
   const [journalType, setJournalType] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Memoize button disabled state to prevent unnecessary re-renders
+  const isButtonDisabled = useMemo(() => 
+    !journalGoal || !journalType || isGenerating,
+    [journalGoal, journalType, isGenerating]
+  );
+
+  // Use useCallback to prevent function recreation on every render
+  const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted with:', { journalGoal, journalType });
     
@@ -65,12 +73,17 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
     } else {
       console.log('Missing required fields:', { journalGoal: !!journalGoal, journalType: !!journalType });
     }
-  };
+  }, [journalGoal, journalType, onGenerate]);
+
+  const handleButtonClick = useCallback((e: React.MouseEvent) => {
+    console.log('Button clicked');
+    handleSubmit(e as any);
+  }, [handleSubmit]);
 
   return (
-    <form onSubmit={handleSubmit} className={cn("space-y-6", className)}>
+    <form onSubmit={handleSubmit} className={cn("space-y-4 sm:space-y-6", className)}>
       <div className="space-y-2">
-        <label htmlFor="journalGoal" className="text-lg font-medium text-enhanced">
+        <label htmlFor="journalGoal" className="text-base sm:text-lg font-medium text-enhanced">
           Journal Goal:
         </label>
         <Select value={journalGoal} onValueChange={setJournalGoal}>
@@ -81,7 +94,8 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
             {journalGoals.map((goal) => (
               <SelectItem key={goal.value} value={goal.value} className="dropdown-option-text hover:bg-white/50 transition-all duration-200 rounded-md">
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl drop-shadow-sm">{goal.emoji}</span> <span>{goal.label}</span>
+                  <span className="text-xl sm:text-2xl drop-shadow-sm">{goal.emoji}</span> 
+                  <span className="text-sm sm:text-base">{goal.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -90,7 +104,7 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="journalType" className="text-lg font-medium text-enhanced">
+        <label htmlFor="journalType" className="text-base sm:text-lg font-medium text-enhanced">
           Journal Type:
         </label>
         <Select value={journalType} onValueChange={setJournalType}>
@@ -101,7 +115,8 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
             {journalTypes.map((type) => (
               <SelectItem key={type.value} value={type.value} className="dropdown-option-text hover:bg-white/50 transition-all duration-200 rounded-md">
                 <span className="inline-flex items-center gap-2">
-                  <span className="text-2xl drop-shadow-sm">{type.emoji}</span> <span>{type.label}</span>
+                  <span className="text-xl sm:text-2xl drop-shadow-sm">{type.emoji}</span> 
+                  <span className="text-sm sm:text-base">{type.label}</span>
                 </span>
               </SelectItem>
             ))}
@@ -111,12 +126,9 @@ const AffirmationForm: React.FC<AffirmationFormProps> = ({ onGenerate, isGenerat
 
       <Button 
         type="submit" 
-        className="w-full btn-gradient-primary font-semibold py-3 px-6 rounded-lg transition-all duration-200"
-        disabled={!journalGoal || !journalType || isGenerating}
-        onClick={(e) => {
-          console.log('Button clicked');
-          handleSubmit(e);
-        }}
+        className="w-full btn-gradient-primary font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-all duration-200 text-sm sm:text-base"
+        disabled={isButtonDisabled}
+        onClick={handleButtonClick}
       >
         {isGenerating ? "Generating..." : "Generate Journal Prompts"}
       </Button>

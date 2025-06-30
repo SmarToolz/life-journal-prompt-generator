@@ -1,40 +1,38 @@
 
-@tailwind base;
-@tailwind components;
+/* Import critical CSS first */
+@import './styles/critical.css';
+
+/* Import Tailwind utilities */
 @tailwind utilities;
+
+/* Import component styles */
+@import './styles/components.css';
+
+/* Import animations last (non-critical) */
+@import './styles/animations.css';
 
 @layer base {
   :root {
     --background: 240 20% 98%;
     --foreground: 220 15% 25%;
-
     --card: 240 15% 96%;
     --card-foreground: 220 15% 25%;
-
     --popover: 240 15% 96%;
     --popover-foreground: 220 15% 25%;
-
     --primary: 260 50% 60%;
     --primary-foreground: 0 0% 98%;
-
     --secondary: 240 10% 90%;
     --secondary-foreground: 220 15% 30%;
-
     --muted: 240 10% 90%;
     --muted-foreground: 220 10% 50%;
-
     --accent: 240 10% 90%;
     --accent-foreground: 220 15% 30%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 240 10% 85%;
     --input: 240 10% 85%;
     --ring: 260 50% 60%;
-
     --radius: 0.75rem;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -48,32 +46,23 @@
   .dark {
     --background: 220 15% 8%;
     --foreground: 220 10% 95%;
-
     --card: 220 15% 12%;
     --card-foreground: 220 10% 95%;
-
     --popover: 220 15% 12%;
     --popover-foreground: 220 10% 95%;
-
     --primary: 260 50% 70%;
     --primary-foreground: 220 15% 8%;
-
     --secondary: 220 15% 18%;
     --secondary-foreground: 220 10% 95%;
-
     --muted: 220 15% 18%;
     --muted-foreground: 220 10% 70%;
-
     --accent: 220 15% 18%;
     --accent-foreground: 220 10% 95%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 220 15% 20%;
     --input: 220 15% 20%;
     --ring: 260 50% 70%;
-    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -92,151 +81,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap;
   }
-}
-
-/* Solid white background */
-.solid-background {
-  background: #ffffff;
-  min-height: 100vh;
-}
-
-/* Pastel card backgrounds inspired by reference image */
-.colorful-card {
-  background: linear-gradient(135deg, #fef7ff 0%, #f0f4ff 100%); /* Very light pink to light blue */
-  border: 2px solid rgba(219, 234, 254, 0.4);
-  box-shadow: 0 8px 25px rgba(219, 234, 254, 0.2);
-}
-
-.colorful-form-card {
-  background: linear-gradient(135deg, #fefce8 0%, #f0fdf4 100%); /* Light yellow to light green */
-  border: 2px solid rgba(254, 249, 195, 0.5);
-  box-shadow: 0 8px 25px rgba(254, 249, 195, 0.3);
-}
-
-.colorful-empty-card {
-  background: linear-gradient(135deg, #f0f4ff 0%, #fdf4ff 100%); /* Light blue to light purple */
-  border: 2px solid rgba(233, 213, 255, 0.4);
-  box-shadow: 0 8px 25px rgba(233, 213, 255, 0.2);
-}
-
-/* Enhanced text visibility classes with darker colors for better readability */
-.text-enhanced {
-  color: #374151;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.text-enhanced-lg {
-  color: #1f2937;
-  font-weight: 700;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Clean dropdown options */
-.dropdown-option-text {
-  color: #374151;
-  font-weight: 500;
-}
-
-/* Soft breathing wave animation for cards with pastel colors */
-.breathing-wave-animation {
-  background: linear-gradient(90deg, 
-    rgba(251, 207, 232, 0.6) 0%,   /* Pink */
-    rgba(254, 249, 195, 0.6) 25%,  /* Yellow */
-    rgba(219, 234, 254, 0.6) 50%,  /* Blue */
-    rgba(220, 252, 231, 0.6) 75%,  /* Green */
-    rgba(233, 213, 255, 0.6) 100%); /* Purple */
-  background-size: 200% 100%;
-  animation: breathingWave 4s ease-in-out infinite;
-}
-
-@keyframes breathingWave {
-  0%, 100% {
-    background-position: 0% 50%;
-    opacity: 0.7;
-  }
-  50% {
-    background-position: 100% 50%;
-    opacity: 0.9;
-  }
-}
-
-/* Animation keyframes for floating elements */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Pastel button gradients inspired by reference image */
-.btn-gradient-primary {
-  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%); /* Light blue to light yellow */
-  border: 2px solid rgba(219, 234, 254, 0.4);
-  color: #374151;
-  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.btn-gradient-primary:hover {
-  background: linear-gradient(135deg, #bfdbfe 0%, #fde68a 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(219, 234, 254, 0.3);
-}
-
-.btn-gradient-secondary {
-  background: linear-gradient(135deg, #f0fdf4 0%, #fdf4ff 100%); /* Light green to light purple */
-  border: 2px solid rgba(220, 252, 231, 0.4);
-  color: #374151;
-  box-shadow: 0 6px 20px rgba(220, 252, 231, 0.2);
-}
-
-.btn-gradient-secondary:hover {
-  background: linear-gradient(135deg, #dcfce7 0%, #f3e8ff 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 252, 231, 0.25);
-}
-
-/* Pastel select and input styling */
-.colorful-select {
-  background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 100%); /* Very light yellow to very light blue */
-  border: 2px solid rgba(254, 249, 195, 0.5);
-  box-shadow: 0 4px 15px rgba(254, 249, 195, 0.2);
-}
-
-.colorful-select:focus {
-  border-color: rgba(219, 234, 254, 0.5);
-  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
-}
-
-/* Pastel dropdown content */
-.colorful-dropdown {
-  background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 100%);
-  border: 2px solid rgba(254, 249, 195, 0.5);
-  box-shadow: 0 8px 30px rgba(254, 249, 195, 0.25);
-}
-
-/* Tab styling with pastel colors */
-.colorful-tabs {
-  background: linear-gradient(135deg, #fef7ff 0%, #f0fdf4 100%); /* Light pink to light green */
-  border: 2px solid rgba(251, 207, 232, 0.4);
-  box-shadow: 0 4px 15px rgba(251, 207, 232, 0.2);
-}
-
-/* Button hover effects with pastel colors */
-.colorful-button-outline {
-  background: linear-gradient(135deg, #f0f4ff 0%, #fefce8 100%); /* Light blue to light yellow */
-  border: 2px solid rgba(219, 234, 254, 0.4);
-  color: #374151;
-  box-shadow: 0 4px 15px rgba(219, 234, 254, 0.2);
-}
-
-.colorful-button-outline:hover {
-  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
 }

@@ -1,0 +1,43 @@
+
+/* Animation styles - Load last as they're non-critical */
+
+/* Breathing wave animation */
+.breathing-wave-animation {
+  background: linear-gradient(90deg, 
+    rgba(251, 207, 232, 0.6) 0%,
+    rgba(254, 249, 195, 0.6) 25%,
+    rgba(219, 234, 254, 0.6) 50%,
+    rgba(220, 252, 231, 0.6) 75%,
+    rgba(233, 213, 255, 0.6) 100%);
+  background-size: 200% 100%;
+  animation: breathingWave 4s ease-in-out infinite;
+}
+
+@keyframes breathingWave {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.7;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.9;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Reduce animations on slow devices */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .breathing-wave-animation {
+    animation: none;
+  }
+}
