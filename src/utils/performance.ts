@@ -1,7 +1,7 @@
 
-// Performance optimization utilities
+// Essential performance utilities only
 
-// Debounce function to reduce excessive function calls
+// Debounce for reducing excessive calls
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   delay: number
@@ -13,7 +13,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   };
 };
 
-// Throttle function to limit function execution frequency
+// Throttle for limiting execution frequency
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -23,49 +23,12 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => inThrottle = false, limit);
     }
   };
 };
 
-// Lazy load images
-export const lazyLoadImage = (src: string): Promise<HTMLImageElement> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = reject;
-    img.src = src;
-  });
-};
-
-// Check if element is in viewport
-export const isInViewport = (element: Element): boolean => {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
-
-// Preload critical resources
-export const preloadResource = (url: string, type: 'script' | 'style' | 'image' = 'script') => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = url;
-  
-  switch (type) {
-    case 'script':
-      link.as = 'script';
-      break;
-    case 'style':
-      link.as = 'style';
-      break;
-    case 'image':
-      link.as = 'image';
-      break;
-  }
-  
-  document.head.appendChild(link);
+// Check if user prefers reduced motion
+export const prefersReducedMotion = (): boolean => {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 };

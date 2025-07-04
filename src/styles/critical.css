@@ -3,7 +3,7 @@
 @tailwind base;
 @tailwind components;
 
-/* Essential base styles */
+/* Essential base styles only */
 :root {
   --background: 240 20% 98%;
   --foreground: 220 15% 25%;
@@ -35,4 +35,16 @@ body {
 .text-enhanced-lg {
   color: #1f2937;
   font-weight: 700;
+}
+
+/* Only critical button styles */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
+  border: 2px solid rgba(219, 234, 254, 0.4);
+  color: #374151;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, #bfdbfe 0%, #fde68a 100%);
+  transform: translateY(-2px);
 }

@@ -8,20 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-// Lazy load heavy components with better loading boundaries
-const LazyCustomPromptsTab = lazy(() => 
-  import('@/components/custom/CustomPromptsTab').then(module => ({
-    default: module.default
-  }))
-);
+// Lazy load heavy components only when needed
+const LazyCustomPromptsTab = lazy(() => import('@/components/custom/CustomPromptsTab'));
+const LazyFavoritesLibrary = lazy(() => import('@/components/favorites/FavoritesLibrary'));
 
-const LazyFavoritesLibrary = lazy(() => 
-  import('@/components/favorites/FavoritesLibrary').then(module => ({
-    default: module.default
-  }))
-);
-
-// Minimal loading component to reduce render blocking
+// Minimal loading component
 const ComponentLoader = () => (
   <div className="flex items-center justify-center p-4" role="status" aria-label="Loading">
     <div className="w-6 h-6 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
@@ -38,13 +29,10 @@ const Index = () => {
   const { toast } = useToast();
 
   const handleGenerateAffirmation = async (category: string, goal: string, promptFocus: string) => {
-    console.log('handleGenerateAffirmation called with:', { category, goal, promptFocus });
     setIsGenerating(true);
 
     try {
-      console.log('Calling generateUniquePrompts...');
       const newAffirmations = await generateUniquePrompts(category, goal, promptFocus, 2);
-      console.log('Generated affirmations:', newAffirmations);
       
       setAffirmations(newAffirmations);
       setCurrentCategory(category);
@@ -56,7 +44,6 @@ const Index = () => {
         description: "Your personalized prompts are ready."
       });
     } catch (error) {
-      console.error('Error generating affirmations:', error);
       setIsGenerating(false);
       toast({
         title: "Error",
@@ -122,15 +109,15 @@ const Index = () => {
                       <AffirmationCard 
                         key={`generation-${generationCount}-${index}`}
                         affirmation={affirmation} 
-                        className="colorful-card animate-float" 
+                        className="colorful-card animate-gentle-float" 
                       />
                     ))}
                   </div>
                 ) : (
                   <div className="colorful-empty-card p-6 sm:p-8 rounded-xl flex flex-col items-center justify-center h-48 sm:h-64 text-center">
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-enhanced">
+                    <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-enhanced">
                       Your journal prompts will appear here
-                    </h3>
+                    </h2>
                     <p className="text-sm sm:text-base text-enhanced font-medium px-4">
                       Select options and fill in the form to generate your personalized journal prompts
                     </p>
