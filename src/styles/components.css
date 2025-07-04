@@ -24,15 +24,15 @@
 .btn-gradient-primary {
   background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
   border: 2px solid rgba(219, 234, 254, 0.4);
-  color: #111827;
-  font-weight: 700;
+  color: #000000 !important;
+  font-weight: 700 !important;
   box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
 }
 
 .btn-gradient-primary:hover {
   background: linear-gradient(135deg, #bfdbfe 0%, #fde68a 100%);
   transform: translateY(-2px);
-  color: #000000;
+  color: #000000 !important;
   box-shadow: 0 8px 25px rgba(219, 234, 254, 0.3);
 }
 
