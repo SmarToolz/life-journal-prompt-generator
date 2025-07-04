@@ -20,17 +20,19 @@
   box-shadow: 0 8px 25px rgba(233, 213, 255, 0.2);
 }
 
-/* Button styles */
+/* Button styles with improved contrast */
 .btn-gradient-primary {
   background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
   border: 2px solid rgba(219, 234, 254, 0.4);
-  color: #374151;
+  color: #1f2937;
+  font-weight: 600;
   box-shadow: 0 6px 20px rgba(219, 234, 254, 0.25);
 }
 
 .btn-gradient-primary:hover {
   background: linear-gradient(135deg, #bfdbfe 0%, #fde68a 100%);
   transform: translateY(-2px);
+  color: #111827;
   box-shadow: 0 8px 25px rgba(219, 234, 254, 0.3);
 }
 
