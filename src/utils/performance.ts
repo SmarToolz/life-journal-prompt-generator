@@ -1,19 +1,19 @@
 
-// Performance utilities for mobile optimization
+// Performance optimization utilities
 
 // Debounce function to reduce excessive function calls
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  delay: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeoutId: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func(...args), delay);
   };
 };
 
-// Throttle function for scroll and resize events
+// Throttle function to limit function execution frequency
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -29,30 +29,43 @@ export const throttle = <T extends (...args: any[]) => any>(
 };
 
 // Lazy load images
-export const lazyLoadImage = (img: HTMLImageElement, src: string) => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        img.src = src;
-        img.classList.remove('opacity-0');
-        img.classList.add('opacity-100');
-        observer.unobserve(img);
-      }
-    });
+export const lazyLoadImage = (src: string): Promise<HTMLImageElement> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
   });
-  observer.observe(img);
+};
+
+// Check if element is in viewport
+export const isInViewport = (element: Element): boolean => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 };
 
 // Preload critical resources
-export const preloadResource = (href: string, as: string = 'script') => {
+export const preloadResource = (url: string, type: 'script' | 'style' | 'image' = 'script') => {
   const link = document.createElement('link');
   link.rel = 'preload';
-  link.href = href;
-  link.as = as;
+  link.href = url;
+  
+  switch (type) {
+    case 'script':
+      link.as = 'script';
+      break;
+    case 'style':
+      link.as = 'style';
+      break;
+    case 'image':
+      link.as = 'image';
+      break;
+  }
+  
   document.head.appendChild(link);
-};
-
-// Check if device prefers reduced motion
-export const prefersReducedMotion = () => {
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 };
