@@ -56,7 +56,7 @@ const Index = () => {
             Life Journal Prompt Generator
           </h1>
           <div className="flex flex-col items-center gap-2 sm:gap-3 mb-3">
-            <p className="text-base max-w-lg text-enhanced font-semibold py-[5px] px-[35px] my-0 mx-0 sm:text-xl">Unlock your potential with journal prompts for self-growth, explore daily life journal prompts, and craft your journey with our journal prompt tool.</p>
+            <p className="text-base max-w-lg text-enhanced font-semibold py-[5px] px-[35px] my-0 mx-0 sm:text-xl">Unlock your potential with journal prompts for self-growth, and craft your journey with our journal prompt tool.</p>
             <Button variant="outline" size="default" className="colorful-button-outline font-semibold px-4 sm:px-6 py-2 transition-all duration-200 text-sm sm:text-base" onClick={() => setShowFavorites(true)} title="Favorites Library">
               <Heart className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gray-700" />
               My Favorites
