@@ -52,7 +52,7 @@ const Index = () => {
       
       <div className="relative z-10 container px-4 py-6 sm:py-10 mx-auto max-w-4xl">
         <header className="text-center mb-6 sm:mb-10 relative">
-          <h1 className="text-2xl sm:text-3xl font-bold text-enhanced-lg mb-3 sm:mb-4 my-[33px] md:text-4xl text-cyan-800">
+          <h1 className="text-2xl sm:text-3xl font-bold text-enhanced-lg mb-3 sm:mb-4 my-[33px] text-cyan-800 md:text-4xl">
             Life Journal Prompt Generator
           </h1>
           <div className="flex flex-col items-center gap-2 sm:gap-3 mb-3">
